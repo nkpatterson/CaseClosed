@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CaseClosed.Core.SmokeTests
+namespace CaseClosed.Model.SmokeTests
 {
     public class SmokeTest
     {
