@@ -2,6 +2,7 @@ using System.Web.Http;
 using WebActivatorEx;
 using CaseClosed.Api;
 using Swashbuckle.Application;
+using System.Configuration;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -62,16 +63,18 @@ namespace CaseClosed.Api
                         //    .Name("apiKey")
                         //    .In("header");
                         //
-                        //c.OAuth2("oauth2")
-                        //    .Description("OAuth2 Implicit Grant")
-                        //    .Flow("implicit")
-                        //    .AuthorizationUrl("http://petstore.swagger.wordnik.com/api/oauth/dialog")
-                        //    //.TokenUrl("https://tempuri.org/token")
-                        //    .Scopes(scopes =>
-                        //    {
-                        //        scopes.Add("read", "Read access to protected resources");
-                        //        scopes.Add("write", "Write access to protected resources");
-                        //    });
+                        c.OAuth2("oauth2")
+                            .Description("OAuth2 Implicit Grant")
+                            .Flow("implicit")
+                            .AuthorizationUrl("https://login.microsoftonline.com/3169cc1d-dcd7-4839-9aec-723163760fb6/oauth2/authorize")
+                            //.TokenUrl("https://login.microsoftonline.com/3169cc1d-dcd7-4839-9aec-723163760fb6/oauth2/token")
+                            .Scopes(scopes =>
+                            {
+                                scopes.Add("read", "Read access to protected resources");
+                                scopes.Add("write", "Write access to protected resources");
+                            });
+
+                        c.OperationFilter<AssignOAuthSecurityRequirements>();
 
                         // Set this flag to omit descriptions for any actions decorated with the Obsolete attribute
                         //c.IgnoreObsoleteActions();
@@ -217,7 +220,10 @@ namespace CaseClosed.Api
                         // If your API supports the OAuth2 Implicit flow, and you've described it correctly, according to
                         // the Swagger 2.0 specification, you can enable UI support as shown below.
                         //
-                        //c.EnableOAuth2Support("test-client-id", "test-realm", "Swagger UI");
+                        c.EnableOAuth2Support(ConfigurationManager.AppSettings["ida:ClientID"], 
+                            ConfigurationManager.AppSettings["ida:Password"],
+                            ConfigurationManager.AppSettings["ida:Audience"],
+                            "CaseClosed.Api");
                     });
         }
     }

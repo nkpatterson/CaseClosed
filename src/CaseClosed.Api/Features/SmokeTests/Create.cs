@@ -8,14 +8,14 @@ namespace CaseClosed.Api.Features.SmokeTests
 {
     public class Create
     {
-        public class Command : IAsyncRequest
+        public class Command : IAsyncRequest<SmokeTest>
         {
             public string CreatedBy { get; set; }
         }
 
-        public class InMemoryCommandHandler : AsyncRequestHandler<Command>
+        public class InMemoryCommandHandler : IAsyncRequestHandler<Command, SmokeTest>
         {
-            protected override async Task HandleCore(Command message)
+            public async Task<SmokeTest> Handle(Command message)
             {
                 var test = new SmokeTest
                 {
@@ -27,6 +27,8 @@ namespace CaseClosed.Api.Features.SmokeTests
                 };
 
                 InMemorySmokeTests.SmokeTests.Add(test);
+
+                return test;
             }
         }
     }
