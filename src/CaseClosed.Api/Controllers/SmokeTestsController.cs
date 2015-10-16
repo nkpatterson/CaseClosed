@@ -24,5 +24,10 @@ namespace CaseClosed.Api.Controllers
 
             return result;
         }
+
+        public async Task Post(Create.Command command)
+        {
+            await _mediator.SendAsync(command);
+        }
     }
 }
