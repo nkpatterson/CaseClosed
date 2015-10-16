@@ -16,11 +16,11 @@ namespace CaseClosed.Api.Controllers
             _mediator = mediator;
         }
 
-        public IEnumerable<SmokeTest> Get(Index.Query query)
+        public async Task<IEnumerable<SmokeTest>> Get(Index.Query query)
         {
             query = query ?? new Index.Query();
 
-            var result = _mediator.Send(query);
+            var result = await _mediator.SendAsync(query);
 
             return result;
         }

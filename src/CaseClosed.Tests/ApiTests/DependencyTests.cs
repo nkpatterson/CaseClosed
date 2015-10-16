@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using CaseClosed.Model.SmokeTests;
 using CaseClosed.Api.Features.SmokeTests;
 using StructureMap;
+using System.Threading.Tasks;
 
 namespace CaseClosed.Tests.ApiTests
 {
@@ -21,25 +22,25 @@ namespace CaseClosed.Tests.ApiTests
         }
 
         [TestMethod]
-        public void CanResolveRequestHandler()
+        public async Task CanResolveRequestHandler()
         {
             // Act
-            var handler = _container.GetInstance<IRequestHandler<Index.Query, List<SmokeTest>>>();
+            var handler = _container.GetInstance<IAsyncRequestHandler<Index.Query, List<SmokeTest>>>();
 
             // Assert
             Assert.IsNotNull(handler);
-            var results = handler.Handle(new Index.Query());
+            var results = await handler.Handle(new Index.Query());
             Assert.AreEqual(1, results.Count);
         }
 
         [TestMethod]
-        public void CanResolveMediator()
+        public async Task CanResolveMediator()
         {
             // ARrange
             var mediator = _container.GetInstance<IMediator>();
 
             // Act
-            var result = mediator.Send(new Index.Query());
+            var result = await mediator.SendAsync(new Index.Query());
 
             // Assert
             Assert.IsNotNull(result);
