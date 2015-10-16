@@ -250,7 +250,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SmokeTestsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="DependencyResolution\CommandProcessRegistry.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />

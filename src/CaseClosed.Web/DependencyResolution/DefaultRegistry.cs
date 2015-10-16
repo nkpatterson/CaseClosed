@@ -15,7 +15,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace CaseClosed.Api.DependencyResolution {
+namespace CaseClosed.Web.DependencyResolution {
     using Core.DependencyResolution;
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
@@ -28,7 +28,7 @@ namespace CaseClosed.Api.DependencyResolution {
                 scan => {
                     scan.TheCallingAssembly();
                     scan.LookForRegistries();
-                    scan.WithDefaultConventions();
+                    scan.With(new ControllerConvention());
                 });
 
             IncludeRegistry(new CommandProcessingRegistry(GetType().Assembly));
