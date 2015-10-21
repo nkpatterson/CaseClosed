@@ -7,11 +7,11 @@ namespace CaseClosed.Api
 {
     public partial class Startup
     {
-        public static string aadInstance = ConfigurationManager.AppSettings["ida:AadInstance"];
-        public static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];
-        public static string clientId = ConfigurationManager.AppSettings["ida:ClientId"];
-        public static string commonPolicy = ConfigurationManager.AppSettings["ida:PolicyId"];
-        private const string discoverySuffix = ".well-known/openid-configuration";
+        //public static string aadInstance = ConfigurationManager.AppSettings["ida:AadInstance"];
+        //public static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];
+        //public static string clientId = ConfigurationManager.AppSettings["ida:ClientId"];
+        //public static string commonPolicy = ConfigurationManager.AppSettings["ida:PolicyId"];
+        //private const string discoverySuffix = ".well-known/openid-configuration";
         
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)

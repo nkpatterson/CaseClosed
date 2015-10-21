@@ -6,7 +6,7 @@ using System.Web.Http;
 
 namespace CaseClosed.Api.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class SmokeTestsController : ApiController
     {
         private IMediator _mediator;

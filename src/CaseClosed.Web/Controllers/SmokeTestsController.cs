@@ -1,15 +1,12 @@
 ﻿using CaseClosed.Web.Features.SmokeTests;
+using CaseClosed.Web.Infrastructure;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CaseClosed.Web.Controllers
 {
-    [Authorize]
+    [Authorize, AcquireToken]
     public class SmokeTestsController : Controller
     {
         private IMediator _mediator;
@@ -28,9 +25,9 @@ namespace CaseClosed.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Create.Command command)
+        public async Task<ActionResult> Create(Create.Command command)
         {
-            var result = _mediator.Send(command);
+            var result = await _mediator.SendAsync(command);
 
             return RedirectToAction("Index");
         }
