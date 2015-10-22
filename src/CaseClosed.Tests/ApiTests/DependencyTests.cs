@@ -22,15 +22,13 @@ namespace CaseClosed.Tests.ApiTests
         }
 
         [TestMethod]
-        public async Task CanResolveRequestHandler()
+        public void CanResolveRequestHandler()
         {
             // Act
             var handler = _container.GetInstance<IAsyncRequestHandler<Index.Query, List<SmokeTest>>>();
 
             // Assert
             Assert.IsNotNull(handler);
-            var results = await handler.Handle(new Index.Query());
-            Assert.AreEqual(1, results.Count);
         }
 
         [TestMethod]
@@ -44,7 +42,6 @@ namespace CaseClosed.Tests.ApiTests
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(1, result.Count);
         }
     }
 }
