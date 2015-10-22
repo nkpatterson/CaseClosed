@@ -1,4 +1,4 @@
-﻿using CaseClosed.Api.Infrastructure;
+﻿using CaseClosed.Api.Infrastructure.DAL;
 using CaseClosed.Model.SmokeTests;
 using MediatR;
 using Microsoft.Azure.Documents.Linq;
@@ -39,14 +39,6 @@ namespace CaseClosed.Api.Features.SmokeTests
                 {
                     throw exc;
                 }
-            }
-        }
-
-        public class InMemoryQueryHandler// : IAsyncRequestHandler<Query, List<SmokeTest>>
-        {
-            public async Task<List<SmokeTest>> Handle(Query message)
-            {
-                return InMemorySmokeTests.SmokeTests.OrderByDescending(x => x.Created).ToList();
             }
         }
     }

@@ -17,7 +17,6 @@
 
 using System.Web.Http.Dependencies;
 using StructureMap;
-using Microsoft.Practices.ServiceLocation;
 
 namespace CaseClosed.Api.DependencyResolution
 {
@@ -51,11 +50,8 @@ namespace CaseClosed.Api.DependencyResolution
         /// </returns>
         public IDependencyScope BeginScope()
         {
-            var resolver = new StructureMapWebApiDependencyResolver(CurrentNestedContainer);
-            ServiceLocatorProvider provider = () => resolver;
-            CurrentNestedContainer.Configure(cfg => cfg.For<ServiceLocatorProvider>().Use(provider));
-
-            return resolver;
+            IContainer child = this.Container.GetNestedContainer();
+            return new StructureMapWebApiDependencyResolver(child);
         }
 
         #endregion

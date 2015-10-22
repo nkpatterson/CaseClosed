@@ -1,11 +1,10 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CaseClosed.Api.DependencyResolution;
-using MediatR;
-using System.Collections.Generic;
-using CaseClosed.Model.SmokeTests;
+﻿using CaseClosed.Api.DependencyResolution;
 using CaseClosed.Api.Features.SmokeTests;
+using CaseClosed.Model.SmokeTests;
+using MediatR;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StructureMap;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CaseClosed.Tests.ApiTests

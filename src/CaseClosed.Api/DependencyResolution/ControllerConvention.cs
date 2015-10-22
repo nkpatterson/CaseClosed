@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="DefaultRegistry.cs" company="Web Advanced">
+// <copyright file="ControllerConvention.cs" company="Web Advanced">
 // Copyright 2012 Web Advanced (www.webadvanced.com)
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,26 +16,21 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace CaseClosed.Api.DependencyResolution {
-    using Infrastructure.DAL;
-    using Core.DependencyResolution;
+    using System;
+
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
+    using StructureMap.Pipeline;
+    using StructureMap.TypeRules;
+    using System.Web.Http;
 
-    public class DefaultRegistry : Registry {
-        #region Constructors and Destructors
+    public class ControllerConvention : IRegistrationConvention {
+        #region Public Methods and Operators
 
-        public DefaultRegistry() {
-            Scan(
-                scan => {
-                    scan.TheCallingAssembly();
-                    scan.LookForRegistries();
-                    scan.WithDefaultConventions();
-                    scan.With(new ControllerConvention());
-                });
-
-            IncludeRegistry(new CommandProcessingRegistry(GetType().Assembly));
-
-            For<DocDbConfiguration>().Use<DocDbConfiguration>();
+        public void Process(Type type, Registry registry) {
+            if (type.CanBeCastTo<ApiController>() && !type.IsAbstract) {
+                registry.For(type).LifecycleIs(new UniquePerRequestLifecycle());
+            }
         }
 
         #endregion

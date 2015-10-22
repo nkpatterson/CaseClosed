@@ -1,16 +1,16 @@
-﻿namespace CaseClosed.Core.DAL
-{
-    using System;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Microsoft.Azure.Documents;
-    using Microsoft.Azure.Documents.Client;
-    using Microsoft.Azure.Documents.Linq;
-    using System.IO;
-    using Newtonsoft.Json;
-    using System.Collections.ObjectModel;
+﻿using System;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Azure.Documents;
+using Microsoft.Azure.Documents.Client;
+using Microsoft.Azure.Documents.Linq;
+using System.IO;
+using Newtonsoft.Json;
+using System.Collections.ObjectModel;
 
+namespace CaseClosed.Api.Infrastructure.DAL
+{
     /// <summary>
     /// Providers common helper methods for working with DocumentClient.
     /// </summary>

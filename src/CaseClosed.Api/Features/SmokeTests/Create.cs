@@ -1,4 +1,4 @@
-﻿using CaseClosed.Api.Infrastructure;
+﻿using CaseClosed.Api.Infrastructure.DAL;
 using CaseClosed.Model.SmokeTests;
 using MediatR;
 using System;
@@ -40,25 +40,6 @@ namespace CaseClosed.Api.Features.SmokeTests
                 {
                     throw exc;
                 }
-
-                return test;
-            }
-        }
-
-        public class InMemoryCommandHandler// : IAsyncRequestHandler<Command, SmokeTest>
-        {
-            public async Task<SmokeTest> Handle(Command message)
-            {
-                var test = new SmokeTest
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    Created = DateTime.UtcNow,
-                    CreatedBy = message.CreatedBy,
-                    Success = true,
-                    Messages = new List<string> { "It works!" }
-                };
-
-                InMemorySmokeTests.SmokeTests.Add(test);
 
                 return test;
             }

@@ -1,9 +1,9 @@
-﻿namespace CaseClosed.Core.DAL
-{
-    using System;
-    using System.Collections.Generic;
-    using Microsoft.Azure.Documents;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.Azure.Documents;
 
+namespace CaseClosed.Api.Infrastructure.DAL
+{
     /// <summary>
     /// The specification/template for creating a new DocumentCollection.
     /// </summary>

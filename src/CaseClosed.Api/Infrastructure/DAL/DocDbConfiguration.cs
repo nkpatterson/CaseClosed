@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace CaseClosed.Api.Infrastructure
+namespace CaseClosed.Api.Infrastructure.DAL
 {
     public class DocDbConfiguration
     {
