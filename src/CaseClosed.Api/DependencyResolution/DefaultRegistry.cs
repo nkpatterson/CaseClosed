@@ -16,6 +16,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace CaseClosed.Api.DependencyResolution {
+    using Infrastructure;
     using Core.DependencyResolution;
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
@@ -32,6 +33,8 @@ namespace CaseClosed.Api.DependencyResolution {
                 });
 
             IncludeRegistry(new CommandProcessingRegistry(GetType().Assembly));
+
+            For<DocDbConfiguration>().Use<DocDbConfiguration>();
         }
 
         #endregion

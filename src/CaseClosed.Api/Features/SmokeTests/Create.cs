@@ -1,8 +1,9 @@
-﻿using MediatR;
+﻿using CaseClosed.Api.Infrastructure;
+using CaseClosed.Model.SmokeTests;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using CaseClosed.Model.SmokeTests;
 
 namespace CaseClosed.Api.Features.SmokeTests
 {
@@ -13,7 +14,38 @@ namespace CaseClosed.Api.Features.SmokeTests
             public string CreatedBy { get; set; }
         }
 
-        public class InMemoryCommandHandler : IAsyncRequestHandler<Command, SmokeTest>
+        public class DocDbCommandHandler : DocDbHandlerBase, IAsyncRequestHandler<Command, SmokeTest>
+        {
+            public DocDbCommandHandler(DocDbConfiguration config) : base(config)
+            {
+            }
+
+            public async Task<SmokeTest> Handle(Command message)
+            {
+                var collection = await GetCollection();
+                var test = new SmokeTest
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Created = DateTime.UtcNow,
+                    CreatedBy = message.CreatedBy,
+                    Success = true,
+                    Messages = new List<string> { "It works!" }
+                };
+
+                try
+                {
+                    await Client.CreateDocumentAsync(collection.SelfLink, test);
+                }
+                catch (Exception exc)
+                {
+                    throw exc;
+                }
+
+                return test;
+            }
+        }
+
+        public class InMemoryCommandHandler// : IAsyncRequestHandler<Command, SmokeTest>
         {
             public async Task<SmokeTest> Handle(Command message)
             {

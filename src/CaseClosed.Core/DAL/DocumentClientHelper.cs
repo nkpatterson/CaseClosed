@@ -1,4 +1,4 @@
-﻿namespace DocumentDB.Samples.Shared.Util
+﻿namespace CaseClosed.Core.DAL
 {
     using System;
     using System.Linq;
@@ -9,6 +9,7 @@
     using Microsoft.Azure.Documents.Linq;
     using System.IO;
     using Newtonsoft.Json;
+    using System.Collections.ObjectModel;
 
     /// <summary>
     /// Providers common helper methods for working with DocumentClient.
@@ -64,7 +65,27 @@
 
             if (collection == null)
             {
-                collection = await CreateDocumentCollectionWithRetriesAsync(client, database, new DocumentCollection { Id = collectionId });
+                collection = await CreateDocumentCollectionWithRetriesAsync(client, database, 
+                    new DocumentCollection
+                    {
+                        Id = collectionId,
+                        IndexingPolicy = new IndexingPolicy()
+                        {
+                            IndexingMode = IndexingMode.Consistent,
+                            IncludedPaths = new Collection<IncludedPath>
+                            {
+                                new IncludedPath
+                                {
+                                    Path = "/*",
+                                    Indexes = new Collection<Index>
+                                    {
+                                        new RangeIndex(DataType.String, -1),
+                                        new RangeIndex(DataType.Number, -1)
+                                    }
+                                }
+                            }
+                        }
+                    });
             }
 
             return collection;

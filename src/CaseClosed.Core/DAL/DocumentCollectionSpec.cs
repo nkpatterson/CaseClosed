@@ -1,4 +1,4 @@
-﻿namespace DocumentDB.Samples.Shared.Util
+﻿namespace CaseClosed.Core.DAL
 {
     using System;
     using System.Collections.Generic;
