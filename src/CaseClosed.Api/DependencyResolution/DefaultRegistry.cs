@@ -16,10 +16,12 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace CaseClosed.Api.DependencyResolution {
-    using Infrastructure.DAL;
     using Core.DependencyResolution;
+    using Infrastructure.DAL;
+    using Microsoft.ApplicationInsights;
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
+    using System.Configuration;
 
     public class DefaultRegistry : Registry {
         #region Constructors and Destructors
@@ -36,6 +38,7 @@ namespace CaseClosed.Api.DependencyResolution {
             IncludeRegistry(new CommandProcessingRegistry(GetType().Assembly));
 
             For<DocDbConfiguration>().Use<DocDbConfiguration>();
+            For<TelemetryClient>().Use(ctx => new TelemetryClient { InstrumentationKey = ConfigurationManager.AppSettings["ai:InstrumentationKey"] });
         }
 
         #endregion
