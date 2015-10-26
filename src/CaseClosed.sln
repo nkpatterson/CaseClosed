@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseClosed.Model", "CaseClo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseClosed.Tests", "CaseClosed.Tests\CaseClosed.Tests.csproj", "{8537BC4B-04A9-42EB-86C4-F33E42719DCD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{83C2267C-0AB2-44B3-A7FE-03AE8A1E4ED4}"
+	ProjectSection(SolutionItems) = preProject
+		..\deploy\start-webapp.ps1 = ..\deploy\start-webapp.ps1
+		..\deploy\stop-webapp.ps1 = ..\deploy\stop-webapp.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
