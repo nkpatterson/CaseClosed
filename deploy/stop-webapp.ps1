@@ -1,10 +1,9 @@
 [CmdletBinding()]
 Param(
-  [Parameter(Mandatory=$True,Position=1)]
-   [string]$ResourceGroupName,
-	
    [Parameter(Mandatory=$True)]
    [string]$AppName
 )
 
-Stop-AzureRmWebApp -ResourceGroupName $ResourceGroupName -Name $AppName
+Write-Host "Stopping web app: $AppName"
+Stop-AzureWebsite -Name $AppName
+Write-Host "Done"
