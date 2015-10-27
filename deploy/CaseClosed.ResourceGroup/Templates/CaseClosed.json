@@ -135,7 +135,19 @@
       ],
       "properties": {
         "name": "[parameters('webAppName')]",
-        "serverFarm": "[parameters('hostingPlanName')]"
+        "serverFarm": "[parameters('hostingPlanName')]",
+        "siteConfig": {
+          "appSettings": [
+            {
+              "Name": "ai:InstrumentationKey",
+              "Value": "[reference(concat('Microsoft.Insights/components/', parameters('webAppName'))).instrumentationKey]"
+            },
+            {
+              "Name": "api:BaseUrl",
+              "Value": "[concat('https://', parameters('apiAppName'), '.azurewebsites.net/api/')]"
+            }
+          ]
+        }
       }
     },
     {
@@ -346,9 +358,6 @@
       "name": "[parameters('webAppName')]",
       "type": "Microsoft.Insights/components",
       "location": "Central US",
-      "dependsOn": [
-        "[concat('Microsoft.Web/sites/', parameters('webAppName'))]"
-      ],
       "tags": {
         "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/sites/', parameters('webAppName'))]": "Resource",
         "displayName": "AppInsightsComponent"
@@ -493,6 +502,18 @@
             {
               "name": "WEBSITE_START_SCM_ON_SITE_CREATION",
               "value": "1"
+            },
+            {
+              "Name": "docdb:EndpointUrl",
+              "Value": "[concat('https://', parameters('databaseAccountName'), '.documents.azure.com:443/')]"
+            },
+            {
+              "Name": "docdb:AuthorizationKey",
+              "Value": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', parameters('databaseAccountName')), '2015-04-08').primaryMasterKey]"
+            },
+            {
+              "Name": "ai:InstrumentationKey",
+              "Value": "[reference(concat('Microsoft.Insights/components/', parameters('webAppName'))).instrumentationKey]"
             }
           ]
         }
