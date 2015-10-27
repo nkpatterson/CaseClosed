@@ -2,11 +2,12 @@
 {
     <text>
     <ul class="nav navbar-nav navbar-right">
-        <li class="navbar-text">
-            Hello, @User.Identity.Name!
-        </li>
-        <li>
-            @Html.ActionLink("Sign out", "SignOut", "Account")
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nick Patterson <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("My Profile", "Index", "Account")</li>
+                <li>@Html.ActionLink("Sign out", "SignOut", "Account")</li>
+            </ul>
         </li>
     </ul>
     </text>

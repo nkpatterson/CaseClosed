@@ -27,15 +27,65 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Case Closed", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("CaseClosed", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Smoke Tests", "Index", "SmokeTests")</li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("Index", "Cases")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cases <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("My Cases", "Index", "Cases")</li>
+                            <li>@Html.ActionLink("Establish Case", "Create", "Cases")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("Index", "Operations")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Operations <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("My Operations", "Index", "Operations")</li>
+                            <li>@Html.ActionLink("New Operation", "Create", "Operations")</li>
+                            <li>@Html.ActionLink("De-Confliction", "Deconflict", "Operations")</li>
+                            <li>@Html.ActionLink("Command Center", "CommandCenter", "Operations")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("Index", "Subjects")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subjects <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("All Subjects", "Index", "Subjects")</li>
+                            <li>@Html.ActionLink("New Subject", "Create", "Subjects")</li>
+                            <li>@Html.ActionLink("De-Confliction", "Deconflict", "Subjects")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("Index", "Inventory")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inventory <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("My Inventory", "Index", "Inventory")</li>
+                            <li>@Html.ActionLink("Submit Inventory", "Create", "Inventory")</li>
+                            <li>@Html.ActionLink("Seizures", "Seizures", "Inventory")</li>
+                            <li>@Html.ActionLink("Assets", "Assets", "Assets")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Reports", "Index", "Reports")</li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("Index", "Settings")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Permissions", "Index", "Permissions", new { area = "settings" }, null)</li>
+                            <li>@Html.ActionLink("Users", "Index", "Users", new { area = "settings" }, null)</li>
+                            <li>@Html.ActionLink("Reference Data", "Index", "ReferenceData", new { area = "settings" }, null)</li>
+                            <li>@Html.ActionLink("Organization Data", "Index", "OrganizationData", new { area = "settings" }, null)</li>
+                            <li>@Html.ActionLink("Form Templates", "Index", "FormTemplates", new { area = "settings" }, null)</li>
+                            <li>@Html.ActionLink("Workflows", "Index", "Workflows", new { area = "settings" }, null)</li>
+                            <li>@Html.ActionLink("Smoke Tests", "Index", "SmokeTests")</li>
+                        </ul>
+                    </li>
                 </ul>
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                </form>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
