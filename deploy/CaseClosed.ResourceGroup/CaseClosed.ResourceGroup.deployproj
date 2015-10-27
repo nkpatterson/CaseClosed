@@ -25,7 +25,6 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
-    <Folder Include="Scripts\" />
     <Folder Include="Tools\" />
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +33,8 @@
     </None>
     <Content Include="Scripts\Deploy-AzureResourceGroup.ps1" />
     <Content Include="Templates\CaseClosed.json" />
+    <None Include="Scripts\start-webapp.ps1" />
+    <None Include="Scripts\stop-webapp.ps1" />
     <None Include="Templates\CaseClosed.param.dev.json" />
   </ItemGroup>
   <ItemGroup>
