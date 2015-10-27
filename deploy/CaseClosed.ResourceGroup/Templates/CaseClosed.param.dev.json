@@ -1,0 +1,42 @@
+﻿{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "hostingPlanName": {
+      "value": "CaseClosedDev2"
+    },
+    "webAppName": {
+      "value": "casecloseddev2"
+    },
+    "gatewayName": {
+      "value": "caseclosedapigatewaydev2"
+    },
+    "apiAppName": {
+      "value": "caseclosedapidev2"
+    },
+    "apiAppSecret": {
+      "value": "CaseClosedApiSecret"
+    },
+    "databaseAccountName": {
+      "value": "casecloseddev2"
+    },
+    "searchName": {
+      "value": "casecloseddev2"
+    },
+    "redisCacheName": {
+      "value": "casecloseddev2"
+    },
+    "redisCacheSku": {
+      "value": "Basic"
+    },
+    "redisCacheCapacity": {
+      "value": 0
+    },
+    "storageName": {
+      "value": "casecloseddev2"
+    },
+    "location": {
+      "value": "East US"
+    }
+  }
+}

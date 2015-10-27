@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{83C226
 		..\deploy\stop-webapp.ps1 = ..\deploy\stop-webapp.ps1
 	EndProjectSection
 EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "CaseClosed.ResourceGroup", "..\deploy\CaseClosed.ResourceGroup\CaseClosed.ResourceGroup.deployproj", "{36ECE49A-E34F-4436-9923-D166E954CC65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,8 +58,17 @@ Global
 		{8537BC4B-04A9-42EB-86C4-F33E42719DCD}.Dev|Any CPU.Build.0 = Dev|Any CPU
 		{8537BC4B-04A9-42EB-86C4-F33E42719DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8537BC4B-04A9-42EB-86C4-F33E42719DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36ECE49A-E34F-4436-9923-D166E954CC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36ECE49A-E34F-4436-9923-D166E954CC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36ECE49A-E34F-4436-9923-D166E954CC65}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{36ECE49A-E34F-4436-9923-D166E954CC65}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{36ECE49A-E34F-4436-9923-D166E954CC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36ECE49A-E34F-4436-9923-D166E954CC65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36ECE49A-E34F-4436-9923-D166E954CC65} = {83C2267C-0AB2-44B3-A7FE-03AE8A1E4ED4}
 	EndGlobalSection
 EndGlobal
