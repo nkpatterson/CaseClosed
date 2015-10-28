@@ -29,9 +29,6 @@
     "redisCacheSku": {
       "value": "Basic"
     },
-    "redisCacheCapacity": {
-      "value": 0
-    },
     "storageName": {
       "value": "casecloseddev"
     },
