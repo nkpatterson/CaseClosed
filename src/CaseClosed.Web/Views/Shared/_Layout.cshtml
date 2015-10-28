@@ -32,14 +32,14 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="@Url.Action("Index", "Cases")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cases <span class="caret"></span></a>
+                        <a href="@Url.Action("Index", "Cases")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cases</a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("My Cases", "Index", "Cases")</li>
                             <li>@Html.ActionLink("Establish Case", "Create", "Cases")</li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="@Url.Action("Index", "Operations")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Operations <span class="caret"></span></a>
+                        <a href="@Url.Action("Index", "Operations")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Operations</a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("My Operations", "Index", "Operations")</li>
                             <li>@Html.ActionLink("New Operation", "Create", "Operations")</li>
@@ -48,7 +48,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="@Url.Action("Index", "Subjects")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subjects <span class="caret"></span></a>
+                        <a href="@Url.Action("Index", "Subjects")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subjects</a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("All Subjects", "Index", "Subjects")</li>
                             <li>@Html.ActionLink("New Subject", "Create", "Subjects")</li>
@@ -56,7 +56,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="@Url.Action("Index", "Inventory")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inventory <span class="caret"></span></a>
+                        <a href="@Url.Action("Index", "Inventory")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inventory</a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("My Inventory", "Index", "Inventory")</li>
                             <li>@Html.ActionLink("Submit Inventory", "Create", "Inventory")</li>
@@ -66,7 +66,9 @@
                     </li>
                     <li>@Html.ActionLink("Reports", "Index", "Reports")</li>
                     <li class="dropdown">
-                        <a href="@Url.Action("Index", "Settings")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+                        <a href="@Url.Action("Index", "Settings")" title="Settings" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-cog"></span>
+                        </a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Permissions", "Index", "Permissions", new { area = "settings" }, null)</li>
                             <li>@Html.ActionLink("Users", "Index", "Users", new { area = "settings" }, null)</li>
@@ -78,15 +80,15 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
+                @Html.Partial("_LoginPartial")
+                <form class="navbar-form hidden-sm hidden-xs" role="search">
+                    <div class="input-group input-group-sm col-md-2">
                         <input type="text" class="form-control" placeholder="Search">
                         <span class="input-group-btn">
                             <button class="btn btn-default type="button"><span class="glyphicon glyphicon-search"></span></button>
                         </span>
                     </div>
                 </form>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
