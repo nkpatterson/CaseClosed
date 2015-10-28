@@ -3,28 +3,28 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "hostingPlanName": {
-      "value": "CaseClosedDev2"
+      "value": "CaseClosedDev"
     },
     "webAppName": {
-      "value": "casecloseddev2"
+      "value": "casecloseddev"
     },
     "gatewayName": {
-      "value": "caseclosedapigatewaydev2"
+      "value": "caseclosedapigatewaydev"
     },
     "apiAppName": {
-      "value": "caseclosedapidev2"
+      "value": "caseclosedapidev"
     },
     "apiAppSecret": {
       "value": "CaseClosedApiSecret"
     },
     "databaseAccountName": {
-      "value": "casecloseddev2"
+      "value": "casecloseddev"
     },
     "searchName": {
-      "value": "casecloseddev2"
+      "value": "casecloseddev"
     },
     "redisCacheName": {
-      "value": "casecloseddev2"
+      "value": "casecloseddev"
     },
     "redisCacheSku": {
       "value": "Basic"
@@ -33,7 +33,7 @@
       "value": 0
     },
     "storageName": {
-      "value": "casecloseddev2"
+      "value": "casecloseddev"
     },
     "location": {
       "value": "East US"
