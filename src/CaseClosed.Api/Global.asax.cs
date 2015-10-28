@@ -1,4 +1,5 @@
-﻿using CaseClosed.Api.DependencyResolution;
+﻿using Microsoft.ApplicationInsights.Extensibility;
+using System.Configuration;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -15,6 +16,8 @@ namespace CaseClosed.Api
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            TelemetryConfiguration.Active.InstrumentationKey = ConfigurationManager.AppSettings["ai:InstrumentationKey"];
         }
     }
 }
