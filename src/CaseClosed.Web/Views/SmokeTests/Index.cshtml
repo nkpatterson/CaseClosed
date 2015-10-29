@@ -49,7 +49,16 @@
 }
 else
 {
-    <div class="well">
-        There are no smoke tests in the system. Click the Create Test button above to generate one.
-    </div>
+    if (!Model.IsSuccess)
+    {
+        <div class="well danger">
+            @Model.Message
+        </div>
+    }
+    else
+    {
+        <div class="well">
+            There are no smoke tests in the system. Click the Create Test button above to generate one.
+        </div>
+    }
 }

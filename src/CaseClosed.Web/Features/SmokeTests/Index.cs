@@ -21,21 +21,10 @@ namespace CaseClosed.Web.Features.SmokeTests
         public class Result
         {
             public string CurrentSortBy { get; set; }
+            public bool IsSuccess { get; internal set; }
             public IPagedList<SmokeTest> Items { get; set; }
+            public string Message { get; internal set; }
         }
-
-        //public class InMemoryQueryHandler : IAsyncRequestHandler<Query, Result>
-        //{
-        //    public async Task<Result> Handle(Query message)
-        //    {
-        //        return new Result
-        //        {
-        //            CurrentSortBy = message.SortBy,
-        //            Items = InMemorySmokeTests.Tests.OrderByDescending(x => x.Created)
-        //                                            .ToPagedList(message.PagedNumber.Value, message.PageSize.Value)
-        //        };
-        //    }
-        //}
 
         public class QueryHandler : WebApiCallerBase, IAsyncRequestHandler<Query, Result>
         {
@@ -56,7 +45,8 @@ namespace CaseClosed.Web.Features.SmokeTests
                     var result = new Result
                     {
                         CurrentSortBy = message.SortBy,
-                        Items = items.ToPagedList(message.PagedNumber, message.PageSize)
+                        Items = items.ToPagedList(message.PagedNumber, message.PageSize),
+                        IsSuccess = true
                     };
 
                     return result;
@@ -67,7 +57,9 @@ namespace CaseClosed.Web.Features.SmokeTests
                     return new Result
                     {
                         CurrentSortBy = message.SortBy,
-                        Items = new List<SmokeTest>().ToPagedList(message.PagedNumber, message.PageSize)
+                        Items = new List<SmokeTest>().ToPagedList(message.PagedNumber, message.PageSize),
+                        IsSuccess = false,
+                        Message = $"{response.StatusCode}: {response.ReasonPhrase}"
                     };
                 }
             }

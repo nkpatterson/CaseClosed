@@ -235,7 +235,6 @@
     <Compile Include="DependencyResolution\StructureMapScopeModule.cs" />
     <Compile Include="Features\SmokeTests\Create.cs" />
     <Compile Include="Features\SmokeTests\Index.cs" />
-    <Compile Include="Features\SmokeTests\InMemorySmokeTests.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

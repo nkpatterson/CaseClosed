@@ -2,7 +2,6 @@
 using CaseClosed.Web.Infrastructure;
 using MediatR;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -14,25 +13,6 @@ namespace CaseClosed.Web.Features.SmokeTests
         public class Command : IAsyncRequest<SmokeTest>
         {
             public string CreatedBy { get; set; }
-        }
-
-        public class InMemoryCommandHandler// : IRequestHandler<Command, SmokeTest>
-        {
-            public SmokeTest Handle(Command message)
-            {
-                var test = new SmokeTest
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    Created = DateTime.UtcNow,
-                    CreatedBy = message.CreatedBy,
-                    Success = true,
-                    Messages = new[] { "Works from the web!" }
-                };
-
-                InMemorySmokeTests.Tests.Add(test);
-
-                return test;
-            }
         }
 
         public class CommandHandler : WebApiCallerBase, IAsyncRequestHandler<Command, SmokeTest>
