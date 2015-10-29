@@ -1,13 +1,16 @@
-﻿using MediatR;
+﻿using CaseClosed.Core.Caching;
+using MediatR;
+using StackExchange.Redis;
 using StructureMap.Configuration.DSL;
-using StructureMap.Graph;
+using System;
+using System.Configuration;
 using System.Reflection;
 
 namespace CaseClosed.Core.DependencyResolution
 {
-    public class CommandProcessingRegistry : Registry
+    public class CoreRegistry : Registry
     {
-        public CommandProcessingRegistry(Assembly assemblyToScan)
+        public CoreRegistry(Assembly assemblyToScan)
         {
             Scan(scan =>
             {
@@ -25,6 +28,21 @@ namespace CaseClosed.Core.DependencyResolution
             For<SingleInstanceFactory>().Use<SingleInstanceFactory>(ctx => t => ctx.GetInstance(t));
             For<MultiInstanceFactory>().Use<MultiInstanceFactory>(ctx => t => ctx.GetAllInstances(t));
             For<IMediator>().Use<Mediator>();
+            For<ICache>().Use<RedisCache>();
+            For<IDatabase>().Use(ctx => CacheConnection.GetDatabase(-1, null));
+        }
+
+        private static Lazy<ConnectionMultiplexer> lazyConnection = new Lazy<ConnectionMultiplexer>(() =>
+        {
+            return ConnectionMultiplexer.Connect(ConfigurationManager.AppSettings["cache:ConnectionString"]);
+        });
+
+        public static ConnectionMultiplexer CacheConnection
+        {
+            get
+            {
+                return lazyConnection.Value;
+            }
         }
     }
 }

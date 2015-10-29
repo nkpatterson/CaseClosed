@@ -1,5 +1,4 @@
 ﻿using CaseClosed.Api.Features.SmokeTests;
-using CaseClosed.Model.SmokeTests;
 using MediatR;
 using System.Threading.Tasks;
 using System.Web.Http;

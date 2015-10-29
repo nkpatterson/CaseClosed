@@ -514,13 +514,18 @@
             {
               "Name": "ai:InstrumentationKey",
               "Value": "[reference(concat('Microsoft.Insights/components/', parameters('webAppName'))).instrumentationKey]"
+            },
+            {
+              "Name": "cache:ConnectionString",
+              "Value": "[concat(parameters('redisCacheName'), '.redis.cache.windows.net,abortConnect=false,ssl=true,password=', listKeys(resourceId('Microsoft.Cache/Redis', parameters('redisCacheName')), '2014-04-01-preview').primaryKey)]"
             }
           ]
         }
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
-        "[resourceId('Microsoft.Web/sites', parameters('gatewayName'))]"
+        "[resourceId('Microsoft.Web/sites', parameters('gatewayName'))]",
+        "[resourceId('Microsoft.Cache/Redis', parameters('redisCacheName'))]"
       ]
     },
     {

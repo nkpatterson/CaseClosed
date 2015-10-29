@@ -1,4 +1,5 @@
 ﻿using CaseClosed.Api.Infrastructure.DAL;
+using CaseClosed.Core.Caching;
 using CaseClosed.Model.SmokeTests;
 using MediatR;
 using Microsoft.ApplicationInsights;
@@ -19,10 +20,12 @@ namespace CaseClosed.Api.Features.SmokeTests
         public class DocDbCommandHandler : DocDbHandlerBase, IAsyncRequestHandler<Command, SmokeTest>
         {
             private TelemetryClient _telemetry;
+            private ICache _cache;
 
-            public DocDbCommandHandler(DocDbConfiguration config, TelemetryClient telemetry) : base(config)
+            public DocDbCommandHandler(DocDbConfiguration config, TelemetryClient telemetry, ICache cache) : base(config)
             {
                 _telemetry = telemetry;
+                _cache = cache;
             }
 
             public async Task<SmokeTest> Handle(Command message)
@@ -49,6 +52,8 @@ namespace CaseClosed.Api.Features.SmokeTests
                     await Client.CreateDocumentAsync(collection.SelfLink, test);
 
                     evt.Properties.Add("Success", "True");
+
+                    _cache.Clear(Index.DocDbQueryHandler.CacheKey);
                 }
                 catch (Exception exc)
                 {

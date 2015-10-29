@@ -24,7 +24,6 @@ namespace CaseClosed.Api.DependencyResolution {
     using System.Configuration;
 
     public class DefaultRegistry : Registry {
-        #region Constructors and Destructors
 
         public DefaultRegistry() {
             Scan(
@@ -35,12 +34,10 @@ namespace CaseClosed.Api.DependencyResolution {
                     scan.With(new ControllerConvention());
                 });
 
-            IncludeRegistry(new CommandProcessingRegistry(GetType().Assembly));
+            IncludeRegistry(new CoreRegistry(GetType().Assembly));
 
             For<DocDbConfiguration>().Use<DocDbConfiguration>();
             For<TelemetryClient>().Use(ctx => new TelemetryClient { InstrumentationKey = ConfigurationManager.AppSettings["ai:InstrumentationKey"] });
         }
-
-        #endregion
     }
 }

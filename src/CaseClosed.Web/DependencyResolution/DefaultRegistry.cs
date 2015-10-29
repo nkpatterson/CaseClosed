@@ -32,7 +32,7 @@ namespace CaseClosed.Web.DependencyResolution {
                     scan.With(new ControllerConvention());
                 });
 
-            IncludeRegistry(new CommandProcessingRegistry(GetType().Assembly));
+            IncludeRegistry(new CoreRegistry(GetType().Assembly));
 
             For<WebApiConfiguration>().Use<WebApiConfiguration>();
         }
