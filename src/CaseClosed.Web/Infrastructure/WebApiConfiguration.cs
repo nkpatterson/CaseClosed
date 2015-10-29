@@ -1,4 +1,4 @@
-﻿using System.Configuration;
+﻿using System.Web.Configuration;
 
 namespace CaseClosed.Web.Infrastructure
 {
@@ -6,27 +6,27 @@ namespace CaseClosed.Web.Infrastructure
     {
         public string BaseUrl
         {
-            get { return ConfigurationManager.AppSettings["api:BaseUrl"]; }
+            get { return WebConfigurationManager.AppSettings["api:BaseUrl"]; }
         }
 
         public string ResourceId
         {
-            get { return ConfigurationManager.AppSettings["api:ResourceId"]; }
+            get { return WebConfigurationManager.AppSettings["api:ResourceId"]; }
         }
 
         public string Authority
         {
-            get { return string.Concat(ConfigurationManager.AppSettings["ida:AADInstance"], ConfigurationManager.AppSettings["ida:TenantId"]); }
+            get { return string.Concat(WebConfigurationManager.AppSettings["ida:AADInstance"], WebConfigurationManager.AppSettings["ida:TenantId"]); }
         }
 
         public string WebClientId
         {
-            get { return ConfigurationManager.AppSettings["ida:ClientId"]; }
+            get { return WebConfigurationManager.AppSettings["ida:ClientId"]; }
         }
 
         public string WebClientSecret
         {
-            get { return ConfigurationManager.AppSettings["ida:ClientSecret"]; }
+            get { return WebConfigurationManager.AppSettings["ida:ClientSecret"]; }
         }
     }
 }

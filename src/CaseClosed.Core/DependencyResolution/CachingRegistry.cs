@@ -9,11 +9,17 @@ namespace CaseClosed.Core.DependencyResolution
     {
         private static string CacheConnectionString;
 
-        public CachingRegistry(string cacheConnectionString)
+        public CachingRegistry(string cacheConnectionString, bool isEnabled)
         {
             CacheConnectionString = cacheConnectionString;
-            For<ICache>().Use<RedisCache>();
-            For<IDatabase>().Use(ctx => CacheConnection.GetDatabase(-1, null));
+
+            if (isEnabled)
+            {
+                For<ICache>().Use<RedisCache>();
+                For<IDatabase>().Use(ctx => CacheConnection.GetDatabase(-1, null));
+            }
+            else
+                For<ICache>().Use<DisabledCache>();
         }
 
         private static Lazy<ConnectionMultiplexer> lazyConnection = new Lazy<ConnectionMultiplexer>(() =>

@@ -2,7 +2,7 @@ using System.Web.Http;
 using WebActivatorEx;
 using CaseClosed.Api;
 using Swashbuckle.Application;
-using System.Configuration;
+using System.Web.Configuration;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -220,9 +220,9 @@ namespace CaseClosed.Api
                         // If your API supports the OAuth2 Implicit flow, and you've described it correctly, according to
                         // the Swagger 2.0 specification, you can enable UI support as shown below.
                         //
-                        c.EnableOAuth2Support(ConfigurationManager.AppSettings["ida:ClientID"], 
-                            ConfigurationManager.AppSettings["ida:Password"],
-                            ConfigurationManager.AppSettings["ida:Audience"],
+                        c.EnableOAuth2Support(WebConfigurationManager.AppSettings["ida:ClientID"],
+                            WebConfigurationManager.AppSettings["ida:Password"],
+                            WebConfigurationManager.AppSettings["ida:Audience"],
                             "CaseClosed.Api");
                     });
         }

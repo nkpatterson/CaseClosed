@@ -1,4 +1,4 @@
-﻿using System.Configuration;
+﻿using System.Web.Configuration;
 
 namespace CaseClosed.Api.Infrastructure.DAL
 {
@@ -6,22 +6,22 @@ namespace CaseClosed.Api.Infrastructure.DAL
     {
         public string EndpointUrl
         {
-            get { return ConfigurationManager.AppSettings["docdb:EndpointUrl"]; }
+            get { return WebConfigurationManager.AppSettings["docdb:EndpointUrl"]; }
         }
 
         public string AuthorizationKey
         {
-            get { return ConfigurationManager.AppSettings["docdb:AuthorizationKey"]; }
+            get { return WebConfigurationManager.AppSettings["docdb:AuthorizationKey"]; }
         }
 
         public string DatabaseId
         {
-            get { return ConfigurationManager.AppSettings["docdb:DatabaseId"]; }
+            get { return WebConfigurationManager.AppSettings["docdb:DatabaseId"]; }
         }
 
         public string CollectionId
         {
-            get { return ConfigurationManager.AppSettings["docdb:CollectionId"]; }
+            get { return WebConfigurationManager.AppSettings["docdb:CollectionId"]; }
         }
     }
 }

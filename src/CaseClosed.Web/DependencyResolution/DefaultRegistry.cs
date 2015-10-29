@@ -20,7 +20,7 @@ namespace CaseClosed.Web.DependencyResolution {
     using Core.DependencyResolution;
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
-    using System.Configuration;
+    using System.Web.Configuration;
 
     public class DefaultRegistry : Registry {
         #region Constructors and Destructors
@@ -34,7 +34,7 @@ namespace CaseClosed.Web.DependencyResolution {
                 });
 
             IncludeRegistry(new MediatorRegistry(GetType().Assembly));
-            IncludeRegistry(new TelemetryRegistry(ConfigurationManager.AppSettings["ai:InstrumentationKey"]));
+            IncludeRegistry(new TelemetryRegistry(WebConfigurationManager.AppSettings["ai:InstrumentationKey"]));
 
             For<WebApiConfiguration>().Use<WebApiConfiguration>();
         }

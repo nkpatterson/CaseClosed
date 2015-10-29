@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caching\DisabledCache.cs" />
     <Compile Include="Caching\ICache.cs" />
     <Compile Include="Caching\RedisCache.cs" />
     <Compile Include="DependencyResolution\TelemetryRegistry.cs" />

@@ -44,7 +44,7 @@ namespace CaseClosed.Api.Features.SmokeTests
                     var sql = $"SELECT * FROM t ORDER BY t.{message.SortBy} {message.SortDirection}";
                     var results = Client.CreateDocumentQuery<SmokeTest>(collection.SelfLink, sql).ToList();
 
-                    _cache.Set(cacheKey, results);
+                    _cache.Set(cacheKey, results, TimeSpan.FromMinutes(1));
 
                     return results;
                 }

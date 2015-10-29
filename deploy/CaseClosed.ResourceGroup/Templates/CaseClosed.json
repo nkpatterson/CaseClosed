@@ -518,6 +518,10 @@
             {
               "Name": "cache:ConnectionString",
               "Value": "[concat(parameters('redisCacheName'), '.redis.cache.windows.net,abortConnect=false,ssl=true,password=', listKeys(resourceId('Microsoft.Cache/Redis', parameters('redisCacheName')), '2014-04-01-preview').primaryKey)]"
+            },
+            {
+              "Name": "cache:IsEnabled",
+              "Value": "true"
             }
           ]
         }

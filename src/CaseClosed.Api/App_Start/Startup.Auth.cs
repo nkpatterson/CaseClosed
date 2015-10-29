@@ -1,7 +1,7 @@
-﻿using System.Configuration;
-using Owin;
+﻿using Owin;
 using Microsoft.Owin.Security.ActiveDirectory;
 using System.IdentityModel.Tokens;
+using System.Web.Configuration;
 
 namespace CaseClosed.Api
 {
@@ -19,10 +19,10 @@ namespace CaseClosed.Api
             app.UseWindowsAzureActiveDirectoryBearerAuthentication(
                 new WindowsAzureActiveDirectoryBearerAuthenticationOptions
                 {
-                    Tenant = ConfigurationManager.AppSettings["ida:Tenant"],
+                    Tenant = WebConfigurationManager.AppSettings["ida:Tenant"],
                     TokenValidationParameters = new TokenValidationParameters
                     {
-                        ValidAudience = ConfigurationManager.AppSettings["ida:Audience"]
+                        ValidAudience = WebConfigurationManager.AppSettings["ida:Audience"]
                     },
                 });
 

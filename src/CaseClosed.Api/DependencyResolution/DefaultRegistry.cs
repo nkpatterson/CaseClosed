@@ -20,7 +20,7 @@ namespace CaseClosed.Api.DependencyResolution {
     using Infrastructure.DAL;
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
-    using System.Configuration;
+    using System.Web.Configuration;
 
     public class DefaultRegistry : Registry {
 
@@ -34,8 +34,9 @@ namespace CaseClosed.Api.DependencyResolution {
                 });
 
             IncludeRegistry(new MediatorRegistry(GetType().Assembly));
-            IncludeRegistry(new CachingRegistry(ConfigurationManager.AppSettings["cache:ConnectionString"]));
-            IncludeRegistry(new TelemetryRegistry(ConfigurationManager.AppSettings["ai:InstrumentationKey"]));
+            IncludeRegistry(new CachingRegistry(WebConfigurationManager.AppSettings["cache:ConnectionString"], 
+                bool.Parse(WebConfigurationManager.AppSettings["cache:IsEnabled"])));
+            IncludeRegistry(new TelemetryRegistry(WebConfigurationManager.AppSettings["ai:InstrumentationKey"]));
 
             For<DocDbConfiguration>().Use<DocDbConfiguration>();
         }
