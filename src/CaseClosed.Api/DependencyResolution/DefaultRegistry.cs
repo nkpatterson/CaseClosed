@@ -18,7 +18,6 @@
 namespace CaseClosed.Api.DependencyResolution {
     using Core.DependencyResolution;
     using Infrastructure.DAL;
-    using Microsoft.ApplicationInsights;
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
     using System.Configuration;
@@ -34,10 +33,11 @@ namespace CaseClosed.Api.DependencyResolution {
                     scan.With(new ControllerConvention());
                 });
 
-            IncludeRegistry(new CoreRegistry(GetType().Assembly));
+            IncludeRegistry(new MediatorRegistry(GetType().Assembly));
+            IncludeRegistry(new CachingRegistry(ConfigurationManager.AppSettings["cache:ConnectionString"]));
+            IncludeRegistry(new TelemetryRegistry(ConfigurationManager.AppSettings["ai:InstrumentationKey"]));
 
             For<DocDbConfiguration>().Use<DocDbConfiguration>();
-            For<TelemetryClient>().Use(ctx => new TelemetryClient { InstrumentationKey = ConfigurationManager.AppSettings["ai:InstrumentationKey"] });
         }
     }
 }

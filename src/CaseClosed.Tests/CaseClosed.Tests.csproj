@@ -74,7 +74,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ApiTests\DependencyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +89,12 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApiTests\" />
+    <Folder Include="CoreTests\" />
+    <Folder Include="ModelTests\" />
+    <Folder Include="WebTests\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
