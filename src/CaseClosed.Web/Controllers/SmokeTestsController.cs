@@ -1,5 +1,6 @@
 ﻿using CaseClosed.Web.Features.SmokeTests;
 using CaseClosed.Web.Infrastructure;
+using CaseClosed.Web.Models;
 using MediatR;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -28,6 +29,8 @@ namespace CaseClosed.Web.Controllers
         public async Task<ActionResult> Create(Create.Command command)
         {
             var result = await _mediator.SendAsync(command);
+
+            TempData.Add("Flash", new FlashMessage { Message = "Smoke Test was successful!", MessageType = FlashMessageType.Success });
 
             return RedirectToAction("Index");
         }

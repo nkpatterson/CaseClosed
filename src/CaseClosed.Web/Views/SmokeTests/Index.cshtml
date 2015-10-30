@@ -1,9 +1,19 @@
 ﻿@model CaseClosed.Web.Features.SmokeTests.Index.Result
+@using CaseClosed.Web.Models
 @{
     ViewBag.Title = "Smoke Tests";
 }
 
 <h2>Smoke Tests</h2>
+
+@if (TempData["Flash"] != null)
+{
+    <div class="panel panel-default panel-success">
+        <div class="panel-body">
+            @{ var flash = (FlashMessage)TempData["Flash"]; }
+            @flash.Message
+        </div>
+    </div>}
 
 <div class="">
     @using (Html.BeginForm("Create", "SmokeTests"))
