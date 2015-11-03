@@ -1,0 +1,39 @@
+﻿{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "hostingPlanName": {
+      "value": "caseclosedstage"
+    },
+    "webAppName": {
+      "value": "caseclosedstage"
+    },
+    "gatewayName": {
+      "value": "caseclosedapigatewaystage"
+    },
+    "apiAppName": {
+      "value": "caseclosedapistage"
+    },
+    "apiAppSecret": {
+      "value": "CaseClosedApiSecret"
+    },
+    "databaseAccountName": {
+      "value": "caseclosedstage"
+    },
+    "searchName": {
+      "value": "caseclosedstage"
+    },
+    "redisCacheName": {
+      "value": "caseclosedstage"
+    },
+    "redisCacheSku": {
+      "value": "Basic"
+    },
+    "storageName": {
+      "value": "caseclosedstage"
+    },
+    "location": {
+      "value": "East US"
+    }
+  }
+}

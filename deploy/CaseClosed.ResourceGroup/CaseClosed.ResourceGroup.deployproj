@@ -9,6 +9,10 @@
       <Configuration>Release</Configuration>
       <Platform>AnyCPU</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Stage|AnyCPU">
+      <Configuration>Stage</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>36ece49a-e34f-4436-9923-d166e954cc65</ProjectGuid>
@@ -35,6 +39,7 @@
     <Content Include="Templates\CaseClosed.json" />
     <None Include="Scripts\start-webapp.ps1" />
     <None Include="Scripts\stop-webapp.ps1" />
+    <None Include="Templates\CaseClosed.param.stage.json" />
     <None Include="Templates\CaseClosed.param.dev.json" />
   </ItemGroup>
   <ItemGroup>
