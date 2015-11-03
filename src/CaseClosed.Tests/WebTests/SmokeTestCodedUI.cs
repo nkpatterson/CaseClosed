@@ -1,5 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.Windows.Input;
+using System.Windows.Forms;
+using System.Drawing;
+using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UITest.Extension;
+using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
+
 
 namespace CaseClosed.Tests.WebTests
 {
@@ -14,7 +23,7 @@ namespace CaseClosed.Tests.WebTests
         }
 
         [TestMethod, TestCategory("UI Tests")]
-        public void VerifySmokeTest()
+        public void CodedUITestMethod1()
         {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
             this.UIMap.LogInAndGoToSmokeTests();

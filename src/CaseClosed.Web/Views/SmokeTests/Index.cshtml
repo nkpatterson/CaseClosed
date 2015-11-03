@@ -9,7 +9,7 @@
 @if (TempData["Flash"] != null)
 {
     <div class="panel panel-default panel-success">
-        <div class="panel-body">
+        <div id="flash" class="panel-body">
             @{ var flash = (FlashMessage)TempData["Flash"]; }
             @flash.Message
         </div>
@@ -19,7 +19,7 @@
     @using (Html.BeginForm("Create", "SmokeTests"))
     {
         <input type="hidden" name="Command.CreatedBy" value="nkpatterson" />
-        <button class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span> Create Test</button>
+        <button id="btnCreateTest" class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span> Create Test</button>
     }
 </div>
 <hr />

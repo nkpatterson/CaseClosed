@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="764d07a9-6162-48fc-a673-ca4fe7d4e857" AssemblyVersion="14.0.23107.0" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
+<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="fd23f98f-d698-41c9-a964-a49ad478ebb3" AssemblyVersion="14.0.23107.0" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
   <Configuration>
     <Group Name="IE">
       <Setting Name="Version" Value="9.11.9600.18053" WarningLevel="1" />
@@ -41,55 +41,16 @@
   </Configuration>
   <InitializeActions />
   <ExecuteActions>
-    <NavigateToUrlAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow">
-      <ParameterName />
-      <Url>http://go.microsoft.com/fwlink/p/?LinkId=255141</Url>
-      <NewInstance>true</NewInstance>
-    </NavigateToUrlAction>
-    <MouseAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UIMSNcomHotmailOutlookDocument.UIHeadercommonCustom">
-      <ContinueOnError>True</ContinueOnError>
+    <MouseAction UIObjectName="UIMap.UISmokeTestsMyASPNETApWindow.UISmokeTestsMyASPNETApDocument.UICreateTestButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="1" Y="1" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Hover</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <NavigateToUrlAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow">
-      <ParameterName />
-      <Url>http://casecloseddev.azurewebsites.net/smokeTests</Url>
-      <NewInstance>false</NewInstance>
-    </NavigateToUrlAction>
-    <MouseAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UISignintoCaseClosedWeDocument.UIUseanotheraccountHyperlink">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="153" Y="42" />
+      <Location X="59" Y="14" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UISignintoCaseClosedWeDocument.UIUseraccountEdit">
-      <ParameterName />
-      <Value Encoded="false">nkpatterson@caseclosed.onmicrosoft.com</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <SetValueAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UISignintoCaseClosedWeDocument.UIPasswordEdit">
-      <ParameterName />
-      <Value Encoded="true">ur05Cyd7vjJQuANVwT4FbSKiOv0ptwtr</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UISignintoCaseClosedWeDocument.UISigninPane">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="35" Y="16" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="LogInAndGoToSmokeTests">
+    <TestStepMarkerAction Comment="" MarkerInformation="ClickCreateTestButton">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -98,16 +59,50 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
-    <MouseAction UIObjectName="UIMap.UISmokeTestsMyASPNETApWindow.UISmokeTestsMyASPNETApDocument.UICreateTestButton">
+    <BrowserAction UIObjectName="UIMap.UISmokeTestsMyASPNETApWindow">
+      <ParameterName />
+      <ActionType>Close</ActionType>
+    </BrowserAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="CloseBrowser">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <LaunchApplicationAction UIObjectName="UIMap.UIInPrivateInternetExpWindow">
+      <ParameterName />
+      <FileName>C:\Program Files\Internet Explorer\iexplore.exe</FileName>
+      <AlternateFileName>%ProgramW6432%\Internet Explorer\iexplore.exe</AlternateFileName>
+      <Arguments>-private</Arguments>
+    </LaunchApplicationAction>
+    <NavigateToUrlAction UIObjectName="UIMap.UIInPrivateInternetExpWindow">
+      <ParameterName />
+      <Url>http://casecloseddev.azurewebsites.net/smokeTests</Url>
+      <NewInstance>false</NewInstance>
+    </NavigateToUrlAction>
+    <SetValueAction UIObjectName="UIMap.UIInPrivateInternetExpWindow.UISignintoCaseClosedWeDocument.UIUseraccountEdit">
+      <ParameterName />
+      <Value Encoded="false">nkpatterson@caseclosed.onmicrosoft.com</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIInPrivateInternetExpWindow.UISignintoCaseClosedWeDocument.UIPasswordEdit">
+      <ParameterName />
+      <Value Encoded="true">ur05Cyd7vjJQuANVwT4FbSKiOv0ptwtr</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIInPrivateInternetExpWindow.UISignintoCaseClosedWeDocument.UISigninPane">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="54" Y="14" />
+      <Location X="37" Y="20" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="ClickCreateTestButton">
+    <TestStepMarkerAction Comment="" MarkerInformation="LogInAndGoToSmokeTests">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -133,85 +128,28 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Assertion</MarkerRegionType>
     </TestStepMarkerAction>
-    <BrowserAction UIObjectName="UIMap.UISmokeTestsMyASPNETApWindow">
-      <ParameterName />
-      <ActionType>Close</ActionType>
-    </BrowserAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="CloseBrowser">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
   </ExecuteActions>
   <CleanupActions />
   <OnErrorActions />
   <Maps>
     <UIMap Id="UIMap">
       <TopLevelWindows>
-        <TopLevelWindow ControlType="Window" Id="UIMSNcomHotmailOutlookWindow" FriendlyName="MSN.com - Hotmail, Outlook, Skype, Bing, Latest Ne..." SpecialControlType="BrowserWindow" SessionId="7078932">
+        <TopLevelWindow ControlType="Window" Id="UIInPrivateInternetExpWindow" FriendlyName="InPrivate - Internet Explorer - [InPrivate]" SpecialControlType="BrowserWindow" SessionId="5636572">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
-            <WindowTitle>MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</WindowTitle>
+            <WindowTitle>InPrivate</WindowTitle>
             <WindowTitle>Sign in to CaseClosed.Web.dev</WindowTitle>
           </WindowTitles>
           <SearchConfigurations>
             <SearchConfiguration>VisibleOnly</SearchConfiguration>
           </SearchConfigurations>
           <AndCondition Id="SearchCondition">
-            <PropertyCondition Name="Name">MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</PropertyCondition>
+            <PropertyCondition Name="Name">InPrivate</PropertyCondition>
             <PropertyCondition Name="ClassName">IEFrame</PropertyCondition>
             <PropertyCondition Name="ControlType">Window</PropertyCondition>
           </AndCondition>
           <SupportLevel>0</SupportLevel>
           <Descendants>
-            <UIObject ControlType="Document" Id="UIMSNcomHotmailOutlookDocument" FriendlyName="MSN.com - Hotmail, Outlook, Skype, Bing, Latest Ne..." SpecialControlType="None">
-              <TechnologyName>Web</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</WindowTitle>
-              </WindowTitles>
-              <AndCondition Id="SearchCondition">
-                <AndCondition Id="Primary">
-                  <PropertyCondition Name="ControlType">Document</PropertyCondition>
-                  <PropertyCondition Name="TagName">BODY</PropertyCondition>
-                  <PropertyCondition Name="Id" />
-                  <PropertyCondition Name="RedirectingPage">False</PropertyCondition>
-                  <PropertyCondition Name="FrameDocument">False</PropertyCondition>
-                </AndCondition>
-                <FilterCondition Id="Secondary">
-                  <PropertyCondition Name="Title">MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</PropertyCondition>
-                  <PropertyCondition Name="AbsolutePath">/</PropertyCondition>
-                  <PropertyCondition Name="PageUrl">http://www.msn.com/?ocid=iehp</PropertyCondition>
-                </FilterCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="Custom" Id="UIHeadercommonCustom" FriendlyName="header-common" SpecialControlType="None">
-                  <TechnologyName>Web</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</WindowTitle>
-                  </WindowTitles>
-                  <AndCondition Id="SearchCondition">
-                    <AndCondition Id="Primary">
-                      <PropertyCondition Name="ControlType">Custom</PropertyCondition>
-                      <PropertyCondition Name="TagName">HEADER</PropertyCondition>
-                      <PropertyCondition Name="Id">header-common</PropertyCondition>
-                      <PropertyCondition Name="Name" />
-                    </AndCondition>
-                    <FilterCondition Id="Secondary">
-                      <PropertyCondition Name="Class">no-overlay</PropertyCondition>
-                      <PropertyCondition Name="ControlDefinition">class="no-overlay" id="header-common" ro</PropertyCondition>
-                      <PropertyCondition Name="TagInstance">1</PropertyCondition>
-                    </FilterCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
-              </Descendants>
-            </UIObject>
             <UIObject ControlType="Document" Id="UISignintoCaseClosedWeDocument" FriendlyName="Sign in to CaseClosed.Web.dev" SpecialControlType="None">
               <TechnologyName>Web</TechnologyName>
               <WindowTitles>
@@ -228,38 +166,11 @@
                 <FilterCondition Id="Secondary">
                   <PropertyCondition Name="Title">Sign in to CaseClosed.Web.dev</PropertyCondition>
                   <PropertyCondition Name="AbsolutePath">/3169cc1d-dcd7-4839-9aec-723163760fb6/oauth2/authorize</PropertyCondition>
-                  <PropertyCondition Name="PageUrl">https://login.microsoftonline.com/3169cc1d-dcd7-4839-9aec-723163760fb6/oauth2/authorize?client_id=8da7e59c-da4a-4030-b34e-58ed5095e268&amp;response_mode=form_post&amp;response_type=code+id_token&amp;scope=openid+profile&amp;state=OpenIdConnect.AuthenticationProperties%3duBQsZnvitwetE9MACPKWrTDo_hGh_zGKqyYC8uMJ5KQ_njJTbTEatq_gdWS7aOg4p8pYjHbGjgKNYVMQz1vRu_jxmed_Ng2eq87a0ARMR22KYV89l-XeFRbEbSHO0fOWvvNU1_4juG5aE31WZ-RskHkBBKBoEx2ryfxkm1zcZ1g&amp;nonce=635821100087539720.YTc3ZGU4YzItMmQ0NS00Y2MxLWIwOTMtOTIyODVjZDc3ODI3MTJmZTU1MmYtNTAyZi00MTRkLTgzYjUtZmIxNDI4YjExMjMy</PropertyCondition>
+                  <PropertyCondition Name="PageUrl">https://login.microsoftonline.com/3169cc1d-dcd7-4839-9aec-723163760fb6/oauth2/authorize?client_id=8da7e59c-da4a-4030-b34e-58ed5095e268&amp;response_mode=form_post&amp;response_type=code+id_token&amp;scope=openid+profile&amp;state=OpenIdConnect.AuthenticationProperties%3ddL7d69LrW4_ieQPky3eGtYO-cr-Ja6_cDkiC_1wlhLi6ocD44jCRV_85rho0RTFD-MTpzBwS5wVSxlD6Enp6NWT211buo9xPbEr8sORLO0MUjDItK0Fh9ZzwJFd_MCVMGi0DGnfN-UgAyLMSfcdB9HuIdjo00Xkjswne8AcUhyE&amp;nonce=635821139895550998.ODE5N2E3YjctNjAxMC00ZjdkLWJlOWUtOWIzZTlkOGZmZjZiNjBjMjEwYmEtMzZmMy00ZDdlLTlhZTctN2U1ZGU1N2ViMWRk</PropertyCondition>
                 </FilterCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
               <Descendants>
-                <UIObject ControlType="Hyperlink" Id="UIUseanotheraccountHyperlink" FriendlyName=" Use another account " SpecialControlType="None">
-                  <TechnologyName>Web</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Sign in to CaseClosed.Web.dev</WindowTitle>
-                  </WindowTitles>
-                  <AndCondition Id="SearchCondition">
-                    <AndCondition Id="Primary">
-                      <PropertyCondition Name="ControlType">Hyperlink</PropertyCondition>
-                      <PropertyCondition Name="TagName">A</PropertyCondition>
-                      <PropertyCondition Name="Id">use_another_account_link</PropertyCondition>
-                      <PropertyCondition Name="Name" />
-                      <PropertyCondition Name="Target" />
-                      <PropertyCondition Name="InnerText"> 
-Use another account </PropertyCondition>
-                    </AndCondition>
-                    <FilterCondition Id="Secondary">
-                      <PropertyCondition Name="AbsolutePath" />
-                      <PropertyCondition Name="Title" />
-                      <PropertyCondition Name="Href">#</PropertyCondition>
-                      <PropertyCondition Name="Class">tile_link tooltip</PropertyCondition>
-                      <PropertyCondition Name="ControlDefinition">tabindex="1" class="tile_link tooltip" i</PropertyCondition>
-                      <PropertyCondition Name="TagInstance">4</PropertyCondition>
-                    </FilterCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
                 <UIObject ControlType="Edit" Id="UIUseraccountEdit" FriendlyName="User account" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles>
@@ -335,7 +246,7 @@ Use another account </PropertyCondition>
             </UIObject>
           </Descendants>
         </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UISmokeTestsMyASPNETApWindow" FriendlyName="Smoke Tests - My ASP.NET Application - Internet Ex..." SpecialControlType="BrowserWindow" SessionId="7078932">
+        <TopLevelWindow ControlType="Window" Id="UISmokeTestsMyASPNETApWindow" FriendlyName="Smoke Tests - My ASP.NET Application - Internet Ex..." SpecialControlType="BrowserWindow" SessionId="5636572">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
             <WindowTitle>Smoke Tests - My ASP.NET Application</WindowTitle>
@@ -380,7 +291,7 @@ Use another account </PropertyCondition>
                     <AndCondition Id="Primary">
                       <PropertyCondition Name="ControlType">Button</PropertyCondition>
                       <PropertyCondition Name="TagName">BUTTON</PropertyCondition>
-                      <PropertyCondition Name="Id" />
+                      <PropertyCondition Name="Id">btnCreateTest</PropertyCondition>
                       <PropertyCondition Name="Name" />
                       <PropertyCondition Name="DisplayText"> Create Test</PropertyCondition>
                       <PropertyCondition Name="Type">submit</PropertyCondition>
@@ -404,7 +315,7 @@ Use another account </PropertyCondition>
                     <AndCondition Id="Primary">
                       <PropertyCondition Name="ControlType">Pane</PropertyCondition>
                       <PropertyCondition Name="TagName">DIV</PropertyCondition>
-                      <PropertyCondition Name="Id" />
+                      <PropertyCondition Name="Id">flash</PropertyCondition>
                       <PropertyCondition Name="Name" />
                     </AndCondition>
                     <FilterCondition Id="Secondary">
