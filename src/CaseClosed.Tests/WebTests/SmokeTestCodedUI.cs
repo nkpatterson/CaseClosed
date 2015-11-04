@@ -18,10 +18,6 @@ namespace CaseClosed.Tests.WebTests
     [CodedUITest]
     public class SmokeTestCodedUI
     {
-        public SmokeTestCodedUI()
-        {
-        }
-
         [TestMethod, TestCategory("UI Tests")]
         public void CodedUITestMethod1()
         {
@@ -37,11 +33,11 @@ namespace CaseClosed.Tests.WebTests
         // You can use the following additional attributes as you write your tests:
 
         ////Use TestInitialize to run code before running each test 
-        //[TestInitialize()]
-        //public void MyTestInitialize()
-        //{        
-        //    // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        //}
+        [TestInitialize()]
+        public void MyTestInitialize()
+        {
+            CodedUITestSettings.StartTest();
+        }
 
         ////Use TestCleanup to run code after each test has run
         //[TestCleanup()]

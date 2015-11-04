@@ -41,7 +41,7 @@
   </Configuration>
   <InitializeActions />
   <ExecuteActions>
-    <MouseAction UIObjectName="UIMap.UISmokeTestsMyASPNETApWindow.UISmokeTestsMyASPNETApDocument.UICreateTestButton">
+    <MouseAction UIObjectName="UIMap.UISmokeTestsWindow.UISmokeTestsPage.UICreateTestButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
@@ -59,7 +59,7 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
-    <BrowserAction UIObjectName="UIMap.UISmokeTestsMyASPNETApWindow">
+    <BrowserAction UIObjectName="UIMap.UISmokeTestsWindow">
       <ParameterName />
       <ActionType>Close</ActionType>
     </BrowserAction>
@@ -72,28 +72,28 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
-    <LaunchApplicationAction UIObjectName="UIMap.UIInPrivateInternetExpWindow">
+    <LaunchApplicationAction UIObjectName="UIMap.UIInPrivateWindow">
       <ParameterName />
       <FileName>C:\Program Files\Internet Explorer\iexplore.exe</FileName>
       <AlternateFileName>%ProgramW6432%\Internet Explorer\iexplore.exe</AlternateFileName>
       <Arguments>-private</Arguments>
     </LaunchApplicationAction>
-    <NavigateToUrlAction UIObjectName="UIMap.UIInPrivateInternetExpWindow">
+    <NavigateToUrlAction UIObjectName="UIMap.UIInPrivateWindow">
       <ParameterName />
       <Url>http://casecloseddev.azurewebsites.net/smokeTests</Url>
       <NewInstance>false</NewInstance>
     </NavigateToUrlAction>
-    <SetValueAction UIObjectName="UIMap.UIInPrivateInternetExpWindow.UISignintoCaseClosedWeDocument.UIUseraccountEdit">
+    <SetValueAction UIObjectName="UIMap.UIInPrivateWindow.UISignInPage.UIUseraccountEdit">
       <ParameterName />
       <Value Encoded="false">nkpatterson@caseclosed.onmicrosoft.com</Value>
       <Type>String</Type>
     </SetValueAction>
-    <SetValueAction UIObjectName="UIMap.UIInPrivateInternetExpWindow.UISignintoCaseClosedWeDocument.UIPasswordEdit">
+    <SetValueAction UIObjectName="UIMap.UIInPrivateWindow.UISignInPage.UIPasswordEdit" ThinkTime="1000">
       <ParameterName />
       <Value Encoded="true">ur05Cyd7vjJQuANVwT4FbSKiOv0ptwtr</Value>
       <Type>String</Type>
     </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UIInPrivateInternetExpWindow.UISignintoCaseClosedWeDocument.UISigninPane">
+    <MouseAction UIObjectName="UIMap.UIInPrivateWindow.UISignInPage.UISigninPane">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
@@ -111,7 +111,7 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
-    <AssertAction UIObjectName="UIMap.UISmokeTestsMyASPNETApWindow.UISmokeTestsMyASPNETApDocument.UISmokeTestwassuccessfPane">
+    <AssertAction UIObjectName="UIMap.UISmokeTestsWindow.UISmokeTestsPage.UISmokeTestWasSuccessPanel" ThinkTime="5000">
       <ParameterName />
       <PropertyName>InnerText</PropertyName>
       <ExpectedValue>Smoke Test was successful! </ExpectedValue>
@@ -134,11 +134,10 @@
   <Maps>
     <UIMap Id="UIMap">
       <TopLevelWindows>
-        <TopLevelWindow ControlType="Window" Id="UIInPrivateInternetExpWindow" FriendlyName="InPrivate - Internet Explorer - [InPrivate]" SpecialControlType="BrowserWindow" SessionId="5636572">
+        <TopLevelWindow ControlType="Window" Id="UIInPrivateWindow" FriendlyName="InPrivate - Internet Explorer - [InPrivate]" SpecialControlType="BrowserWindow" SessionId="5636572">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
             <WindowTitle>InPrivate</WindowTitle>
-            <WindowTitle>Sign in to CaseClosed.Web.dev</WindowTitle>
           </WindowTitles>
           <SearchConfigurations>
             <SearchConfiguration>VisibleOnly</SearchConfiguration>
@@ -150,7 +149,7 @@
           </AndCondition>
           <SupportLevel>0</SupportLevel>
           <Descendants>
-            <UIObject ControlType="Document" Id="UISignintoCaseClosedWeDocument" FriendlyName="Sign in to CaseClosed.Web.dev" SpecialControlType="None">
+            <UIObject ControlType="Document" Id="UISignInPage" FriendlyName="Sign in to CaseClosed.Web.dev" SpecialControlType="None">
               <TechnologyName>Web</TechnologyName>
               <WindowTitles>
                 <WindowTitle>Sign in to CaseClosed.Web.dev</WindowTitle>
@@ -246,7 +245,7 @@
             </UIObject>
           </Descendants>
         </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UISmokeTestsMyASPNETApWindow" FriendlyName="Smoke Tests - My ASP.NET Application - Internet Ex..." SpecialControlType="BrowserWindow" SessionId="5636572">
+        <TopLevelWindow ControlType="Window" Id="UISmokeTestsWindow" FriendlyName="Smoke Tests - My ASP.NET Application - Internet Ex..." SpecialControlType="BrowserWindow" SessionId="5636572">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
             <WindowTitle>Smoke Tests - My ASP.NET Application</WindowTitle>
@@ -261,7 +260,7 @@
           </AndCondition>
           <SupportLevel>0</SupportLevel>
           <Descendants>
-            <UIObject ControlType="Document" Id="UISmokeTestsMyASPNETApDocument" FriendlyName="Smoke Tests - My ASP.NET Application" SpecialControlType="None">
+            <UIObject ControlType="Document" Id="UISmokeTestsPage" FriendlyName="Smoke Tests - My ASP.NET Application" SpecialControlType="None">
               <TechnologyName>Web</TechnologyName>
               <WindowTitles>
                 <WindowTitle>Smoke Tests - My ASP.NET Application</WindowTitle>
@@ -292,21 +291,17 @@
                       <PropertyCondition Name="ControlType">Button</PropertyCondition>
                       <PropertyCondition Name="TagName">BUTTON</PropertyCondition>
                       <PropertyCondition Name="Id">btnCreateTest</PropertyCondition>
-                      <PropertyCondition Name="Name" />
-                      <PropertyCondition Name="DisplayText"> Create Test</PropertyCondition>
+                      <PropertyCondition Name="DisplayText" Operator="Contains">Create Test</PropertyCondition>
                       <PropertyCondition Name="Type">submit</PropertyCondition>
                     </AndCondition>
                     <FilterCondition Id="Secondary">
-                      <PropertyCondition Name="Title" />
                       <PropertyCondition Name="Class">btn btn-primary</PropertyCondition>
-                      <PropertyCondition Name="ControlDefinition">class="btn btn-primary"</PropertyCondition>
-                      <PropertyCondition Name="TagInstance">3</PropertyCondition>
                     </FilterCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
                 </UIObject>
-                <UIObject ControlType="Pane" Id="UISmokeTestwassuccessfPane" FriendlyName="Smoke Test was successful!" SpecialControlType="None">
+                <UIObject ControlType="Pane" Id="UISmokeTestWasSuccessPanel" FriendlyName="Smoke Test was successful!" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles>
                     <WindowTitle>Smoke Tests - My ASP.NET Application</WindowTitle>
@@ -316,14 +311,10 @@
                       <PropertyCondition Name="ControlType">Pane</PropertyCondition>
                       <PropertyCondition Name="TagName">DIV</PropertyCondition>
                       <PropertyCondition Name="Id">flash</PropertyCondition>
-                      <PropertyCondition Name="Name" />
                     </AndCondition>
                     <FilterCondition Id="Secondary">
-                      <PropertyCondition Name="InnerText">Smoke Test was successful! </PropertyCondition>
-                      <PropertyCondition Name="Title" />
+                      <PropertyCondition Name="InnerText" Operator="Contains">Smoke Test was successful! </PropertyCondition>
                       <PropertyCondition Name="Class">panel-body</PropertyCondition>
-                      <PropertyCondition Name="ControlDefinition">class="panel-body"</PropertyCondition>
-                      <PropertyCondition Name="TagInstance">8</PropertyCondition>
                     </FilterCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>

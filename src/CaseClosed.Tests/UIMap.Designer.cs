@@ -35,7 +35,7 @@ namespace CaseClosed.Tests
         public void ClickCreateTestButton()
         {
             #region Variable Declarations
-            HtmlButton uICreateTestButton = this.UISmokeTestsMyASPNETApWindow.UISmokeTestsMyASPNETApDocument.UICreateTestButton;
+            HtmlButton uICreateTestButton = this.UISmokeTestsWindow.UISmokeTestsPage.UICreateTestButton;
             #endregion
 
             // Click 'Create Test' button
@@ -48,11 +48,11 @@ namespace CaseClosed.Tests
         public void CloseBrowser()
         {
             #region Variable Declarations
-            BrowserWindow uISmokeTestsMyASPNETApWindow = this.UISmokeTestsMyASPNETApWindow;
+            BrowserWindow uISmokeTestsWindow = this.UISmokeTestsWindow;
             #endregion
 
             // Perform Close on Browser Window
-            uISmokeTestsMyASPNETApWindow.Close();
+            uISmokeTestsWindow.Close();
         }
         
         /// <summary>
@@ -61,22 +61,23 @@ namespace CaseClosed.Tests
         public void LogInAndGoToSmokeTests()
         {
             #region Variable Declarations
-            BrowserWindow uIInPrivateInternetExpWindow1 = this.UIInPrivateInternetExpWindow;
-            HtmlEdit uIUseraccountEdit = this.UIInPrivateInternetExpWindow.UISignintoCaseClosedWeDocument.UIUseraccountEdit;
-            HtmlEdit uIPasswordEdit = this.UIInPrivateInternetExpWindow.UISignintoCaseClosedWeDocument.UIPasswordEdit;
-            HtmlSpan uISigninPane = this.UIInPrivateInternetExpWindow.UISignintoCaseClosedWeDocument.UISigninPane;
+            BrowserWindow uIInPrivateWindow1 = this.UIInPrivateWindow;
+            HtmlEdit uIUseraccountEdit = this.UIInPrivateWindow.UISignInPage.UIUseraccountEdit;
+            HtmlEdit uIPasswordEdit = this.UIInPrivateWindow.UISignInPage.UIPasswordEdit;
+            HtmlSpan uISigninPane = this.UIInPrivateWindow.UISignInPage.UISigninPane;
             #endregion
 
             // Launch '%ProgramW6432%\Internet Explorer\iexplore.exe' with arguments '-private'
-            ApplicationUnderTest uIInPrivateInternetExpWindow = ApplicationUnderTest.Launch(this.LogInAndGoToSmokeTestsParams.UIInPrivateInternetExpWindowExePath, this.LogInAndGoToSmokeTestsParams.UIInPrivateInternetExpWindowAlternateExePath, "-private");
+            ApplicationUnderTest uIInPrivateWindow = ApplicationUnderTest.Launch(this.LogInAndGoToSmokeTestsParams.UIInPrivateWindowExePath, this.LogInAndGoToSmokeTestsParams.UIInPrivateWindowAlternateExePath, "-private");
 
             // Go to web page 'http://casecloseddev.azurewebsites.net/smokeTests'
-            uIInPrivateInternetExpWindow1.NavigateToUrl(new System.Uri(this.LogInAndGoToSmokeTestsParams.UIInPrivateInternetExpWindowUrl));
+            uIInPrivateWindow1.NavigateToUrl(new System.Uri(this.LogInAndGoToSmokeTestsParams.UIInPrivateWindowUrl));
 
             // Type 'nkpatterson@caseclosed.onmicrosoft.com' in 'User account' text box
             uIUseraccountEdit.Text = this.LogInAndGoToSmokeTestsParams.UIUseraccountEditText;
 
-            // Type '********' in 'Password' text box
+            // Wait for 1 seconds for user delay between actions; Type '********' in 'Password' text box
+            Playback.Wait(1000);
             uIPasswordEdit.Password = this.LogInAndGoToSmokeTestsParams.UIPasswordEditPassword;
 
             // Click 'Sign in' pane
@@ -89,11 +90,12 @@ namespace CaseClosed.Tests
         public void VerifySmokeTestWasSuccessful()
         {
             #region Variable Declarations
-            HtmlDiv uISmokeTestwassuccessfPane = this.UISmokeTestsMyASPNETApWindow.UISmokeTestsMyASPNETApDocument.UISmokeTestwassuccessfPane;
+            HtmlDiv uISmokeTestWasSuccessPanel = this.UISmokeTestsWindow.UISmokeTestsPage.UISmokeTestWasSuccessPanel;
             #endregion
 
-            // Verify that the 'InnerText' property of 'Smoke Test was successful!' pane equals 'Smoke Test was successful! '
-            Assert.AreEqual(this.VerifySmokeTestWasSuccessfulExpectedValues.UISmokeTestwassuccessfPaneInnerText, uISmokeTestwassuccessfPane.InnerText);
+            // Wait for 5 seconds for user delay between actions; Verify that the 'InnerText' property of 'Smoke Test was successful!' pane equals 'Smoke Test was successful! '
+            Playback.Wait(5000);
+            Assert.AreEqual(this.VerifySmokeTestWasSuccessfulExpectedValues.UISmokeTestWasSuccessPanelInnerText, uISmokeTestWasSuccessPanel.InnerText);
         }
         
         #region Properties
@@ -121,27 +123,27 @@ namespace CaseClosed.Tests
             }
         }
         
-        public UIInPrivateInternetExpWindow UIInPrivateInternetExpWindow
+        public UIInPrivateWindow UIInPrivateWindow
         {
             get
             {
-                if ((this.mUIInPrivateInternetExpWindow == null))
+                if ((this.mUIInPrivateWindow == null))
                 {
-                    this.mUIInPrivateInternetExpWindow = new UIInPrivateInternetExpWindow();
+                    this.mUIInPrivateWindow = new UIInPrivateWindow();
                 }
-                return this.mUIInPrivateInternetExpWindow;
+                return this.mUIInPrivateWindow;
             }
         }
         
-        public UISmokeTestsMyASPNETApWindow UISmokeTestsMyASPNETApWindow
+        public UISmokeTestsWindow UISmokeTestsWindow
         {
             get
             {
-                if ((this.mUISmokeTestsMyASPNETApWindow == null))
+                if ((this.mUISmokeTestsWindow == null))
                 {
-                    this.mUISmokeTestsMyASPNETApWindow = new UISmokeTestsMyASPNETApWindow();
+                    this.mUISmokeTestsWindow = new UISmokeTestsWindow();
                 }
-                return this.mUISmokeTestsMyASPNETApWindow;
+                return this.mUISmokeTestsWindow;
             }
         }
         #endregion
@@ -151,9 +153,9 @@ namespace CaseClosed.Tests
         
         private VerifySmokeTestWasSuccessfulExpectedValues mVerifySmokeTestWasSuccessfulExpectedValues;
         
-        private UIInPrivateInternetExpWindow mUIInPrivateInternetExpWindow;
+        private UIInPrivateWindow mUIInPrivateWindow;
         
-        private UISmokeTestsMyASPNETApWindow mUISmokeTestsMyASPNETApWindow;
+        private UISmokeTestsWindow mUISmokeTestsWindow;
         #endregion
     }
     
@@ -168,17 +170,17 @@ namespace CaseClosed.Tests
         /// <summary>
         /// Launch '%ProgramW6432%\Internet Explorer\iexplore.exe' with arguments '-private'
         /// </summary>
-        public string UIInPrivateInternetExpWindowExePath = "C:\\Program Files\\Internet Explorer\\iexplore.exe";
+        public string UIInPrivateWindowExePath = "C:\\Program Files\\Internet Explorer\\iexplore.exe";
         
         /// <summary>
         /// Launch '%ProgramW6432%\Internet Explorer\iexplore.exe' with arguments '-private'
         /// </summary>
-        public string UIInPrivateInternetExpWindowAlternateExePath = "%ProgramW6432%\\Internet Explorer\\iexplore.exe";
+        public string UIInPrivateWindowAlternateExePath = "%ProgramW6432%\\Internet Explorer\\iexplore.exe";
         
         /// <summary>
         /// Go to web page 'http://casecloseddev.azurewebsites.net/smokeTests'
         /// </summary>
-        public string UIInPrivateInternetExpWindowUrl = "http://casecloseddev.azurewebsites.net/smokeTests";
+        public string UIInPrivateWindowUrl = "http://casecloseddev.azurewebsites.net/smokeTests";
         
         /// <summary>
         /// Type 'nkpatterson@caseclosed.onmicrosoft.com' in 'User account' text box
@@ -186,7 +188,7 @@ namespace CaseClosed.Tests
         public string UIUseraccountEditText = "nkpatterson@caseclosed.onmicrosoft.com";
         
         /// <summary>
-        /// Type '********' in 'Password' text box
+        /// Wait for 1 seconds for user delay between actions; Type '********' in 'Password' text box
         /// </summary>
         public string UIPasswordEditPassword = "ur05Cyd7vjJQuANVwT4FbSKiOv0ptwtr";
         #endregion
@@ -201,23 +203,22 @@ namespace CaseClosed.Tests
         
         #region Fields
         /// <summary>
-        /// Verify that the 'InnerText' property of 'Smoke Test was successful!' pane equals 'Smoke Test was successful! '
+        /// Wait for 5 seconds for user delay between actions; Verify that the 'InnerText' property of 'Smoke Test was successful!' pane equals 'Smoke Test was successful! '
         /// </summary>
-        public string UISmokeTestwassuccessfPaneInnerText = "Smoke Test was successful! ";
+        public string UISmokeTestWasSuccessPanelInnerText = "Smoke Test was successful! ";
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class UIInPrivateInternetExpWindow : BrowserWindow
+    public class UIInPrivateWindow : BrowserWindow
     {
         
-        public UIInPrivateInternetExpWindow()
+        public UIInPrivateWindow()
         {
             #region Search Criteria
             this.SearchProperties[UITestControl.PropertyNames.Name] = "InPrivate";
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
             this.WindowTitles.Add("InPrivate");
-            this.WindowTitles.Add("Sign in to CaseClosed.Web.dev");
             #endregion
         }
         
@@ -227,29 +228,29 @@ namespace CaseClosed.Tests
         }
         
         #region Properties
-        public UISignintoCaseClosedWeDocument UISignintoCaseClosedWeDocument
+        public UISignInPage UISignInPage
         {
             get
             {
-                if ((this.mUISignintoCaseClosedWeDocument == null))
+                if ((this.mUISignInPage == null))
                 {
-                    this.mUISignintoCaseClosedWeDocument = new UISignintoCaseClosedWeDocument(this);
+                    this.mUISignInPage = new UISignInPage(this);
                 }
-                return this.mUISignintoCaseClosedWeDocument;
+                return this.mUISignInPage;
             }
         }
         #endregion
         
         #region Fields
-        private UISignintoCaseClosedWeDocument mUISignintoCaseClosedWeDocument;
+        private UISignInPage mUISignInPage;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class UISignintoCaseClosedWeDocument : HtmlDocument
+    public class UISignInPage : HtmlDocument
     {
         
-        public UISignintoCaseClosedWeDocument(UITestControl searchLimitContainer) : 
+        public UISignInPage(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
@@ -346,10 +347,10 @@ namespace CaseClosed.Tests
     }
     
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class UISmokeTestsMyASPNETApWindow : BrowserWindow
+    public class UISmokeTestsWindow : BrowserWindow
     {
         
-        public UISmokeTestsMyASPNETApWindow()
+        public UISmokeTestsWindow()
         {
             #region Search Criteria
             this.SearchProperties[UITestControl.PropertyNames.Name] = "Smoke Tests - My ASP.NET Application";
@@ -364,29 +365,29 @@ namespace CaseClosed.Tests
         }
         
         #region Properties
-        public UISmokeTestsMyASPNETApDocument UISmokeTestsMyASPNETApDocument
+        public UISmokeTestsPage UISmokeTestsPage
         {
             get
             {
-                if ((this.mUISmokeTestsMyASPNETApDocument == null))
+                if ((this.mUISmokeTestsPage == null))
                 {
-                    this.mUISmokeTestsMyASPNETApDocument = new UISmokeTestsMyASPNETApDocument(this);
+                    this.mUISmokeTestsPage = new UISmokeTestsPage(this);
                 }
-                return this.mUISmokeTestsMyASPNETApDocument;
+                return this.mUISmokeTestsPage;
             }
         }
         #endregion
         
         #region Fields
-        private UISmokeTestsMyASPNETApDocument mUISmokeTestsMyASPNETApDocument;
+        private UISmokeTestsPage mUISmokeTestsPage;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class UISmokeTestsMyASPNETApDocument : HtmlDocument
+    public class UISmokeTestsPage : HtmlDocument
     {
         
-        public UISmokeTestsMyASPNETApDocument(UITestControl searchLimitContainer) : 
+        public UISmokeTestsPage(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
@@ -410,13 +411,9 @@ namespace CaseClosed.Tests
                     this.mUICreateTestButton = new HtmlButton(this);
                     #region Search Criteria
                     this.mUICreateTestButton.SearchProperties[HtmlButton.PropertyNames.Id] = "btnCreateTest";
-                    this.mUICreateTestButton.SearchProperties[HtmlButton.PropertyNames.Name] = "";
-                    this.mUICreateTestButton.SearchProperties[HtmlButton.PropertyNames.DisplayText] = " Create Test";
+                    this.mUICreateTestButton.SearchProperties.Add(new PropertyExpression(HtmlButton.PropertyNames.DisplayText, "Create Test", PropertyExpressionOperator.Contains));
                     this.mUICreateTestButton.SearchProperties[HtmlButton.PropertyNames.Type] = "submit";
-                    this.mUICreateTestButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
                     this.mUICreateTestButton.FilterProperties[HtmlButton.PropertyNames.Class] = "btn btn-primary";
-                    this.mUICreateTestButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "class=\"btn btn-primary\"";
-                    this.mUICreateTestButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "3";
                     this.mUICreateTestButton.WindowTitles.Add("Smoke Tests - My ASP.NET Application");
                     #endregion
                 }
@@ -424,25 +421,21 @@ namespace CaseClosed.Tests
             }
         }
         
-        public HtmlDiv UISmokeTestwassuccessfPane
+        public HtmlDiv UISmokeTestWasSuccessPanel
         {
             get
             {
-                if ((this.mUISmokeTestwassuccessfPane == null))
+                if ((this.mUISmokeTestWasSuccessPanel == null))
                 {
-                    this.mUISmokeTestwassuccessfPane = new HtmlDiv(this);
+                    this.mUISmokeTestWasSuccessPanel = new HtmlDiv(this);
                     #region Search Criteria
-                    this.mUISmokeTestwassuccessfPane.SearchProperties[HtmlDiv.PropertyNames.Id] = "flash";
-                    this.mUISmokeTestwassuccessfPane.SearchProperties[HtmlDiv.PropertyNames.Name] = "";
-                    this.mUISmokeTestwassuccessfPane.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Smoke Test was successful! ";
-                    this.mUISmokeTestwassuccessfPane.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
-                    this.mUISmokeTestwassuccessfPane.FilterProperties[HtmlDiv.PropertyNames.Class] = "panel-body";
-                    this.mUISmokeTestwassuccessfPane.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "class=\"panel-body\"";
-                    this.mUISmokeTestwassuccessfPane.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "8";
-                    this.mUISmokeTestwassuccessfPane.WindowTitles.Add("Smoke Tests - My ASP.NET Application");
+                    this.mUISmokeTestWasSuccessPanel.SearchProperties[HtmlDiv.PropertyNames.Id] = "flash";
+                    this.mUISmokeTestWasSuccessPanel.FilterProperties.Add(new PropertyExpression(HtmlDiv.PropertyNames.InnerText, "Smoke Test was successful! ", PropertyExpressionOperator.Contains));
+                    this.mUISmokeTestWasSuccessPanel.FilterProperties[HtmlDiv.PropertyNames.Class] = "panel-body";
+                    this.mUISmokeTestWasSuccessPanel.WindowTitles.Add("Smoke Tests - My ASP.NET Application");
                     #endregion
                 }
-                return this.mUISmokeTestwassuccessfPane;
+                return this.mUISmokeTestWasSuccessPanel;
             }
         }
         #endregion
@@ -450,7 +443,7 @@ namespace CaseClosed.Tests
         #region Fields
         private HtmlButton mUICreateTestButton;
         
-        private HtmlDiv mUISmokeTestwassuccessfPane;
+        private HtmlDiv mUISmokeTestWasSuccessPanel;
         #endregion
     }
 }

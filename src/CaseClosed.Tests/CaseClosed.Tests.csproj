@@ -94,6 +94,7 @@
     <Compile Include="UIMap.Designer.cs">
       <DependentUpon>UIMap.uitest</DependentUpon>
     </Compile>
+    <Compile Include="WebTests\CodedUITestSettings.cs" />
     <Compile Include="WebTests\SmokeTestCodedUI.cs" />
   </ItemGroup>
   <ItemGroup>
