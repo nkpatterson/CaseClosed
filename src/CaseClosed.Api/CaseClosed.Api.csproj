@@ -280,10 +280,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\DAL\DocDbClient.cs" />
     <Compile Include="Infrastructure\DAL\DocDbConfiguration.cs" />
     <Compile Include="Infrastructure\DAL\DocDbHandlerBase.cs" />
     <Compile Include="Infrastructure\DAL\DocumentClientHelper.cs" />
     <Compile Include="Infrastructure\DAL\DocumentCollectionSpec.cs" />
+    <Compile Include="Infrastructure\DAL\IDocumentClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
