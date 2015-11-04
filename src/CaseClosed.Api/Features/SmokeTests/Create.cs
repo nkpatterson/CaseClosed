@@ -17,20 +17,21 @@ namespace CaseClosed.Api.Features.SmokeTests
             public string CreatedBy { get; set; }
         }
 
-        public class DocDbCommandHandler : DocDbHandlerBase, IAsyncRequestHandler<Command, SmokeTest>
+        public class CommandHandler : IAsyncRequestHandler<Command, SmokeTest>
         {
-            private TelemetryClient _telemetry;
+            private IDocumentClient _client;
             private ICache _cache;
+            private TelemetryClient _telemetry;
 
-            public DocDbCommandHandler(DocDbConfiguration config, TelemetryClient telemetry, ICache cache) : base(config)
+            public CommandHandler(IDocumentClient client, ICache cache, TelemetryClient telemetry)
             {
-                _telemetry = telemetry;
+                _client = client;
                 _cache = cache;
+                _telemetry = telemetry;
             }
 
             public async Task<SmokeTest> Handle(Command message)
             {
-                var collection = await GetCollection();
                 var test = new SmokeTest
                 {
                     Id = Guid.NewGuid().ToString(),
@@ -49,11 +50,9 @@ namespace CaseClosed.Api.Features.SmokeTests
 
                 try
                 {
-                    await Client.CreateDocumentAsync(collection.SelfLink, test);
+                    await _client.CreateDocumentAsync(test);
 
-                    evt.Properties.Add("Success", "True");
-
-                    _cache.Clear(Index.DocDbQueryHandler.CacheKey);
+                    _cache.Clear(Index.QueryHandler.CacheKey);
                 }
                 catch (Exception exc)
                 {

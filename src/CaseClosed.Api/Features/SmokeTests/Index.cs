@@ -2,7 +2,6 @@
 using CaseClosed.Core.Caching;
 using CaseClosed.Model.SmokeTests;
 using MediatR;
-using Microsoft.Azure.Documents.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,34 +18,33 @@ namespace CaseClosed.Api.Features.SmokeTests
             public int Page { get; set; } = 1;
         }
 
-        public class DocDbQueryHandler : DocDbHandlerBase, IAsyncRequestHandler<Query, List<SmokeTest>>
+        public class QueryHandler : IAsyncRequestHandler<Query, List<SmokeTest>>
         {
             private ICache _cache;
-            public static string CacheKey = typeof(DocDbQueryHandler).FullName;
+            private IDocumentClient _client;
+            public static string CacheKey = typeof(QueryHandler).FullName;
 
-            public DocDbQueryHandler(DocDbConfiguration config, ICache cache) : base(config)
+            public QueryHandler(IDocumentClient client, ICache cache)
             {
+                _client = client;
                 _cache = cache;
             }
 
             public async Task<List<SmokeTest>> Handle(Query message)
             {
-                const string cacheKey = nameof(DocDbQueryHandler);
-                
-                var cachedResult = _cache.Get<List<SmokeTest>>(cacheKey);
+                var cachedResult = _cache.Get<List<SmokeTest>>(CacheKey);
                 if (cachedResult != null)
                     return cachedResult;
-                
-                var collection = await GetCollection();
-                
+
                 try
                 {
                     var sql = $"SELECT * FROM t ORDER BY t.{message.SortBy} {message.SortDirection}";
-                    var results = Client.CreateDocumentQuery<SmokeTest>(collection.SelfLink, sql).ToList();
+                    var results = await _client.CreateDocumentQueryAsync<SmokeTest>(sql);
+                    var resultsList = results.ToList();
 
-                    _cache.Set(cacheKey, results, TimeSpan.FromMinutes(1));
+                    _cache.Set(CacheKey, resultsList, TimeSpan.FromMinutes(1));
 
-                    return results;
+                    return resultsList;
                 }
                 catch (Exception exc)
                 {

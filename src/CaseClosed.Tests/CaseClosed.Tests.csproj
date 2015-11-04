@@ -57,7 +57,15 @@
       <HintPath>..\packages\MediatR.2.0.2\lib\net45\MediatR.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Moq, Version=4.2.1510.2205, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.2.1510.2205\lib\net40\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="StructureMap, Version=3.1.6.186, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.3.1.6.186\lib\net40\StructureMap.dll</HintPath>
       <Private>True</Private>
@@ -87,6 +95,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ApiTests\SmokeTests\IndexQueryHandlerTests.cs" />
+    <Compile Include="ApiTests\SmokeTests\CreateCommandHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIMap.cs">
       <DependentUpon>UIMap.uitest</DependentUpon>
@@ -102,6 +112,10 @@
       <Project>{04780f55-fdb6-436c-92e6-e2881847bfdd}</Project>
       <Name>CaseClosed.Api</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CaseClosed.Core\CaseClosed.Core.csproj">
+      <Project>{7d662307-d4db-48e5-9d6a-d4d45d5ad490}</Project>
+      <Name>CaseClosed.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CaseClosed.Model\CaseClosed.Model.csproj">
       <Project>{86547b50-7935-4dc7-9a23-99b54ade7f60}</Project>
       <Name>CaseClosed.Model</Name>
@@ -109,11 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="UIMap.uitest" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ApiTests\" />
     <Folder Include="CoreTests\" />
     <Folder Include="ModelTests\" />
   </ItemGroup>

@@ -39,6 +39,7 @@ namespace CaseClosed.Api.DependencyResolution {
             IncludeRegistry(new TelemetryRegistry(WebConfigurationManager.AppSettings["ai:InstrumentationKey"]));
 
             For<DocDbConfiguration>().Use<DocDbConfiguration>();
+            For<IDocumentClient>().Use<DocDbClient>();
         }
     }
 }
