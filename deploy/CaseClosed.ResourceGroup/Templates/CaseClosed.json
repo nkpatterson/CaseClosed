@@ -1,5 +1,5 @@
 ﻿{
-  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "webAppName": {
@@ -33,7 +33,7 @@
       "type": "string"
     },
     "hostingPlanSettings": {
-      "type": "Object",
+      "type": "object",
       "defaultValue": {
         "computeMode": "Dedicated",
         "siteMode": "Limited",
@@ -84,20 +84,25 @@
         "Standard_ZRS"
       ]
     },
-    "webAppSettings": {
-      "type": "object",
-      "defaultValue": {
-        "idaClientId": "",
-        "idaClientSecret": ""
-      }
+    "webAppClientId": {
+      "type": "string",
+      "defaultValue": ""
     },
-    "apiAppSettings": {
-      "type": "object",
-      "defaultValue": {
-        "idaAudience": "",
-        "idaClientID": "",
-        "idaClientSecret": ""
-      }
+    "webAppClientSecret": {
+      "type": "string",
+      "defaultValue": ""
+    },
+    "apiAppAudience": {
+      "type": "string",
+      "defaultValue": ""
+    },
+    "apiAppClientId": {
+      "type": "string",
+      "defaultValue": ""
+    },
+    "apiAppClientSecret": {
+      "type": "string",
+      "defaultValue": ""
     }
   },
 
@@ -167,15 +172,15 @@
             },
             {
               "Name": "ida:ClientId",
-              "Value": "[parameters('webAppSettings').idaClientId]"
+              "Value": "[parameters('webAppClientId')]"
             },
             {
               "Name": "ida:ClientSecret",
-              "Value": "[parameters('webAppSettings').idaClientSecret]"
+              "Value": "[parameters('webAppClientSecret')]"
             },
             {
               "Name": "api:ResourceId",
-              "Value": "[parameters('apiAppSettings').idaAudience]"
+              "Value": "[parameters('apiAppAudience')]"
             }
           ]
         }
@@ -556,15 +561,15 @@
             },
             {
               "Name": "ida:Audience",
-              "Value": "[parameters('apiAppSettings').idaAudience]"
+              "Value": "[parameters('apiAppAudience')]"
             },
             {
               "Name": "ida:ClientId",
-              "Value": "[parameters('apiAppSettings').idaClientId]"
+              "Value": "[parameters('apiAppClientId')]"
             },
             {
               "Name": "ida:ClientSecret",
-              "Value": "[parameters('apiAppSettings').idaClientSecret]"
+              "Value": "[parameters('apiAppClientSecret')]"
             }
           ]
         }

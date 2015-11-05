@@ -35,18 +35,20 @@
     "location": {
       "value": "East US"
     },
-    "webAppSettings": {
-      "value": {
-        "idaClientId": "8da7e59c-da4a-4030-b34e-58ed5095e268",
-        "idaClientSecret": "1/9Y02PXuk+I8BpquyLMCxPV9htlQmd3JB5HLuA52n8="
-      }
+    "webAppClientId": {
+      "value": "8da7e59c-da4a-4030-b34e-58ed5095e268"
     },
-    "apiAppSettings": {
-      "value": {
-        "idaAudience": "https://CaseClosed.onmicrosoft.com/CaseClosed.Api.dev",
-        "idaClientID": "a0b85748-9655-4dd5-b5a3-4fb815182548",
-        "idaClientSecret": "ZRU2fnrYb3Fk+IR31O0IFQ1Poxz4G12G/F5mND863Qs="
-      }
+    "webAppClientSecret": {
+      "value": "1/9Y02PXuk+I8BpquyLMCxPV9htlQmd3JB5HLuA52n8="
+    },
+    "apiAppAudience": {
+      "value": "https://CaseClosed.onmicrosoft.com/CaseClosed.Api.dev"
+    },
+    "apiAppClientId": {
+      "value": "a0b85748-9655-4dd5-b5a3-4fb815182548"
+    },
+    "apiAppClientSecret": {
+      "value": "ZRU2fnrYb3Fk+IR31O0IFQ1Poxz4G12G/F5mND863Qs="
     }
   }
 }
