@@ -88,7 +88,7 @@
       "type": "object",
       "defaultValue": {
         "idaClientId": "",
-        "idaClientSecret": "",
+        "idaClientSecret": ""
       }
     },
     "apiAppSettings": {
