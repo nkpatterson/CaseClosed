@@ -221,7 +221,7 @@ namespace CaseClosed.Api
                         // the Swagger 2.0 specification, you can enable UI support as shown below.
                         //
                         c.EnableOAuth2Support(WebConfigurationManager.AppSettings["ida:ClientID"],
-                            WebConfigurationManager.AppSettings["ida:Password"],
+                            WebConfigurationManager.AppSettings["ida:ClientSecret"],
                             WebConfigurationManager.AppSettings["ida:Audience"],
                             "CaseClosed.Api");
                     });

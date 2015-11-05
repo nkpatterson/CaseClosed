@@ -83,6 +83,21 @@
         "Standard_GRS",
         "Standard_ZRS"
       ]
+    },
+    "webAppSettings": {
+      "type": "object",
+      "defaultValue": {
+        "idaClientId": "",
+        "idaClientSecret": "",
+      }
+    },
+    "apiAppSettings": {
+      "type": "object",
+      "defaultValue": {
+        "idaAudience": "",
+        "idaClientID": "",
+        "idaClientSecret": ""
+      }
     }
   },
 
@@ -145,6 +160,22 @@
             {
               "Name": "api:BaseUrl",
               "Value": "[concat('https://', parameters('apiAppName'), '.azurewebsites.net/api/')]"
+            },
+            {
+              "Name": "ida:PostLogoutRedirectUri",
+              "Value": "[concat('http://', parameters('webAppName'), '.azurewebsites.net/')]"
+            },
+            {
+              "Name": "ida:ClientId",
+              "Value": "[parameters('webAppSettings').idaClientId]"
+            },
+            {
+              "Name": "ida:ClientSecret",
+              "Value": "[parameters('webAppSettings').idaClientSecret]"
+            },
+            {
+              "Name": "api:ResourceId",
+              "Value": "[parameters('apiAppSettings').idaAudience]"
             }
           ]
         }
@@ -522,6 +553,18 @@
             {
               "Name": "cache:IsEnabled",
               "Value": "true"
+            },
+            {
+              "Name": "ida:Audience",
+              "Value": "[parameters('apiAppSettings').idaAudience]"
+            },
+            {
+              "Name": "ida:ClientId",
+              "Value": "[parameters('apiAppSettings').idaClientId]"
+            },
+            {
+              "Name": "ida:ClientSecret",
+              "Value": "[parameters('apiAppSettings').idaClientSecret]"
             }
           ]
         }
