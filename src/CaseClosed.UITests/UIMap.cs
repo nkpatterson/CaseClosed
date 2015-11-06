@@ -1,4 +1,4 @@
-﻿namespace CaseClosed.Tests
+﻿namespace CaseClosed.UITests
 {
     using System;
     using System.Collections.Generic;

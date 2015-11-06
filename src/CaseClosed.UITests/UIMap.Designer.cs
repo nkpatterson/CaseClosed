@@ -8,7 +8,7 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace CaseClosed.Tests
+namespace CaseClosed.UITests
 {
     using System;
     using System.CodeDom.Compiler;

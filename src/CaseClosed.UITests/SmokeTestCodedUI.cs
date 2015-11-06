@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UITest.Extension;
 using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 
 
-namespace CaseClosed.Tests.WebTests
+namespace CaseClosed.UITests
 {
     /// <summary>
     /// Summary description for CodedUITest1
@@ -18,7 +18,7 @@ namespace CaseClosed.Tests.WebTests
     [CodedUITest]
     public class SmokeTestCodedUI
     {
-        [TestMethod, TestCategory("UI Tests")]
+        [TestMethod, TestCategory("Smoke Tests")]
         public void CodedUITestMethod1()
         {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
