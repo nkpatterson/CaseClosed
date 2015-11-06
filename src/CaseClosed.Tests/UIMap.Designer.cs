@@ -76,8 +76,7 @@ namespace CaseClosed.Tests
             // Type 'nkpatterson@caseclosed.onmicrosoft.com' in 'User account' text box
             uIUseraccountEdit.Text = this.LogInAndGoToSmokeTestsParams.UIUseraccountEditText;
 
-            // Wait for 1 seconds for user delay between actions; Type '********' in 'Password' text box
-            Playback.Wait(1000);
+            // Type '********' in 'Password' text box
             uIPasswordEdit.Password = this.LogInAndGoToSmokeTestsParams.UIPasswordEditPassword;
 
             // Click 'Sign in' pane
@@ -93,8 +92,7 @@ namespace CaseClosed.Tests
             HtmlDiv uISmokeTestWasSuccessPanel = this.UISmokeTestsWindow.UISmokeTestsPage.UISmokeTestWasSuccessPanel;
             #endregion
 
-            // Wait for 5 seconds for user delay between actions; Verify that the 'InnerText' property of 'Smoke Test was successful!' pane equals 'Smoke Test was successful! '
-            Playback.Wait(5000);
+            // Verify that the 'InnerText' property of 'Smoke Test was successful!' pane equals 'Smoke Test was successful! '
             Assert.AreEqual(this.VerifySmokeTestWasSuccessfulExpectedValues.UISmokeTestWasSuccessPanelInnerText, uISmokeTestWasSuccessPanel.InnerText);
         }
         
@@ -188,7 +186,7 @@ namespace CaseClosed.Tests
         public string UIUseraccountEditText = "nkpatterson@caseclosed.onmicrosoft.com";
         
         /// <summary>
-        /// Wait for 1 seconds for user delay between actions; Type '********' in 'Password' text box
+        /// Type '********' in 'Password' text box
         /// </summary>
         public string UIPasswordEditPassword = "ur05Cyd7vjJQuANVwT4FbSKiOv0ptwtr";
         #endregion
@@ -203,7 +201,7 @@ namespace CaseClosed.Tests
         
         #region Fields
         /// <summary>
-        /// Wait for 5 seconds for user delay between actions; Verify that the 'InnerText' property of 'Smoke Test was successful!' pane equals 'Smoke Test was successful! '
+        /// Verify that the 'InnerText' property of 'Smoke Test was successful!' pane equals 'Smoke Test was successful! '
         /// </summary>
         public string UISmokeTestWasSuccessPanelInnerText = "Smoke Test was successful! ";
         #endregion

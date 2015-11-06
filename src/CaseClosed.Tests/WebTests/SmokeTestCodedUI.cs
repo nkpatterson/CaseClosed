@@ -36,7 +36,7 @@ namespace CaseClosed.Tests.WebTests
         [TestInitialize()]
         public void MyTestInitialize()
         {
-            CodedUITestSettings.StartTest();
+            //CodedUITestSettings.StartTest();
         }
 
         ////Use TestCleanup to run code after each test has run

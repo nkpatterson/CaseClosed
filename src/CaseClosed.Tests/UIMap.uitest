@@ -88,7 +88,7 @@
       <Value Encoded="false">nkpatterson@caseclosed.onmicrosoft.com</Value>
       <Type>String</Type>
     </SetValueAction>
-    <SetValueAction UIObjectName="UIMap.UIInPrivateWindow.UISignInPage.UIPasswordEdit" ThinkTime="1000">
+    <SetValueAction UIObjectName="UIMap.UIInPrivateWindow.UISignInPage.UIPasswordEdit">
       <ParameterName />
       <Value Encoded="true">ur05Cyd7vjJQuANVwT4FbSKiOv0ptwtr</Value>
       <Type>String</Type>
@@ -111,7 +111,7 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
-    <AssertAction UIObjectName="UIMap.UISmokeTestsWindow.UISmokeTestsPage.UISmokeTestWasSuccessPanel" ThinkTime="5000">
+    <AssertAction UIObjectName="UIMap.UISmokeTestsWindow.UISmokeTestsPage.UISmokeTestWasSuccessPanel">
       <ParameterName />
       <PropertyName>InnerText</PropertyName>
       <ExpectedValue>Smoke Test was successful! </ExpectedValue>
