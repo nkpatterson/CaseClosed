@@ -16,16 +16,19 @@ namespace CaseClosed.UITests
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class SmokeTestCodedUI
+    public class CodedUITest1
     {
-        [TestMethod, TestCategory("Smoke Tests")]
+        public CodedUITest1()
+        {
+        }
+
+        [TestMethod]
         public void CodedUITestMethod1()
         {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-            this.UIMap.LogInAndGoToSmokeTests();
-            this.UIMap.ClickCreateTestButton();
-            this.UIMap.VerifySmokeTestWasSuccessful();
-            this.UIMap.CloseBrowser();
+            this.UIMap.LogInAndGoToSmokeTests2();
+            this.UIMap.ClickCreateButton();
+
         }
 
         #region Additional test attributes
@@ -33,11 +36,11 @@ namespace CaseClosed.UITests
         // You can use the following additional attributes as you write your tests:
 
         ////Use TestInitialize to run code before running each test 
-        [TestInitialize()]
-        public void MyTestInitialize()
-        {
-            //CodedUITestSettings.StartTest();
-        }
+        //[TestInitialize()]
+        //public void MyTestInitialize()
+        //{        
+        //    // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
+        //}
 
         ////Use TestCleanup to run code after each test has run
         //[TestCleanup()]
