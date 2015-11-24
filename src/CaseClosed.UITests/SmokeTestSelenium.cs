@@ -15,7 +15,7 @@ namespace CaseClosed.UITests
             {
                 var homepageUrl = "http://casecloseddev.azurewebsites.net/";
                 var username = "nkpatterson@caseclosed.onmicrosoft.com";
-                var password = "Cr0-Magn0n";
+                var password = "P2ssw0rd";
 
                 // Act/Assert
                 new LoginPage(driver, homepageUrl)
@@ -35,7 +35,7 @@ namespace CaseClosed.UITests
             {
                 var homepageUrl = "http://casecloseddev.azurewebsites.net/";
                 var username = "nkpatterson@caseclosed.onmicrosoft.com";
-                var password = "Cr0-Magn0n";
+                var password = "P2ssw0rd";
 
                 new LoginPage(driver, homepageUrl)
                     .LoginAs(username, password)
