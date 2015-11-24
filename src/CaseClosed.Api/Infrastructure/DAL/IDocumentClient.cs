@@ -7,5 +7,6 @@ namespace CaseClosed.Api.Infrastructure.DAL
     {
         Task<IQueryable<T>> CreateDocumentQueryAsync<T>(string sql);
         Task CreateDocumentAsync<T>(T document);
+        Task UpdateDocumentAsync<T>(T document);
     }
 }

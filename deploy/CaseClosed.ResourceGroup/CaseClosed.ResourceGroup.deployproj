@@ -39,6 +39,7 @@
     <Content Include="Templates\CaseClosed.json" />
     <None Include="Scripts\start-webapp.ps1" />
     <None Include="Scripts\stop-webapp.ps1" />
+    <None Include="Scripts\update-appconfig.ps1" />
     <None Include="Templates\CaseClosed.param.stage.json" />
     <None Include="Templates\CaseClosed.param.dev.json" />
   </ItemGroup>

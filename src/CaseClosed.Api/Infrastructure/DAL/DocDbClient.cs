@@ -34,6 +34,12 @@ namespace CaseClosed.Api.Infrastructure.DAL
             await Client.CreateDocumentAsync(collection.SelfLink, document);
         }
 
+        public async Task UpdateDocumentAsync<T>(T document)
+        {
+            var collection = await GetCollection();
+            await Client.UpsertDocumentAsync(collection.SelfLink, document);
+        }
+
         public async Task<Database> GetDatabase()
         {
             if (_database != null)

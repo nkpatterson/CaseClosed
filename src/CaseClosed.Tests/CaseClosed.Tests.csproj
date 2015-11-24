@@ -77,6 +77,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ApiTests\AppConfigTests\IndexQueryHandlerTests.cs" />
+    <Compile Include="ApiTests\AppConfigTests\UpdateCommandHandlerTests.cs" />
     <Compile Include="ApiTests\SmokeTests\IndexQueryHandlerTests.cs" />
     <Compile Include="ApiTests\SmokeTests\CreateCommandHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

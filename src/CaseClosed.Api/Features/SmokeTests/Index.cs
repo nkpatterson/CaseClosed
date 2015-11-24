@@ -22,7 +22,7 @@ namespace CaseClosed.Api.Features.SmokeTests
         {
             private ICache _cache;
             private IDocumentClient _client;
-            public static string CacheKey = typeof(QueryHandler).FullName;
+            public static readonly string CacheKey = typeof(QueryHandler).FullName;
 
             public QueryHandler(IDocumentClient client, ICache cache)
             {

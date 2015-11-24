@@ -265,6 +265,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AppConfigController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SmokeTestsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -275,6 +276,8 @@
     <Compile Include="DependencyResolution\StructureMapScopeModule.cs" />
     <Compile Include="DependencyResolution\StructureMapWebApiDependencyResolver.cs" />
     <Compile Include="DependencyResolution\StructureMapWebApiDependencyScope.cs" />
+    <Compile Include="Features\AppConfig\Index.cs" />
+    <Compile Include="Features\AppConfig\Update.cs" />
     <Compile Include="Features\SmokeTests\Create.cs" />
     <Compile Include="Features\SmokeTests\Index.cs" />
     <Compile Include="Global.asax.cs">
