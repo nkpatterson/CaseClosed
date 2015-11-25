@@ -11,7 +11,9 @@ namespace CaseClosed.Api.Features.AppConfig
     {
         public class Command : IAsyncRequest<AppConfiguration>
         {
-            public AppConfiguration AppConfiguration { get; set; }
+            public string CurrentVersion { get; set; }
+            public string BetaVersion { get; set; }
+            public string BetaUrl { get; set; }
         }
 
         public class CommandHandler : IAsyncRequestHandler<Command, AppConfiguration>
@@ -29,14 +31,14 @@ namespace CaseClosed.Api.Features.AppConfig
             {
                 var sql = "SELECT * FROM ac";
                 var query = await _client.CreateDocumentQueryAsync<AppConfiguration>(sql);
-                var currentConfig = query.FirstOrDefault();
+                var currentConfig = query.ToList().FirstOrDefault();
 
                 if (currentConfig == null)
                     currentConfig = new AppConfiguration();
 
-                currentConfig.CurrentVersion = message.AppConfiguration.CurrentVersion;
-                currentConfig.BetaVersion = message.AppConfiguration.BetaVersion;
-                currentConfig.BetaUrl = message.AppConfiguration.BetaUrl;
+                currentConfig.CurrentVersion = message.CurrentVersion;
+                currentConfig.BetaVersion = message.BetaVersion;
+                currentConfig.BetaUrl = message.BetaUrl;
 
                 await _client.UpdateDocumentAsync(currentConfig);
 

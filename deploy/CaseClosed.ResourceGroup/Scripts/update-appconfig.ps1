@@ -7,7 +7,7 @@ Param(
    [string] $BetaUrl
 )
 
-$url = "http://{$EndpointUrl}/api/AppConfig"
+$url = "https://" + $EndpointUrl + "/api/AppConfig"
 $body = @{
 	CurrentVersion = $CurrentVersion
 	BetaVersion = $BetaVersion

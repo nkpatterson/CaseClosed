@@ -35,7 +35,7 @@ namespace CaseClosed.Api.Features.AppConfig
 
                 var sql = "SELECT * FROM ac";
                 var query = await _client.CreateDocumentQueryAsync<AppConfiguration>(sql);
-                var config = query.FirstOrDefault();
+                var config = query.ToList().FirstOrDefault();
 
                 _cache.Set(CacheKey, config, TimeSpan.FromMinutes(5));
 
