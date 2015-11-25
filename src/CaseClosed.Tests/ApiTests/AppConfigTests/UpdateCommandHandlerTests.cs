@@ -28,7 +28,7 @@ namespace CaseClosed.Tests.ApiTests.AppConfigTests
             client.Setup(c => c.CreateDocumentQueryAsync<AppConfiguration>(It.IsAny<string>())).ReturnsAsync(fakeResult.AsQueryable());
 
             // Act
-            await handler.Handle(new Update.Command { AppConfiguration = newAppConfig });
+            await handler.Handle(new Update.Command { CurrentVersion = newAppConfig.CurrentVersion, BetaVersion = newAppConfig.BetaVersion, BetaUrl = newAppConfig.BetaUrl });
 
             // Assert
             client.Verify(c => c.UpdateDocumentAsync(It.Is<AppConfiguration>(ac => ac.BetaUrl == newAppConfig.BetaUrl && ac.BetaVersion == newAppConfig.BetaVersion)));
@@ -44,7 +44,7 @@ namespace CaseClosed.Tests.ApiTests.AppConfigTests
             var handler = new Update.CommandHandler(client.Object, cache.Object);
 
             // Act
-            await handler.Handle(new Update.Command { AppConfiguration = newAppConfig });
+            await handler.Handle(new Update.Command { CurrentVersion = newAppConfig.CurrentVersion, BetaVersion = newAppConfig.BetaVersion, BetaUrl = newAppConfig.BetaUrl });
 
             // Assert
             client.Verify(c => c.UpdateDocumentAsync(It.Is<AppConfiguration>(ac => ac.CurrentVersion == ac.CurrentVersion)));
@@ -60,7 +60,7 @@ namespace CaseClosed.Tests.ApiTests.AppConfigTests
             var handler = new Update.CommandHandler(client.Object, cache.Object);
 
             // Act
-            await handler.Handle(new Update.Command { AppConfiguration = newAppConfig });
+            await handler.Handle(new Update.Command { CurrentVersion = newAppConfig.CurrentVersion, BetaVersion = newAppConfig.BetaVersion, BetaUrl = newAppConfig.BetaUrl });
 
             // Assert
             cache.Verify(c => c.Clear(Index.QueryHandler.CacheKey));
