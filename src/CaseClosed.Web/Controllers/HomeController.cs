@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace CaseClosed.Web.Controllers
 {
     [Authorize]
-    public class HomeController : Controller
+    public class HomeController : CaseClosedController
     {
         public ActionResult Index()
         {

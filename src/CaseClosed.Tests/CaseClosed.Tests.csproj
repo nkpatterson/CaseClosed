@@ -81,6 +81,7 @@
     <Compile Include="ApiTests\AppConfigTests\UpdateCommandHandlerTests.cs" />
     <Compile Include="ApiTests\SmokeTests\IndexQueryHandlerTests.cs" />
     <Compile Include="ApiTests\SmokeTests\CreateCommandHandlerTests.cs" />
+    <Compile Include="ModelTests\AppConfigurationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CoreTests\" />
-    <Folder Include="ModelTests\" />
     <Folder Include="WebTests\" />
   </ItemGroup>
   <Choose>
