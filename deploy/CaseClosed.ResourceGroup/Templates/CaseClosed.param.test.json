@@ -1,0 +1,54 @@
+﻿{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "hostingPlanName": {
+      "value": "caseclosedtest"
+    },
+    "webAppName": {
+      "value": "caseclosedtest"
+    },
+    "gatewayName": {
+      "value": "caseclosedapigatewaytest"
+    },
+    "apiAppName": {
+      "value": "caseclosedapitest"
+    },
+    "apiAppSecret": {
+      "value": "CaseClosedApiSecret"
+    },
+    "databaseAccountName": {
+      "value": "caseclosedtest"
+    },
+    "searchName": {
+      "value": "caseclosedtest"
+    },
+    "redisCacheName": {
+      "value": "caseclosedtest"
+    },
+    "redisCacheSku": {
+      "value": "Basic"
+    },
+    "storageName": {
+      "value": "caseclosedtest"
+    },
+    "location": {
+      "value": "East US"
+    },
+    "webAppClientId": {
+      "value": "95c5618f-25ae-4707-861f-4b39243e54b1"
+    },
+    "webAppClientSecret": {
+      "value": "XRFRJFZ5KlV13NjJSSACTDbX5dkPyrDusN5EKDElExE="
+    },
+    "apiAppAudience": {
+      "value": "https://CaseClosed.onmicrosoft.com/CaseClosed.Api.test"
+    },
+    "apiAppClientId": {
+      "value": "9a7c138d-f53b-4eb3-bc42-d151874462a6"
+    },
+    "apiAppClientSecret": {
+      "value": "D0DHhAjb6m7x0YmFNGWhOu4UiNfDFEmbexpyAjMHxqg="
+    }
+  }
+}

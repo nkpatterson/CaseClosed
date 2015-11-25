@@ -3,52 +3,52 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "hostingPlanName": {
-      "value": "caseclosedstage"
+      "value": "caseclosed"
     },
     "webAppName": {
-      "value": "caseclosedstage"
+      "value": "caseclosed"
     },
     "gatewayName": {
-      "value": "caseclosedapigatewaystage"
+      "value": "caseclosedapigateway"
     },
     "apiAppName": {
-      "value": "caseclosedapistage"
+      "value": "caseclosedapi"
     },
     "apiAppSecret": {
       "value": "CaseClosedApiSecret"
     },
     "databaseAccountName": {
-      "value": "caseclosedstage"
+      "value": "caseclosed"
     },
     "searchName": {
-      "value": "caseclosedstage"
+      "value": "caseclosed"
     },
     "redisCacheName": {
-      "value": "caseclosedstage"
+      "value": "caseclosed"
     },
     "redisCacheSku": {
       "value": "Basic"
     },
     "storageName": {
-      "value": "caseclosedstage"
+      "value": "caseclosed"
     },
     "location": {
       "value": "East US"
     },
     "webAppClientId": {
-      "value": "95c5618f-25ae-4707-861f-4b39243e54b1"
+      "value": "ea23d101-d36a-46d6-9f05-25bf7852c03e"
     },
     "webAppClientSecret": {
-      "value": "XRFRJFZ5KlV13NjJSSACTDbX5dkPyrDusN5EKDElExE="
+      "value": "wT+T1Y3XklnUvrl8u5hVOLQLEXQPwLlswQNzEMOXY6U="
     },
     "apiAppAudience": {
-      "value": "https://CaseClosed.onmicrosoft.com/CaseClosed.Api.stage"
+      "value": "https://CaseClosed.onmicrosoft.com/CaseClosed.Api.prod"
     },
     "apiAppClientId": {
-      "value": "9a7c138d-f53b-4eb3-bc42-d151874462a6"
+      "value": "64fbfa42-1220-4f5b-bb24-84f9342d1afa"
     },
     "apiAppClientSecret": {
-      "value": "D0DHhAjb6m7x0YmFNGWhOu4UiNfDFEmbexpyAjMHxqg="
+      "value": "ImoATF/dazW5KZbrRX8X2gAmUCVAOhCuW3yBOxpgjXs="
     }
   }
 }
