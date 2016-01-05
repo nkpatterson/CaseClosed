@@ -1,50 +1,73 @@
 ﻿using CaseClosed.UITests.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.IE;
 
 namespace CaseClosed.UITests
 {
     [TestClass]
+    [DeploymentItem("IEDriverServer.exe"), DeploymentItem("chromedriver.exe")]
     public class SmokeTestSelenium
     {
+        private static IWebDriver Driver;
+        private static string _homepageUrl;
+        private static string _username;
+        private static string _password;
+        private static string _browser;
+
+        [ClassInitialize]
+        public static void Startup(TestContext context)
+        {
+            _homepageUrl = context.Properties["homepageUrl"]?.ToString() ?? "http://casecloseddev.azurewebsites.net/";
+            _username = context.Properties["username"]?.ToString() ?? "nkpatterson@caseclosed.onmicrosoft.com";
+            _password = context.Properties["password"]?.ToString() ?? "P2ssw0rd";
+            _browser = context.Properties["browser"]?.ToString() ?? "IE";
+        }
+
+        [TestInitialize]
+        public void Initialize()
+        {
+            if (_browser == "Chrome")
+            {
+                Driver = new ChromeDriver();
+            }
+            else
+            {
+                Driver = new InternetExplorerDriver(new InternetExplorerOptions
+                {
+                    EnsureCleanSession = true
+                });
+            }
+        }
+
+        [TestCleanup]
+        public void Cleanup()
+        {
+            Driver.Quit();
+        }
+
         [TestMethod, TestCategory("Smoke Tests")]
         public void CanViewSmokeTests()
         {
-            // Arrange
-            using (var driver = new ChromeDriver())
-            {
-                var homepageUrl = "http://casecloseddev.azurewebsites.net/";
-                var username = "nkpatterson@caseclosed.onmicrosoft.com";
-                var password = "P2ssw0rd";
-
-                // Act/Assert
-                new LoginPage(driver, homepageUrl)
-                    .LoginAs(username, password)
-                    .ClickSettings()
-                    .ClickSmokeTests()
-                    .VerifySmokeTestsReached();
-
-                driver.Quit();
-            }
+            // Act/Assert
+            new LoginPage(Driver, _homepageUrl)
+                .LoginAs(_username, _password)
+                .ClickSettings()
+                .ClickSmokeTests()
+                .VerifySmokeTestsReached();
         }
 
         [TestMethod, TestCategory("Smoke Tests")]
         public void CanCreateSmokeTest()
         {
-            using (var driver = new ChromeDriver())
-            {
-                var homepageUrl = "http://casecloseddev.azurewebsites.net/";
-                var username = "nkpatterson@caseclosed.onmicrosoft.com";
-                var password = "P2ssw0rd";
-
-                new LoginPage(driver, homepageUrl)
-                    .LoginAs(username, password)
-                    .ClickSettings()
-                    .ClickSmokeTests()
-                    .VerifySmokeTestsReached()
-                    .ClickCreateTestButton()
-                    .VerifySmokeTestWasSuccessful();
-            }
+            new LoginPage(Driver, _homepageUrl)
+                .LoginAs(_username, _password)
+                .ClickSettings()
+                .ClickSmokeTests()
+                .VerifySmokeTestsReached()
+                .ClickCreateTestButton()
+                .VerifySmokeTestWasSuccessful();
         }
     }
 }

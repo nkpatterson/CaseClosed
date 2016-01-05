@@ -20,11 +20,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseClosed.UITests", "CaseClosed.UITests\CaseClosed.UITests.csproj", "{B2366DC5-F82B-45E6-A444-0F2E333B1DC1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{940F4A79-E426-4A39-AADD-2DA7B7EB2B7B}"
-	ProjectSection(SolutionItems) = preProject
-		LoadTests.testsettings = LoadTests.testsettings
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{841209A0-4819-472A-9B57-F052535A1019}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
