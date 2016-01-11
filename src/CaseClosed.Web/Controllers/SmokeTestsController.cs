@@ -1,27 +1,40 @@
-﻿using CaseClosed.Web.Features.SmokeTests;
-using CaseClosed.Web.Infrastructure;
+﻿using Abp.Web.Mvc.Authorization;
+using CaseClosed.Authorization;
+using CaseClosed.SmokeTests;
+using CaseClosed.SmokeTests.Dto;
+using CaseClosed.Web.Models.SmokeTests;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace CaseClosed.Web.Controllers
 {
-    [Authorize, AcquireToken]
-    public class SmokeTestsController : CaseClosedController
+    [AbpMvcAuthorize(PermissionNames.SmokeTests)]
+    public class SmokeTestsController : CaseClosedControllerBase
     {
-        // GET: SmokeTests
-        public async Task<ActionResult> Index(Index.Query query)
-        {
-            var result = await Mediator.SendAsync(query);
+        private readonly ISmokeTestAppService _smokeTestAppService;
 
-            return View(result);
+        public SmokeTestsController(ISmokeTestAppService smokeTestAppService)
+        {
+            _smokeTestAppService = smokeTestAppService;
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Create(Create.Command command)
+        public async Task<ActionResult> Index()
         {
-            var result = await Mediator.SendAsync(command);
+            var output = await _smokeTestAppService.GetAll();
+            var canCreate = await PermissionChecker.IsGrantedAsync(PermissionNames.SmokeTests_Create);
+            var model = new IndexViewModel
+            {
+                CanCreateSmokeTest = canCreate,
+                Items = output
+            };
 
-            Flash("Smoke Test was successful!");
+            return View(model);
+        }
+
+        [AbpMvcAuthorize(PermissionNames.SmokeTests_Create)]
+        public async Task<ActionResult> Create()
+        {
+            var output = await _smokeTestAppService.Create(new CreateSmokeTestInput());
 
             return RedirectToAction("Index");
         }

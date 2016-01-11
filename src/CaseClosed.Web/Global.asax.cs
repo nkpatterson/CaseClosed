@@ -1,17 +1,16 @@
-﻿using System.Web.Mvc;
-using System.Web.Optimization;
-using System.Web.Routing;
+﻿using System;
+using Abp.Dependency;
+using Abp.Web;
+using Castle.Facilities.Logging;
 
 namespace CaseClosed.Web
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : AbpWebApplication
     {
-        protected void Application_Start()
+        protected override void Application_Start(object sender, EventArgs e)
         {
-            AreaRegistration.RegisterAllAreas();
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            IocManager.Instance.IocContainer.AddFacility<LoggingFacility>(f => f.UseLog4Net().WithConfig("log4net.config"));
+            base.Application_Start(sender, e);
         }
     }
 }

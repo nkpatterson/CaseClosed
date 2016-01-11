@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <text name="HomePage" value="Home page" />
+    <text name="About" value="About" />
+    <text name="WellcomeMessage" value="Welcome to CaseClosed!" />
+    
+    <text name="FormIsNotValidMessage" value="Form is not valid. Please check and fix errors." />
+    <text name="TenantNameCanNotBeEmpty" value="Tenant name can not be empty" />
+
+    <text name="InvalidUserNameOrPassword" value="Invalid user name or password" />
+    <text name="ThereIsNoTenantDefinedWithName{0}" value="There is no tenant defined with name {0}" />
+    <text name="TenantIsNotActive" value="Tenant {0} is not active." />
+    <text name="UserIsNotActiveAndCanNotLogin" value="User {0} is not active and can not log in." />
+    <text name="PleaseEnterLoginInformation" value="Please enter login information" />
+    <text name="TenancyName" value="Tenancy name" />
+    <text name="UserNameOrEmail" value="User name or email" />
+    <text name="Password" value="Password" />
+    <text name="RememberMe" value="Remember me" />
+    <text name="LogIn" value="Log in" />
+
+    <text name="LoginFailed" value="Login failed!" />
+
+    <text name="NameSurname" value="Name surname" />
+    <text name="UserName" value="User name" />
+    <text name="Name" value="Name" />
+    <text name="Surname" value="Surname" />
+    <text name="EmailAddress" value="Email address" />
+
+    <text name="Tenants" value="Tenants" />
+    <text name="SavedSuccessfully" value="Saved successfully" />
+    <text name="CreateNewTenant" value="Create new tenant" />
+    <text name="AdminEmailAddress" value="Admin email address" />
+    <text name="Save" value="Save" />
+    <text name="Cancel" value="Cancel" />
+    <text name="TenantName_Regex_Description" value="Tenant name must be at least 2 chars, starts with a letter and continue with letter, number, dash or underscore." />
+    <text name="DefaultPasswordIs" value="Default password is {0}" />
+    <text name="CanBeEmptyToLoginAsHost" value="Can be empty to login as host." />
+    <text name="Register" value="Register" />
+    <text name="OrLoginWith" value="Or login with" />
+    <text name="WaitingForActivationMessage" value="Your account is waiting to be activated by system admin." />
+    <text name="TenantSelection" value="Tenant Selection" />
+    <text name="TenantSelection_Detail" value="Please select one of the following tenants." />
+    <text name="Logout" value="Logout" />
+
+    <text name="Cases" value="Cases" />
+    <text name="MyCases" value="My Cases" />
+    <text name="EstablishCase" value="Establish Case" />
+    <text name="Operations" value="Operations" />
+    <text name="MyOperations" value="My Operations" />
+    <text name="NewOperation" value="New Operation" />
+    <text name="DeConfliction" value="De-Confliction" />
+    <text name="CommandCenter" value="Command Center" />
+    <text name="Subjects" value="Subjects" />
+    <text name="AllSubjects" value="All Subjects" />
+    <text name="NewSubject" value="New Subject" />
+    <text name="Inventory" value="Inventory" />
+    <text name="MyInventory" value="My Inventory" />
+    <text name="SubmitInventory" value="Submit Inventory" />
+    <text name="Seizures" value="Seizures" />
+    <text name="Assets" value="Assets" />
+    <text name="Reports" value="Reports" />
+    <text name="Settings" value="Settings" />
+    <text name="Permissions" value="Permissions" />
+    <text name="Users" value="Users" />
+    <text name="ReferenceData" value="Reference Data" />
+    <text name="OrganizationData" value="Organization Data" />
+    <text name="FormTemplates" value="Form Templates" />
+    <text name="Workflows" value="Workflows" />
+    <text name="SmokeTests" value="Smoke Tests" />
+
+    <text name="CreateSmokeTest" value="Create Smoke Test" />
+
+
+
+  </texts>
+</localizationDictionary>

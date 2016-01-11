@@ -1,114 +1,58 @@
-﻿<!DOCTYPE html>
-<html ng-app="caseclosed">
+﻿@using System.Threading
+@using System.Web.Optimization
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+    <title>CaseClosed</title>
+
+    @Styles.Render("~/Bundles/vendor/css")
+    @Styles.Render("~/Bundles/css")
+
+    <!-- View specific styles -->
+    @RenderSection("styles", required: false)
 
     <script type="text/javascript">
-        var appInsights = window.appInsights || function (config) {
-            function s(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u; for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop()); return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) { var s = u && u(config, r, f, e, o); return s !== !0 && t["_" + i](config, r, f, e, o), s }), t
-        }({
-            instrumentationKey: "@(System.Web.Configuration.WebConfigurationManager.AppSettings["ai:InstrumentationKey"])"
-        });
-        
-        window.appInsights=appInsights;
-        appInsights.trackPageView();
+        //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
     </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="@Url.Content("~/Scripts/others/html5shiv.js")"></script>
+        <script src="@Url.Content("~/Scripts/others/respond.min.js")"></script>
+    <![endif]-->
+
+    @Scripts.Render("~/Bundles/vendor/js/top")
+
 </head>
-<body ng-controller="layoutController">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href='@Url.Action("Index", "Home", new { area = "" })' class="navbar-brand">CaseClosed</a>
-                <a id="betaLink" ng-show="config.IsBetaAvailable" href="{{config.BetaUrl}}" class="beta ng-hide">Try New Beta!</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="@Url.Action("Index", "Cases")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cases</a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("My Cases", "Index", "Cases")</li>
-                            <li>@Html.ActionLink("Establish Case", "Create", "Cases")</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="@Url.Action("Index", "Operations")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Operations</a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("My Operations", "Index", "Operations")</li>
-                            <li>@Html.ActionLink("New Operation", "Create", "Operations")</li>
-                            <li>@Html.ActionLink("De-Confliction", "Deconflict", "Operations")</li>
-                            <li>@Html.ActionLink("Command Center", "CommandCenter", "Operations")</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="@Url.Action("Index", "Subjects")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subjects</a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("All Subjects", "Index", "Subjects")</li>
-                            <li>@Html.ActionLink("New Subject", "Create", "Subjects")</li>
-                            <li>@Html.ActionLink("De-Confliction", "Deconflict", "Subjects")</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="@Url.Action("Index", "Inventory")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inventory</a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("My Inventory", "Index", "Inventory")</li>
-                            <li>@Html.ActionLink("Submit Inventory", "Create", "Inventory")</li>
-                            <li>@Html.ActionLink("Seizures", "Seizures", "Inventory")</li>
-                            <li>@Html.ActionLink("Assets", "Assets", "Assets")</li>
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("Reports", "Index", "Reports")</li>
-                    <li class="dropdown">
-                        <a href="@Url.Action("Index", "Settings")" id="settings-dropdown" title="Settings" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="glyphicon glyphicon-cog"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Permissions", "Index", "Permissions", new { area = "settings" }, null)</li>
-                            <li>@Html.ActionLink("Users", "Index", "Users", new { area = "settings" }, null)</li>
-                            <li>@Html.ActionLink("Reference Data", "Index", "ReferenceData", new { area = "settings" }, null)</li>
-                            <li>@Html.ActionLink("Organization Data", "Index", "OrganizationData", new { area = "settings" }, null)</li>
-                            <li>@Html.ActionLink("Form Templates", "Index", "FormTemplates", new { area = "settings" }, null)</li>
-                            <li>@Html.ActionLink("Workflows", "Index", "Workflows", new { area = "settings" }, null)</li>
-                            <li>@Html.ActionLink("Smoke Tests", "Index", "SmokeTests")</li>
-                        </ul>
-                    </li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-                <form class="navbar-form hidden-sm hidden-xs" role="search">
-                    <div class="input-group input-group-sm col-md-2">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default type="button"><span class="glyphicon glyphicon-search"></span></button>
-                        </span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+<body>
+    @Html.Partial("_TopBar")
+
+    <div class="container">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>
-                CaseClosed {{config.CurrentVersion}}
-            </p>
-        </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/angularjs")
+    @Scripts.Render("~/Bundles/vendor/js/bottom")
+    @Scripts.Render("~/Bundles/js")
 
-    <script src="~/Scripts/app/app.js" type="text/javascript"></script>
+    <script>
+        //Localizing momentjs
+        moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
+    </script>
 
+    <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
+    <script src="~/api/AbpServiceProxies/GetAll"></script>
+    <script src="~/AbpScripts/GetScripts" type="text/javascript"></script>
+
+    <!-- View specific scripts -->
     @RenderSection("scripts", required: false)
 </body>
 </html>

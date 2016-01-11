@@ -1,74 +1,37 @@
-﻿@model CaseClosed.Web.Features.SmokeTests.Index.Result
-@using CaseClosed.Web.Models
+﻿@model CaseClosed.Web.Models.SmokeTests.IndexViewModel
+
 @{
     ViewBag.Title = "Smoke Tests";
+    ViewBag.ActiveMenu = "Settings";
 }
 
-<h2>Smoke Tests</h2>
+<h2>@ViewBag.Title</h2>
 
-@if (TempData["Flash"] != null)
-{
-    <div class="panel panel-default panel-success">
-        <div id="flash" class="panel-body">
-            @{ var flash = (FlashMessage)TempData["Flash"]; }
-            @flash.Message
-        </div>
-    </div>}
-
-<div class="">
-    @using (Html.BeginForm("Create", "SmokeTests"))
+<p>
+    @if (Model.CanCreateSmokeTest)
     {
-        <input type="hidden" name="Command.CreatedBy" value="nkpatterson" />
-        <button id="btnCreateTest" class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span> Create Test</button>
+        <a href="@Url.Action("Create", "SmokeTests")" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> @L("CreateSmokeTest")</a>
     }
-</div>
-<hr />
-@if (Model.Items.Any())
-{
-    <table class="table">
-        <thead>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Created</th>
+            <th>Creator</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items.Items)
+        {
             <tr>
-                <th>Id</th>
-                <th>Created</th>
-                <th>Created By</th>
-                <th>Success</th>
-                <th>Messages</th>
+                <td>@item.Id</td>
+                <td>@item.CreationTime</td>
+                <td>@item.Creator</td>
+                <td>@item.Message</td>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.Items)
-            {
-                <tr class="@(item.Success == false ? "danger" : "")">
-                    <td>@item.Id</td>
-                    <td>@item.Created</td>
-                    <td>@item.CreatedBy</td>
-                    <td>@item.Success</td>
-                    <td>
-                        @if (item.Messages != null)
-                        {
-                            foreach (var msg in item.Messages)
-                            {
-                                <span>@msg</span>
-                            }
-                        }
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-else
-{
-    if (!Model.IsSuccess)
-    {
-        <div class="well danger">
-            @Model.Message
-        </div>
-    }
-    else
-    {
-        <div class="well">
-            There are no smoke tests in the system. Click the Create Test button above to generate one.
-        </div>
-    }
-}
+        }
+    </tbody>
+</table>
