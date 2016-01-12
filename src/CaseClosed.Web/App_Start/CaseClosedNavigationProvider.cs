@@ -136,20 +136,6 @@ namespace CaseClosed.Web
                         url: "/SmokeTests",
                         requiredPermissionName: PermissionNames.SmokeTests))
                 );
-
-                //.AddItem(
-                //    new MenuItemDefinition(
-                //        "Tenants",
-                //        L("Tenants"),
-                //        url: "/Tenants",
-                //        icon: "fa fa-globe",
-                //        requiredPermissionName: PermissionNames.Pages_Tenants))
-                //.AddItem(
-                //    new MenuItemDefinition(
-                //        "About",
-                //        L("About"),
-                //        url: "/About",
-                //        icon: "fa fa-info"));
         }
 
         private static ILocalizableString L(string name)

@@ -6,6 +6,7 @@ using Abp.Zero;
 using Abp.Zero.Configuration;
 using CaseClosed.Authorization;
 using CaseClosed.Authorization.Roles;
+using CaseClosed.Features;
 
 namespace CaseClosed
 {
@@ -31,6 +32,7 @@ namespace CaseClosed
             AppRoleConfig.Configure(Configuration.Modules.Zero().RoleManagement);
 
             Configuration.Authorization.Providers.Add<CaseClosedAuthorizationProvider>();
+            Configuration.Features.Providers.Add<AppFeatureProvider>();
         }
 
         public override void Initialize()

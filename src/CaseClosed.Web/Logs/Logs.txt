@@ -1,824 +1,209 @@
-DEBUG 2016-01-07 21:41:37,882 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-07 21:41:40,013 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-07 21:41:40,013 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-07 21:41:40,028 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-07 21:41:40,059 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-07 21:41:40,059 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-07 21:41:40,059 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-07 21:41:40,059 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-07 21:41:43,075 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-07 21:41:43,091 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-07 21:41:43,091 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-07 21:41:43,091 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-07 21:41:43,091 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-07 21:41:44,575 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 4 classes defines auto mapping attributes
-DEBUG 2016-01-07 21:41:44,575 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-07 21:41:44,778 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-07 21:41:44,778 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-07 21:41:44,778 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-07 21:41:44,841 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-07 21:41:44,841 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-07 21:41:44,841 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-07 21:41:44,841 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2016-01-08 16:36:02,967 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-08 16:36:05,256 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-08 16:36:05,287 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-08 16:36:05,319 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-08 16:36:05,319 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-08 16:36:05,319 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-08 16:36:05,319 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-08 16:36:08,090 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-08 16:36:08,090 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-08 16:36:08,090 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-08 16:36:08,090 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-08 16:36:08,090 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-08 16:36:09,465 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 4 classes defines auto mapping attributes
-DEBUG 2016-01-08 16:36:09,465 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-08 16:36:09,559 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-08 16:36:09,559 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-08 16:36:09,559 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-08 16:36:09,605 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-08 16:36:09,605 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-08 16:36:09,605 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-08 16:36:09,605 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2016-01-11 15:46:21,188 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-11 15:46:23,513 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-11 15:46:23,519 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 15:46:23,531 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-11 15:46:23,572 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 15:46:23,572 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 15:46:23,572 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 15:46:23,572 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 15:46:26,454 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-11 15:46:26,462 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-11 15:46:26,463 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-11 15:46:26,464 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-11 15:46:26,464 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-11 15:46:27,926 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
-DEBUG 2016-01-11 15:46:27,926 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-11 15:46:28,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-11 15:46:28,031 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
-DEBUG 2016-01-11 15:46:28,053 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-11 15:46:28,054 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-11 15:46:28,085 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-11 15:46:28,086 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-11 15:46:28,087 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
-DEBUG 2016-01-11 15:46:28,089 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-11 15:46:28,090 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2016-01-11 16:16:20,134 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-11 16:16:22,472 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-11 16:16:22,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,480 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,481 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,481 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,481 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:16:22,490 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-11 16:16:22,526 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:16:22,526 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:16:22,526 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:16:22,526 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:16:25,431 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-11 16:16:25,439 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-11 16:16:25,440 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-11 16:16:25,452 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-11 16:16:25,453 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-11 16:16:26,940 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
-DEBUG 2016-01-11 16:16:26,940 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-11 16:16:27,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-11 16:16:27,035 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
-DEBUG 2016-01-11 16:16:27,055 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-11 16:16:27,056 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-11 16:16:27,087 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-11 16:16:27,088 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-11 16:16:27,090 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
-DEBUG 2016-01-11 16:16:27,091 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-11 16:16:27,092 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2016-01-11 16:41:36,076 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-11 16:41:38,228 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-11 16:41:38,235 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,238 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,238 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,238 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,239 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,239 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,239 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,239 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,239 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,240 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,240 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,240 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,240 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:41:38,247 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-11 16:41:38,287 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:41:38,287 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:41:38,287 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:41:38,287 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:41:41,161 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-11 16:41:41,170 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-11 16:41:41,170 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-11 16:41:41,171 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-11 16:41:41,172 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-11 16:41:42,687 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
-DEBUG 2016-01-11 16:41:42,687 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-11 16:41:42,779 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-11 16:41:42,786 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
-DEBUG 2016-01-11 16:41:42,807 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-11 16:41:42,808 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-11 16:41:42,837 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-11 16:41:42,838 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-11 16:41:42,839 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
-DEBUG 2016-01-11 16:41:42,840 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-11 16:41:42,842 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2016-01-11 16:42:55,793 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-11 16:42:58,051 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-11 16:42:58,057 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,060 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,060 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,061 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,061 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,061 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,061 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,061 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,062 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,062 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,062 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,062 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,062 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 16:42:58,069 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-11 16:42:58,104 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:42:58,104 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:42:58,104 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:42:58,104 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 16:43:00,882 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-11 16:43:00,891 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-11 16:43:00,892 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-11 16:43:00,893 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-11 16:43:00,894 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-11 16:43:02,369 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
-DEBUG 2016-01-11 16:43:02,369 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-11 16:43:02,455 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-11 16:43:02,462 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
-DEBUG 2016-01-11 16:43:02,482 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-11 16:43:02,483 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-11 16:43:02,513 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-11 16:43:02,514 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-11 16:43:02,515 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
-DEBUG 2016-01-11 16:43:02,517 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-11 16:43:02,518 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-ERROR 2016-01-11 16:43:04,730 [510  ] lers.Filters.AbpExceptionFilterAttribute - System.OperationCanceledException: The operation was canceled.
-   at System.Threading.CancellationToken.ThrowOperationCanceledException()
-   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
-   at System.Web.Http.HostAuthenticationFilter.<AuthenticateAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
-   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
-System.OperationCanceledException: The operation was canceled.
-   at System.Threading.CancellationToken.ThrowOperationCanceledException()
-   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
-   at System.Web.Http.HostAuthenticationFilter.<AuthenticateAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
-   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
-DEBUG 2016-01-11 18:28:56,633 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-11 18:28:58,743 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-11 18:28:58,750 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,753 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,753 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,754 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,754 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,754 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,754 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,754 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,755 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,755 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,755 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,755 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,756 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:28:58,762 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-11 18:28:58,799 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:28:58,799 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:28:58,799 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:28:58,799 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:29:01,636 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-11 18:29:01,645 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-11 18:29:01,646 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-11 18:29:01,647 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-11 18:29:01,648 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-11 18:29:03,254 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
-DEBUG 2016-01-11 18:29:03,254 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-11 18:29:03,345 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-11 18:29:03,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
-DEBUG 2016-01-11 18:29:03,373 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-11 18:29:03,375 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-11 18:29:03,405 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-11 18:29:03,407 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-11 18:29:03,408 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
-DEBUG 2016-01-11 18:29:03,409 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-11 18:29:03,411 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-ERROR 2016-01-11 18:29:08,486 [677  ] sed.Web.Controllers.SmokeTestsController - System.Web.HttpCompileException (0x80004005): c:\Users\nkpatterson\Source\Repos\Case Closed\src\CaseClosed.Web\Views\SmokeTests\Index.cshtml(11): error CS1061: 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' does not contain a definition for 'CanCreateSmokeTests' and no extension method 'CanCreateSmokeTests' accepting a first argument of type 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' could be found (are you missing a using directive or an assembly reference?)
-   at System.Web.Compilation.AssemblyBuilder.Compile()
-   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
-   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
-   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
-   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-System.Web.HttpCompileException (0x80004005): c:\Users\nkpatterson\Source\Repos\Case Closed\src\CaseClosed.Web\Views\SmokeTests\Index.cshtml(11): error CS1061: 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' does not contain a definition for 'CanCreateSmokeTests' and no extension method 'CanCreateSmokeTests' accepting a first argument of type 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' could be found (are you missing a using directive or an assembly reference?)
-   at System.Web.Compilation.AssemblyBuilder.Compile()
-   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
-   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
-   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
-   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-WARN  2016-01-11 18:29:11,078 [677  ] Abp.Logging.LogHelper                    - Can not find 'Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,080 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,081 [677  ] Abp.Logging.LogHelper                    - Can not find 'Establish Case' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,083 [677  ] Abp.Logging.LogHelper                    - Can not find 'Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,084 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,085 [677  ] Abp.Logging.LogHelper                    - Can not find 'New Operation' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,086 [677  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,087 [677  ] Abp.Logging.LogHelper                    - Can not find 'Command Center' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,087 [677  ] Abp.Logging.LogHelper                    - Can not find 'Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,089 [677  ] Abp.Logging.LogHelper                    - Can not find 'All Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,090 [677  ] Abp.Logging.LogHelper                    - Can not find 'New Subject' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,091 [677  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,092 [677  ] Abp.Logging.LogHelper                    - Can not find 'Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,093 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,094 [677  ] Abp.Logging.LogHelper                    - Can not find 'Submit Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,095 [677  ] Abp.Logging.LogHelper                    - Can not find 'Seizures' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,096 [677  ] Abp.Logging.LogHelper                    - Can not find 'Assets' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,097 [677  ] Abp.Logging.LogHelper                    - Can not find 'Reports' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,098 [677  ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,099 [677  ] Abp.Logging.LogHelper                    - Can not find 'Permissions' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,100 [677  ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,101 [677  ] Abp.Logging.LogHelper                    - Can not find 'Reference Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,102 [677  ] Abp.Logging.LogHelper                    - Can not find 'Organization Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,103 [677  ] Abp.Logging.LogHelper                    - Can not find 'Form Templates' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,104 [677  ] Abp.Logging.LogHelper                    - Can not find 'Workflows' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:11,105 [677  ] Abp.Logging.LogHelper                    - Can not find 'Smoke Tests' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,527 [677  ] Abp.Logging.LogHelper                    - Can not find 'Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,528 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,529 [677  ] Abp.Logging.LogHelper                    - Can not find 'Establish Case' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,530 [677  ] Abp.Logging.LogHelper                    - Can not find 'Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,532 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,533 [677  ] Abp.Logging.LogHelper                    - Can not find 'New Operation' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,534 [677  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,535 [677  ] Abp.Logging.LogHelper                    - Can not find 'Command Center' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,536 [677  ] Abp.Logging.LogHelper                    - Can not find 'Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,537 [677  ] Abp.Logging.LogHelper                    - Can not find 'All Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,538 [677  ] Abp.Logging.LogHelper                    - Can not find 'New Subject' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,539 [677  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,540 [677  ] Abp.Logging.LogHelper                    - Can not find 'Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,541 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,542 [677  ] Abp.Logging.LogHelper                    - Can not find 'Submit Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,543 [677  ] Abp.Logging.LogHelper                    - Can not find 'Seizures' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,544 [677  ] Abp.Logging.LogHelper                    - Can not find 'Assets' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,545 [677  ] Abp.Logging.LogHelper                    - Can not find 'Reports' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,546 [677  ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,547 [677  ] Abp.Logging.LogHelper                    - Can not find 'Permissions' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,548 [677  ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,549 [677  ] Abp.Logging.LogHelper                    - Can not find 'Reference Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,550 [677  ] Abp.Logging.LogHelper                    - Can not find 'Organization Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,551 [677  ] Abp.Logging.LogHelper                    - Can not find 'Form Templates' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,552 [677  ] Abp.Logging.LogHelper                    - Can not find 'Workflows' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:13,553 [677  ] Abp.Logging.LogHelper                    - Can not find 'Smoke Tests' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,007 [677  ] Abp.Logging.LogHelper                    - Can not find 'Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,008 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,009 [677  ] Abp.Logging.LogHelper                    - Can not find 'Establish Case' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,010 [677  ] Abp.Logging.LogHelper                    - Can not find 'Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,011 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,012 [677  ] Abp.Logging.LogHelper                    - Can not find 'New Operation' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,013 [677  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,014 [677  ] Abp.Logging.LogHelper                    - Can not find 'Command Center' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,015 [677  ] Abp.Logging.LogHelper                    - Can not find 'Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,016 [677  ] Abp.Logging.LogHelper                    - Can not find 'All Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,017 [677  ] Abp.Logging.LogHelper                    - Can not find 'New Subject' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,018 [677  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,019 [677  ] Abp.Logging.LogHelper                    - Can not find 'Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,020 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,021 [677  ] Abp.Logging.LogHelper                    - Can not find 'Submit Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,022 [677  ] Abp.Logging.LogHelper                    - Can not find 'Seizures' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,022 [677  ] Abp.Logging.LogHelper                    - Can not find 'Assets' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,023 [677  ] Abp.Logging.LogHelper                    - Can not find 'Reports' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,024 [677  ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,025 [677  ] Abp.Logging.LogHelper                    - Can not find 'Permissions' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,026 [677  ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,027 [677  ] Abp.Logging.LogHelper                    - Can not find 'Reference Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,028 [677  ] Abp.Logging.LogHelper                    - Can not find 'Organization Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,029 [677  ] Abp.Logging.LogHelper                    - Can not find 'Form Templates' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,030 [677  ] Abp.Logging.LogHelper                    - Can not find 'Workflows' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,031 [677  ] Abp.Logging.LogHelper                    - Can not find 'Smoke Tests' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,158 [674  ] Abp.Logging.LogHelper                    - Can not find 'Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,159 [674  ] Abp.Logging.LogHelper                    - Can not find 'My Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,160 [674  ] Abp.Logging.LogHelper                    - Can not find 'Establish Case' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,161 [674  ] Abp.Logging.LogHelper                    - Can not find 'Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,162 [674  ] Abp.Logging.LogHelper                    - Can not find 'My Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,163 [674  ] Abp.Logging.LogHelper                    - Can not find 'New Operation' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,164 [674  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,165 [674  ] Abp.Logging.LogHelper                    - Can not find 'Command Center' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,165 [674  ] Abp.Logging.LogHelper                    - Can not find 'Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,166 [674  ] Abp.Logging.LogHelper                    - Can not find 'All Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,167 [674  ] Abp.Logging.LogHelper                    - Can not find 'New Subject' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,168 [674  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,170 [674  ] Abp.Logging.LogHelper                    - Can not find 'Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,171 [674  ] Abp.Logging.LogHelper                    - Can not find 'My Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,172 [674  ] Abp.Logging.LogHelper                    - Can not find 'Submit Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,173 [674  ] Abp.Logging.LogHelper                    - Can not find 'Seizures' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,174 [674  ] Abp.Logging.LogHelper                    - Can not find 'Assets' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,175 [674  ] Abp.Logging.LogHelper                    - Can not find 'Reports' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,176 [674  ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,177 [674  ] Abp.Logging.LogHelper                    - Can not find 'Permissions' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,178 [674  ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,179 [674  ] Abp.Logging.LogHelper                    - Can not find 'Reference Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,179 [674  ] Abp.Logging.LogHelper                    - Can not find 'Organization Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,180 [674  ] Abp.Logging.LogHelper                    - Can not find 'Form Templates' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,181 [674  ] Abp.Logging.LogHelper                    - Can not find 'Workflows' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:28,182 [674  ] Abp.Logging.LogHelper                    - Can not find 'Smoke Tests' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,494 [677  ] Abp.Logging.LogHelper                    - Can not find 'Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,495 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,496 [677  ] Abp.Logging.LogHelper                    - Can not find 'Establish Case' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,498 [677  ] Abp.Logging.LogHelper                    - Can not find 'Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,499 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,500 [677  ] Abp.Logging.LogHelper                    - Can not find 'New Operation' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,501 [677  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,503 [677  ] Abp.Logging.LogHelper                    - Can not find 'Command Center' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,504 [677  ] Abp.Logging.LogHelper                    - Can not find 'Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,504 [677  ] Abp.Logging.LogHelper                    - Can not find 'All Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,505 [677  ] Abp.Logging.LogHelper                    - Can not find 'New Subject' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,507 [677  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,508 [677  ] Abp.Logging.LogHelper                    - Can not find 'Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,509 [677  ] Abp.Logging.LogHelper                    - Can not find 'My Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,510 [677  ] Abp.Logging.LogHelper                    - Can not find 'Submit Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,511 [677  ] Abp.Logging.LogHelper                    - Can not find 'Seizures' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,512 [677  ] Abp.Logging.LogHelper                    - Can not find 'Assets' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,513 [677  ] Abp.Logging.LogHelper                    - Can not find 'Reports' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,515 [677  ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,516 [677  ] Abp.Logging.LogHelper                    - Can not find 'Permissions' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,517 [677  ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,518 [677  ] Abp.Logging.LogHelper                    - Can not find 'Reference Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,519 [677  ] Abp.Logging.LogHelper                    - Can not find 'Organization Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,520 [677  ] Abp.Logging.LogHelper                    - Can not find 'Form Templates' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,521 [677  ] Abp.Logging.LogHelper                    - Can not find 'Workflows' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:37,522 [677  ] Abp.Logging.LogHelper                    - Can not find 'Smoke Tests' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,239 [674  ] Abp.Logging.LogHelper                    - Can not find 'Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,240 [674  ] Abp.Logging.LogHelper                    - Can not find 'My Cases' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,241 [674  ] Abp.Logging.LogHelper                    - Can not find 'Establish Case' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,242 [674  ] Abp.Logging.LogHelper                    - Can not find 'Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,243 [674  ] Abp.Logging.LogHelper                    - Can not find 'My Operations' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,243 [674  ] Abp.Logging.LogHelper                    - Can not find 'New Operation' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,243 [674  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,243 [674  ] Abp.Logging.LogHelper                    - Can not find 'Command Center' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,248 [674  ] Abp.Logging.LogHelper                    - Can not find 'Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,248 [674  ] Abp.Logging.LogHelper                    - Can not find 'All Subjects' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,249 [674  ] Abp.Logging.LogHelper                    - Can not find 'New Subject' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,250 [674  ] Abp.Logging.LogHelper                    - Can not find 'De-Confliction' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,251 [674  ] Abp.Logging.LogHelper                    - Can not find 'Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,252 [674  ] Abp.Logging.LogHelper                    - Can not find 'My Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,253 [674  ] Abp.Logging.LogHelper                    - Can not find 'Submit Inventory' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,254 [674  ] Abp.Logging.LogHelper                    - Can not find 'Seizures' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,255 [674  ] Abp.Logging.LogHelper                    - Can not find 'Assets' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,256 [674  ] Abp.Logging.LogHelper                    - Can not find 'Reports' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,257 [674  ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,258 [674  ] Abp.Logging.LogHelper                    - Can not find 'Permissions' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,260 [674  ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,260 [674  ] Abp.Logging.LogHelper                    - Can not find 'Reference Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,262 [674  ] Abp.Logging.LogHelper                    - Can not find 'Organization Data' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,262 [674  ] Abp.Logging.LogHelper                    - Can not find 'Form Templates' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,262 [674  ] Abp.Logging.LogHelper                    - Can not find 'Workflows' in localization source 'CaseClosed'!
-WARN  2016-01-11 18:29:38,262 [674  ] Abp.Logging.LogHelper                    - Can not find 'Smoke Tests' in localization source 'CaseClosed'!
-DEBUG 2016-01-11 18:40:05,156 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-11 18:40:07,534 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-11 18:40:07,540 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,545 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,545 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,545 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,546 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,546 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,546 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,546 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,546 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,547 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,547 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,547 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,547 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:40:07,554 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-11 18:40:07,614 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:40:07,614 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:40:07,614 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:40:07,614 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:40:10,439 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-11 18:40:10,448 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-11 18:40:10,448 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-11 18:40:10,449 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-11 18:40:10,450 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-11 18:40:11,888 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
-DEBUG 2016-01-11 18:40:11,888 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-11 18:40:11,976 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-11 18:40:11,983 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
-DEBUG 2016-01-11 18:40:12,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-11 18:40:12,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-11 18:40:12,031 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-11 18:40:12,032 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-11 18:40:12,033 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
-DEBUG 2016-01-11 18:40:12,035 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-11 18:40:12,036 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-ERROR 2016-01-11 18:40:20,016 [679  ] sed.Web.Controllers.SmokeTestsController - System.Web.HttpCompileException (0x80004005): c:\Users\nkpatterson\Source\Repos\Case Closed\src\CaseClosed.Web\Views\SmokeTests\Index.cshtml(11): error CS1061: 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' does not contain a definition for 'CanCreateSmokeTests' and no extension method 'CanCreateSmokeTests' accepting a first argument of type 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' could be found (are you missing a using directive or an assembly reference?)
-   at System.Web.Compilation.AssemblyBuilder.Compile()
-   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
-   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
-   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
-   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-System.Web.HttpCompileException (0x80004005): c:\Users\nkpatterson\Source\Repos\Case Closed\src\CaseClosed.Web\Views\SmokeTests\Index.cshtml(11): error CS1061: 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' does not contain a definition for 'CanCreateSmokeTests' and no extension method 'CanCreateSmokeTests' accepting a first argument of type 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' could be found (are you missing a using directive or an assembly reference?)
-   at System.Web.Compilation.AssemblyBuilder.Compile()
-   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
-   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
-   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
-   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-DEBUG 2016-01-11 18:48:15,853 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-11 18:48:17,894 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-11 18:48:17,900 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 18:48:17,914 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-11 18:48:17,955 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:48:17,955 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:48:17,955 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:48:17,955 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 18:48:20,972 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-11 18:48:20,980 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-11 18:48:20,980 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-11 18:48:20,981 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-11 18:48:20,982 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-11 18:48:22,418 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
-DEBUG 2016-01-11 18:48:22,418 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-11 18:48:22,521 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-11 18:48:22,528 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
-DEBUG 2016-01-11 18:48:22,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-11 18:48:22,551 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-11 18:48:22,583 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-11 18:48:22,585 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-11 18:48:22,586 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
-DEBUG 2016-01-11 18:48:22,587 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-11 18:48:22,589 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-ERROR 2016-01-11 18:49:41,413 [677  ] sed.Web.Controllers.SmokeTestsController - System.Web.HttpCompileException (0x80004005): c:\Users\nkpatterson\Source\Repos\Case Closed\src\CaseClosed.Web\Views\SmokeTests\Index.cshtml(11): error CS1061: 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' does not contain a definition for 'CanCreateSmokeTests' and no extension method 'CanCreateSmokeTests' accepting a first argument of type 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' could be found (are you missing a using directive or an assembly reference?)
-   at System.Web.Compilation.AssemblyBuilder.Compile()
-   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
-   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
-   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
-   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-System.Web.HttpCompileException (0x80004005): c:\Users\nkpatterson\Source\Repos\Case Closed\src\CaseClosed.Web\Views\SmokeTests\Index.cshtml(11): error CS1061: 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' does not contain a definition for 'CanCreateSmokeTests' and no extension method 'CanCreateSmokeTests' accepting a first argument of type 'CaseClosed.Web.Models.SmokeTests.IndexViewModel' could be found (are you missing a using directive or an assembly reference?)
-   at System.Web.Compilation.AssemblyBuilder.Compile()
-   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
-   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
-   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
-   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-DEBUG 2016-01-11 20:50:56,272 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-11 20:50:58,742 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-11 20:50:58,748 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,751 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,752 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,752 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,752 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,752 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,753 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,753 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,753 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,753 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,754 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,754 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,754 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:50:58,761 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-11 20:50:58,797 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 20:50:58,797 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 20:50:58,797 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 20:50:58,797 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 20:51:01,682 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-11 20:51:01,691 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-11 20:51:01,691 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-11 20:51:01,692 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-11 20:51:01,693 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-11 20:51:03,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
-DEBUG 2016-01-11 20:51:03,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-11 20:51:03,494 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-11 20:51:03,501 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
-DEBUG 2016-01-11 20:51:03,521 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-11 20:51:03,522 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-11 20:51:03,550 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-11 20:51:03,552 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-11 20:51:03,553 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
-DEBUG 2016-01-11 20:51:03,554 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-11 20:51:03,555 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-WARN  2016-01-11 20:52:44,690 [679  ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Required permissions are not granted. At least one of these permissions must be granted: SmokeTests
-   at Abp.Authorization.PermissionCheckerExtensions.<AuthorizeAsync>d__9.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Abp.Authorization.AuthorizeAttributeHelper.<AuthorizeAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass3.<Run>b__1(Task t)
-   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   at System.Threading.Tasks.Task.Execute()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   at Abp.Threading.AsyncHelper.RunSync(Func`1 action)
-   at Abp.Authorization.AuthorizeAttributeHelper.Authorize(IEnumerable`1 authorizeAttributes)
-   at Abp.Authorization.AuthorizeAttributeHelper.Authorize(IAbpAuthorizeAttribute authorizeAttribute)
-   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeAttribute.AuthorizeCore(HttpContextBase httpContext)
-Abp.Authorization.AbpAuthorizationException: Required permissions are not granted. At least one of these permissions must be granted: SmokeTests
-   at Abp.Authorization.PermissionCheckerExtensions.<AuthorizeAsync>d__9.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Abp.Authorization.AuthorizeAttributeHelper.<AuthorizeAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass3.<Run>b__1(Task t)
-   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   at System.Threading.Tasks.Task.Execute()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   at Abp.Threading.AsyncHelper.RunSync(Func`1 action)
-   at Abp.Authorization.AuthorizeAttributeHelper.Authorize(IEnumerable`1 authorizeAttributes)
-   at Abp.Authorization.AuthorizeAttributeHelper.Authorize(IAbpAuthorizeAttribute authorizeAttribute)
-   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeAttribute.AuthorizeCore(HttpContextBase httpContext)
-WARN  2016-01-11 20:52:54,877 [672  ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Required permissions are not granted. At least one of these permissions must be granted: SmokeTests
-   at Abp.Authorization.PermissionCheckerExtensions.<AuthorizeAsync>d__9.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Abp.Authorization.AuthorizeAttributeHelper.<AuthorizeAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass3.<Run>b__1(Task t)
-   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   at System.Threading.Tasks.Task.Execute()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   at Abp.Threading.AsyncHelper.RunSync(Func`1 action)
-   at Abp.Authorization.AuthorizeAttributeHelper.Authorize(IEnumerable`1 authorizeAttributes)
-   at Abp.Authorization.AuthorizeAttributeHelper.Authorize(IAbpAuthorizeAttribute authorizeAttribute)
-   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeAttribute.AuthorizeCore(HttpContextBase httpContext)
-Abp.Authorization.AbpAuthorizationException: Required permissions are not granted. At least one of these permissions must be granted: SmokeTests
-   at Abp.Authorization.PermissionCheckerExtensions.<AuthorizeAsync>d__9.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Abp.Authorization.AuthorizeAttributeHelper.<AuthorizeAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass3.<Run>b__1(Task t)
-   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   at System.Threading.Tasks.Task.Execute()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   at Abp.Threading.AsyncHelper.RunSync(Func`1 action)
-   at Abp.Authorization.AuthorizeAttributeHelper.Authorize(IEnumerable`1 authorizeAttributes)
-   at Abp.Authorization.AuthorizeAttributeHelper.Authorize(IAbpAuthorizeAttribute authorizeAttribute)
-   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeAttribute.AuthorizeCore(HttpContextBase httpContext)
-DEBUG 2016-01-11 20:56:32,073 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-11 20:56:34,130 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-11 20:56:34,136 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,141 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,141 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,141 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,141 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 20:56:34,148 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-11 20:56:34,186 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 20:56:34,186 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 20:56:34,186 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 20:56:34,186 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 20:56:37,016 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-11 20:56:37,023 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-11 20:56:37,024 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-11 20:56:37,025 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-11 20:56:37,026 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-11 20:56:38,425 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
-DEBUG 2016-01-11 20:56:38,425 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-11 20:56:38,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-11 20:56:38,522 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
-DEBUG 2016-01-11 20:56:38,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-11 20:56:38,543 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-11 20:56:38,570 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-11 20:56:38,571 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-11 20:56:38,572 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
-DEBUG 2016-01-11 20:56:38,574 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-11 20:56:38,575 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2016-01-11 21:27:43,788 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-01-11 21:27:46,323 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
-DEBUG 2016-01-11 21:27:46,329 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,332 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,332 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,335 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-01-11 21:27:46,341 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
-DEBUG 2016-01-11 21:27:46,378 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 21:27:46,378 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 21:27:46,378 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 21:27:46,378 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-01-11 21:27:49,458 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-01-11 21:27:49,467 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-01-11 21:27:49,467 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-01-11 21:27:49,468 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-01-11 21:27:49,469 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
-DEBUG 2016-01-11 21:27:51,169 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
-DEBUG 2016-01-11 21:27:51,170 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-01-11 21:27:51,270 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-01-11 21:27:51,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
-DEBUG 2016-01-11 21:27:51,303 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-01-11 21:27:51,304 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-01-11 21:27:51,338 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-01-11 21:27:51,339 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-01-11 21:27:51,341 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
-DEBUG 2016-01-11 21:27:51,342 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-01-11 21:27:51,343 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-12 20:20:19,447 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:20:19,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:20:19,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:20:19,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:20:19,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:20:19,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:20:19,455 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:20:19,455 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:20:19,461 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-12 20:20:19,501 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:20:19,501 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:20:19,501 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:20:19,501 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:20:22,840 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-12 20:20:22,848 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-12 20:20:22,849 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-12 20:20:22,850 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-12 20:20:22,851 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-12 20:20:24,784 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-12 20:20:24,784 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-12 20:20:24,941 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-12 20:20:24,948 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-12 20:20:24,976 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-12 20:20:24,977 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-12 20:20:25,015 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-12 20:20:25,016 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-12 20:20:25,018 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-12 20:20:25,019 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-12 20:20:25,020 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-12 20:35:40,520 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-12 20:35:43,114 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-12 20:35:43,121 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,124 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,125 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,125 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,125 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,126 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,126 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,126 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,126 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,126 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,127 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,127 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,127 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:35:43,135 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-12 20:35:43,173 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:35:43,173 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:35:43,174 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:35:43,174 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:35:46,158 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-12 20:35:46,314 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-12 20:35:46,315 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-12 20:35:46,316 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-12 20:35:46,317 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-12 20:35:47,985 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-12 20:35:47,985 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-12 20:35:48,079 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-12 20:35:48,086 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-12 20:35:48,107 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-12 20:35:48,108 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-12 20:35:48,137 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-12 20:35:48,139 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-12 20:35:48,141 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-12 20:35:48,141 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-12 20:35:48,142 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-12 20:40:03,574 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-12 20:40:05,863 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-12 20:40:05,869 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,872 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:40:05,881 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-12 20:40:05,928 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:40:05,928 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:40:05,928 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:40:05,928 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:40:08,985 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-12 20:40:08,993 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-12 20:40:08,993 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-12 20:40:08,994 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-12 20:40:08,995 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-12 20:40:10,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-12 20:40:10,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-12 20:40:10,789 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-12 20:40:10,795 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-12 20:40:10,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-12 20:40:10,816 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-12 20:40:10,849 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-12 20:40:10,850 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-12 20:40:10,852 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-12 20:40:10,853 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-12 20:40:10,854 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-12 20:42:57,957 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-12 20:43:00,760 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-12 20:43:00,766 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,769 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,769 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,770 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,770 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,770 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,770 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,770 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,770 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,771 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,771 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,771 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,771 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:43:00,778 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-12 20:43:00,814 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:43:00,814 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:43:00,814 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:43:00,814 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:43:04,005 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-12 20:43:04,013 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-12 20:43:04,014 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-12 20:43:04,015 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-12 20:43:04,016 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-12 20:43:05,923 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-12 20:43:05,923 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-12 20:43:06,011 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-12 20:43:06,017 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-12 20:43:06,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-12 20:43:06,039 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-12 20:43:06,067 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-12 20:43:06,068 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-12 20:43:06,069 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-12 20:43:06,070 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-12 20:43:06,072 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-12 20:49:41,639 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-12 20:49:44,044 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-12 20:49:44,051 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,054 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,054 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,056 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,056 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,056 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,057 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,057 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,057 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:49:44,064 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-12 20:49:44,102 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:49:44,102 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:49:44,102 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:49:44,102 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:49:47,145 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-12 20:49:47,154 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-12 20:49:47,154 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-12 20:49:47,155 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-12 20:49:47,156 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-12 20:49:48,864 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-12 20:49:48,864 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-12 20:49:48,959 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-12 20:49:48,966 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-12 20:49:48,988 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-12 20:49:48,989 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-12 20:49:49,020 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-12 20:49:49,022 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-12 20:49:49,023 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-12 20:49:49,024 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-12 20:49:49,025 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-12 20:51:24,892 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-12 20:51:27,668 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-12 20:51:27,674 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,677 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,678 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,678 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,678 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,679 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,679 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,679 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,679 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,679 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,680 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,680 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,680 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 20:51:27,687 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-12 20:51:27,725 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:51:27,725 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:51:27,725 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:51:27,725 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 20:51:30,785 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-12 20:51:30,794 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-12 20:51:30,794 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-12 20:51:30,795 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-12 20:51:30,796 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-12 20:51:32,577 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-12 20:51:32,577 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-12 20:51:32,672 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-12 20:51:32,679 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-12 20:51:32,701 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-12 20:51:32,702 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-12 20:51:32,733 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-12 20:51:32,734 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-12 20:51:32,736 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-12 20:51:32,737 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-12 20:51:32,738 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.

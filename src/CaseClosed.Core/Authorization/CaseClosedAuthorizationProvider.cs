@@ -1,6 +1,8 @@
-﻿using Abp.Authorization;
+﻿using Abp.Application.Features;
+using Abp.Authorization;
 using Abp.Localization;
 using Abp.MultiTenancy;
+using CaseClosed.Features;
 
 namespace CaseClosed.Authorization
 {
@@ -18,7 +20,7 @@ namespace CaseClosed.Authorization
             //Host permissions
             var tenants = pages.CreateChildPermission(PermissionNames.Pages_Tenants, L("Tenants"), multiTenancySides: MultiTenancySides.Host);
 
-            var smokeTests = context.CreatePermission(PermissionNames.SmokeTests, L("SmokeTests"));
+            var smokeTests = context.CreatePermission(PermissionNames.SmokeTests, L("SmokeTests"), featureDependency: new SimpleFeatureDependency(FeatureNames.SmokeTests));
             smokeTests.CreateChildPermission(PermissionNames.SmokeTests_Create, L("Create"));
         }
 
