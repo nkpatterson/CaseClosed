@@ -169,11 +169,11 @@
         "name": "[parameters('webSiteName')]",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
         "siteConfig": {
-          "appSettings": [
-            {
-              "Name": "AppInsights.InstrumentationKey",
-              "Value": "[reference(concat('Microsoft.Insights/components/', parameters('webSiteName'))).instrumentationKey]"
-            },
+          //"appSettings": [
+          //  {
+          //    "Name": "AppInsights.InstrumentationKey",
+          //    "Value": "[reference(concat('Microsoft.Insights/components/', parameters('webSiteName'))).instrumentationKey]"
+          //  },
             {
               "Name": "ExternalAuth.OpenIdConnect.PostLogoutRedirectUrl",
               "Value": "[concat('http://', parameters('webSiteName'), '.azurewebsites.net/')]"
