@@ -1,10 +1,10 @@
-﻿using Abp.Web.Mvc.Authorization;
+﻿using System.Threading.Tasks;
+using System.Web.Mvc;
+using Abp.Web.Mvc.Authorization;
 using CaseClosed.Authorization;
 using CaseClosed.SmokeTests;
 using CaseClosed.SmokeTests.Dto;
 using CaseClosed.Web.Models.SmokeTests;
-using System.Threading.Tasks;
-using System.Web.Mvc;
 
 namespace CaseClosed.Web.Controllers
 {
@@ -35,6 +35,8 @@ namespace CaseClosed.Web.Controllers
         public async Task<ActionResult> Create()
         {
             var output = await _smokeTestAppService.Create(new CreateSmokeTestInput());
+
+            Flash("Smoke test created successfully!");
 
             return RedirectToAction("Index");
         }

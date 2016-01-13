@@ -207,3 +207,219 @@ DEBUG 2016-01-12 20:51:32,734 [1    ] Abp.Logging.LogHelper                    -
 DEBUG 2016-01-12 20:51:32,736 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
 DEBUG 2016-01-12 20:51:32,737 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
 DEBUG 2016-01-12 20:51:32,738 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-12 21:17:12,516 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-12 21:17:14,819 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-12 21:17:14,825 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,831 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,831 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,831 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,831 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-12 21:17:14,838 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-12 21:17:14,878 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 21:17:14,878 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 21:17:14,878 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 21:17:14,878 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-12 21:17:17,816 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-12 21:17:17,825 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-12 21:17:17,825 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-12 21:17:17,826 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-12 21:17:17,827 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-12 21:17:19,552 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-12 21:17:19,552 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-12 21:17:19,645 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-12 21:17:19,652 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-12 21:17:19,673 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-12 21:17:19,675 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-12 21:17:19,705 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-12 21:17:19,706 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-12 21:17:19,708 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-12 21:17:19,709 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-12 21:17:19,710 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-13 16:35:41,817 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-13 16:35:44,436 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-13 16:35:44,442 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,445 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,446 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,446 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,446 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,447 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,447 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,447 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,447 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,447 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,448 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,448 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,448 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:35:44,455 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-13 16:35:44,494 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:35:44,494 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:35:44,494 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:35:44,494 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:35:47,432 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-13 16:35:47,441 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-13 16:35:47,441 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-13 16:35:47,442 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-13 16:35:47,443 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-13 16:35:49,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-13 16:35:49,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-13 16:35:49,183 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-13 16:35:49,190 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-13 16:35:49,210 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-13 16:35:49,211 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-13 16:35:49,240 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-13 16:35:49,241 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-13 16:35:49,243 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-13 16:35:49,244 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-13 16:35:49,245 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-13 16:47:46,228 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-13 16:47:48,575 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-13 16:47:48,581 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,585 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,585 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,585 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:47:48,595 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-13 16:47:48,635 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:47:48,635 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:47:48,635 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:47:48,635 [1    ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:47:51,895 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-13 16:47:51,904 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-13 16:47:51,904 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-13 16:47:51,905 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-13 16:47:51,906 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-13 16:47:53,711 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-13 16:47:53,711 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-13 16:47:53,814 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-13 16:47:53,821 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-13 16:47:53,842 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-13 16:47:53,844 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-13 16:47:53,874 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-13 16:47:53,876 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-13 16:47:53,877 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-13 16:47:53,878 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-13 16:47:53,880 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-13 16:52:20,359 [822  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-13 16:52:23,051 [822  ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-13 16:52:23,066 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,069 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,070 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,070 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,070 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,070 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,070 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,071 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,071 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,071 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,071 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,071 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,072 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:52:23,078 [822  ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-13 16:52:23,118 [822  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:52:23,118 [822  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:52:23,118 [822  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:52:23,118 [822  ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:52:26,310 [822  ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-13 16:52:26,318 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-13 16:52:26,318 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-13 16:52:26,319 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-13 16:52:26,320 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-13 16:52:28,295 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-13 16:52:28,295 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-13 16:52:28,384 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-13 16:52:28,391 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-13 16:52:28,412 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-13 16:52:28,413 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-13 16:52:28,442 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-13 16:52:28,444 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-13 16:52:28,445 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-13 16:52:28,446 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-13 16:52:28,448 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-13 16:53:20,093 [822  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-13 16:53:22,837 [822  ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-13 16:53:22,844 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,847 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,848 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,848 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,848 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,849 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,849 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,849 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,849 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,850 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,850 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,850 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,850 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:53:22,857 [822  ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-13 16:53:22,896 [822  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:53:22,896 [822  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:53:22,896 [822  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:53:22,896 [822  ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:53:26,254 [822  ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-13 16:53:26,264 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-13 16:53:26,264 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-13 16:53:26,265 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-13 16:53:26,266 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-13 16:53:28,196 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-13 16:53:28,196 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-13 16:53:28,290 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-13 16:53:28,296 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-13 16:53:28,318 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-13 16:53:28,319 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-13 16:53:28,350 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-13 16:53:28,351 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-13 16:53:28,353 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-13 16:53:28,354 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-13 16:53:28,355 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-01-13 16:58:28,529 [822  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-01-13 16:58:30,956 [822  ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-01-13 16:58:30,963 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,966 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,967 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,967 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,967 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,967 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.7.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,967 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,968 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.7.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,968 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedApplicationModule, CaseClosed.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,968 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedCoreModule, CaseClosed.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,968 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.CaseClosedDataModule, CaseClosed.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,969 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Web.CaseClosedWebModule, CaseClosed.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,969 [822  ] Abp.Modules.AbpModuleManager             - Loaded module: CaseClosed.Api.CaseClosedWebApiModule, CaseClosed.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-01-13 16:58:30,976 [822  ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-01-13 16:58:31,016 [822  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:58:31,017 [822  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:58:31,017 [822  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:58:31,017 [822  ] o.Configuration.LanguageManagementConfig - Converted CaseClosed (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-01-13 16:58:34,084 [822  ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-01-13 16:58:34,092 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-01-13 16:58:34,093 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-01-13 16:58:34,094 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-01-13 16:58:34,095 [822  ] Abp.Localization.LocalizationManager     - Initialized localization source: CaseClosed
+DEBUG 2016-01-13 16:58:35,904 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 5 classes defines auto mapping attributes
+DEBUG 2016-01-13 16:58:35,904 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-01-13 16:58:35,998 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-01-13 16:58:36,005 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.SmokeTests.Dto.SmokeTestListDto
+DEBUG 2016-01-13 16:58:36,024 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-01-13 16:58:36,026 [822  ] Abp.AutoMapper.AbpAutoMapperModule       - CaseClosed.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-01-13 16:58:36,054 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-01-13 16:58:36,055 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-01-13 16:58:36,056 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.SmokeTests.ISmokeTestAppService' with service name 'app/smokeTest'.
+DEBUG 2016-01-13 16:58:36,057 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-01-13 16:58:36,059 [822  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CaseClosed.MultiTenancy.ITenantAppService' with service name 'app/tenant'.

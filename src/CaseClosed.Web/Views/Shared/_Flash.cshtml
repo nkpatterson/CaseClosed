@@ -1,0 +1,11 @@
+﻿@using CaseClosed.Web.Models.Layout
+@if (TempData["Flash"] != null)
+{
+    var flash = (FlashViewModel)TempData["Flash"];
+
+    <div id="flash" class="panel @flash.CssClass">
+        <div id="flashBody" class="panel-body">
+            @flash.Message
+        </div>
+    </div>
+}
