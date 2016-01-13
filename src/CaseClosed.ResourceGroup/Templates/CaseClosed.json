@@ -169,7 +169,7 @@
         "name": "[parameters('webSiteName')]",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
         "siteConfig": {
-          //"appSettings": [
+          "appSettings": [
           //  {
           //    "Name": "AppInsights.InstrumentationKey",
           //    "Value": "[reference(concat('Microsoft.Insights/components/', parameters('webSiteName'))).instrumentationKey]"
