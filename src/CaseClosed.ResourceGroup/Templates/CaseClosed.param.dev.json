@@ -15,7 +15,7 @@
       "value": "caseclosedadmin"
     },
     "administratorLoginPassword": {
-      "value": ""
+      "value": "P2ssw0rd" // TODO: make this a parameter in RM
     },
     "sqlServerName": {
       "value": "caseclosedabpdev"
