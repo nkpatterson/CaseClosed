@@ -8,7 +8,7 @@ namespace CaseClosed.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
+            AutomaticMigrationDataLossAllowed = false;
             ContextKey = "CaseClosed";
         }
 
