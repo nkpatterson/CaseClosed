@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{0f5245d3-61d0-4786-9b8a-1f5c57e6a192}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureDatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -78,5 +78,8 @@
     <Build Include="dbo\Tables\AbpOrganizationUnits.sql" />
     <Build Include="dbo\Tables\AbpUserOrganizationUnits.sql" />
     <Build Include="dbo\Tables\SmokeTests.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CaseClosedAbpDev.CaseClosed.publish.publish.xml" />
   </ItemGroup>
 </Project>
