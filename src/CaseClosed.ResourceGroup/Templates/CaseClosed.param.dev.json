@@ -1,0 +1,24 @@
+﻿{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "webSiteName": {
+      "value": "CaseClosedAbpDev"
+    },
+    "webSiteClientId": {
+      "value": "d901ef89-a3c1-4524-be60-762030fe7579"
+    },
+    "hostingPlanName": {
+      "value": "CaseClosedAbpDev"
+    },
+    "administratorLogin": {
+      "value": "caseclosedadmin"
+    },
+    "sqlServerName": {
+      "value": "caseclosedabpdev"
+    },
+    "databaseName": {
+      "value": "CaseClosed"
+    }
+  }
+}

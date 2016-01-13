@@ -1,0 +1,24 @@
+﻿{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "webSiteName": {
+      "value": "CaseClosedAbpTest"
+    },
+    "webSiteClientId": {
+      "value": "70c63e78-6f53-41bb-9e1e-72d74bb56fc2"
+    },
+    "hostingPlanName": {
+      "value": "CaseClosedAbpTest"
+    },
+    "administratorLogin": {
+      "value": "caseclosedadmin"
+    },
+    "sqlServerName": {
+      "value": "caseclosedabptest"
+    },
+    "databaseName": {
+      "value": "CaseClosed"
+    }
+  }
+}

@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseClosed.Tests", "Tests\C
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CaseClosed.Database", "CaseClosed.Database\CaseClosed.Database.sqlproj", "{0F5245D3-61D0-4786-9B8A-1F5C57E6A192}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{2AD11CD3-3090-41A8-9DD5-DB7DEC820BB3}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "CaseClosed.ResourceGroup", "CaseClosed.ResourceGroup\CaseClosed.ResourceGroup.deployproj", "{2C884F50-9434-4227-850D-DB7D91A9FD9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,11 +66,16 @@ Global
 		{0F5245D3-61D0-4786-9B8A-1F5C57E6A192}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F5245D3-61D0-4786-9B8A-1F5C57E6A192}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F5245D3-61D0-4786-9B8A-1F5C57E6A192}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2C884F50-9434-4227-850D-DB7D91A9FD9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C884F50-9434-4227-850D-DB7D91A9FD9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C884F50-9434-4227-850D-DB7D91A9FD9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C884F50-9434-4227-850D-DB7D91A9FD9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C602C47E-F379-40A3-A146-4F19105B3491} = {7E85C7E5-70BD-4C9D-B052-D95955F46609}
+		{2C884F50-9434-4227-850D-DB7D91A9FD9F} = {2AD11CD3-3090-41A8-9DD5-DB7DEC820BB3}
 	EndGlobalSection
 EndGlobal
