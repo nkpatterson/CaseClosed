@@ -36,6 +36,7 @@
     <None Include="Scripts\add-deployslot.ps1" />
     <None Include="Scripts\start-webapp.ps1" />
     <None Include="Scripts\stop-webapp.ps1" />
+    <None Include="Scripts\swap-deployslot.ps1" />
     <None Include="Templates\CaseClosed.param.prod.json" />
     <None Include="Templates\CaseClosed.param.test.json" />
     <None Include="Templates\CaseClosed.param.dev.json" />

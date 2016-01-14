@@ -5,8 +5,14 @@
     "webSiteName": {
       "value": "CaseClosedAbp"
     },
+    "webSiteClientId": {
+      "value": "a945ecfe-0098-46f8-b9f7-a81768d7fccc"
+    },
     "hostingPlanName": {
       "value": "CaseClosedAbp"
+    },
+    "skuName": {
+      "value": "S1"
     },
     "administratorLogin": {
       "value": "caseclosedadmin"
