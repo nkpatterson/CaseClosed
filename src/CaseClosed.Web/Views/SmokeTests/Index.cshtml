@@ -12,7 +12,7 @@
 <p>
     @if (Model.CanCreateSmokeTest)
     {
-        <a href="@Url.Action("Create", "SmokeTests")" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> @L("CreateSmokeTest")</a>
+        <a id="createSmokeTestButton" href="@Url.Action("Create", "SmokeTests")" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> @L("CreateSmokeTest")</a>
     }
 </p>
 
