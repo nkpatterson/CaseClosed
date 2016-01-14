@@ -6,7 +6,14 @@ namespace CaseClosed.Web
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
+            BundleTable.EnableOptimizations = false;
+
             bundles.IgnoreList.Clear();
+
+            // TODO: Figure all this out so it works with optimizations enabled
+            bundles.IgnoreList.Ignore("*all.css", OptimizationMode.WhenEnabled);
+            bundles.IgnoreList.Ignore("*base.css", OptimizationMode.WhenEnabled);
+            bundles.IgnoreList.Ignore("*theme.css", OptimizationMode.WhenEnabled);
 
             //VENDOR RESOURCES
 
