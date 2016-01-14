@@ -1,11 +1,13 @@
 ﻿using System.Reflection;
+using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Abp.Zero.Configuration;
 using Abp.Modules;
 using Abp.Web.Mvc;
+using Abp.Zero.Configuration;
 using CaseClosed.Api;
+using Microsoft.ApplicationInsights.Extensibility;
 
 namespace CaseClosed.Web
 {
@@ -32,6 +34,7 @@ namespace CaseClosed.Web
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            TelemetryConfiguration.Active.InstrumentationKey = WebConfigurationManager.AppSettings["AppInsights.InstrumentationKey"];
         }
     }
 }
