@@ -170,10 +170,10 @@
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
         "siteConfig": {
           "appSettings": [
-          //  {
-          //    "Name": "AppInsights.InstrumentationKey",
-          //    "Value": "[reference(concat('Microsoft.Insights/components/', parameters('webSiteName'))).instrumentationKey]"
-          //  },
+            {
+              "Name": "AppInsights.InstrumentationKey",
+              "Value": "[reference(concat('Microsoft.Insights/components/', parameters('webSiteName'))).instrumentationKey]"
+            },
             {
               "Name": "ExternalAuth.OpenIdConnect.PostLogoutRedirectUrl",
               "Value": "[concat('http://', parameters('webSiteName'), '.azurewebsites.net/')]"
@@ -409,9 +409,9 @@
       "name": "[parameters('webSiteName')]",
       "type": "Microsoft.Insights/components",
       "location": "Central US",
-      "dependsOn": [
-        "[concat('Microsoft.Web/sites/', parameters('webSiteName'))]"
-      ],
+      //"dependsOn": [
+      //  "[concat('Microsoft.Web/sites/', parameters('webSiteName'))]"
+      //],
       "tags": {
         "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/sites/', parameters('webSiteName'))]": "Resource",
         "displayName": "AppInsightsComponent"
