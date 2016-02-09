@@ -36,7 +36,7 @@
 
   <!-- Parameters used by tests at runtime -->
   <TestRunParameters>
-    <Parameter name="homepageUrl" value="http://caseclosedabpdev2.azurewebsites.net/" />
+    <Parameter name="homepageUrl" value="https://localhost:44300/" />
     <Parameter name="username" value="admin" />
     <Parameter name="password" value="123qwe" />
     <Parameter name="browser" value="Chrome" />

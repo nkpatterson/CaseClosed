@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Login" Id="e10d08f5-0ee7-495e-9a37-23e7895a9d59" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="{{Username}}" CredentialPassword="yuDcyT06xK+zW2PNXVmKuA==" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="ViewSmokeTests.cac605db-266e-4df0-8522-1dbe8c3232be.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="e1bca1b1-cc6d-42c8-b2a6-48f0720029da" Version="1.1" Url="{{WebAppName}}/Account/Login" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{WebAppName}}/" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="2bff25a9-d860-4917-8ba7-3002ec96d1f5" Version="1.1" Url="{{WebAppName}}/Account/Login" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="{{WebAppName}}/Account/Login" />
+      </Headers>
+      <StringHttpBody ContentType="application/json" InsertByteOrderMark="False">ewAiAHQAZQBuAGEAbgBjAHkATgBhAG0AZQAiADoAIgAiACwAIgB1AHMAZQByAG4AYQBtAGUATwByAEUAbQBhAGkAbABBAGQAZAByAGUAcwBzACIAOgAiAHsAewBVAHMAZQByAG4AYQBtAGUAfQB9ACIALAAiAHAAYQBzAHMAdwBvAHIAZAAiADoAIgB7AHsAUABhAHMAcwB3AG8AcgBkAH0AfQAiACwAIgByAGUAbQBlAG0AYgBlAHIATQBlACIAOgBmAGEAbABzAGUALAAiAHIAZQB0AHUAcgBuAFUAcgBsAEgAYQBzAGgAIgA6ACIAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="6dac43d8-5736-4a68-be39-a21ac479096d" Version="1.1" Url="{{WebAppName}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{WebAppName}}/Account/Login" />
+      </Headers>
+    </Request>
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="WebAppName" Value="http://caseclosedabpdev.azurewebsites.net" />
+    <ContextParameter Name="Username" Value="admin" />
+    <ContextParameter Name="Password" Value="123qwe" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

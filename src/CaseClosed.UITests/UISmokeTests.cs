@@ -19,7 +19,7 @@ namespace CaseClosed.UITests
         [ClassInitialize]
         public static void Startup(TestContext context)
         {
-            _homepageUrl = context.Properties["homepageUrl"]?.ToString() ?? "http://caseclosedabpdev.azurewebsites.net/";
+            _homepageUrl = context.Properties["homepageUrl"]?.ToString() ?? "https://localhost:44300/";
             _username = context.Properties["username"]?.ToString() ?? "admin";
             _password = context.Properties["password"]?.ToString() ?? "123qwe";
             _browser = context.Properties["browser"]?.ToString() ?? "Chrome";

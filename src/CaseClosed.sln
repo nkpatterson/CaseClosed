@@ -32,6 +32,8 @@ Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "CaseClosed.ResourceGroup", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseClosed.UITests", "CaseClosed.UITests\CaseClosed.UITests.csproj", "{CFDFDFBF-34FD-42C4-8449-1AC96F71D393}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseClosed.LoadTests", "CaseClosed.LoadTests\CaseClosed.LoadTests.csproj", "{42769016-EF16-4012-9DFD-25DB621A6BB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +78,10 @@ Global
 		{CFDFDFBF-34FD-42C4-8449-1AC96F71D393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFDFDFBF-34FD-42C4-8449-1AC96F71D393}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFDFDFBF-34FD-42C4-8449-1AC96F71D393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42769016-EF16-4012-9DFD-25DB621A6BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42769016-EF16-4012-9DFD-25DB621A6BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42769016-EF16-4012-9DFD-25DB621A6BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42769016-EF16-4012-9DFD-25DB621A6BB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,5 +90,6 @@ Global
 		{C602C47E-F379-40A3-A146-4F19105B3491} = {7E85C7E5-70BD-4C9D-B052-D95955F46609}
 		{2C884F50-9434-4227-850D-DB7D91A9FD9F} = {2AD11CD3-3090-41A8-9DD5-DB7DEC820BB3}
 		{CFDFDFBF-34FD-42C4-8449-1AC96F71D393} = {7E85C7E5-70BD-4C9D-B052-D95955F46609}
+		{42769016-EF16-4012-9DFD-25DB621A6BB7} = {7E85C7E5-70BD-4C9D-B052-D95955F46609}
 	EndGlobalSection
 EndGlobal
