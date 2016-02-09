@@ -56,7 +56,9 @@
     <None Include="LoadTests\ViewAndCreateSmokeTests.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="CloudBasedLoadTests.testsettings" />
+    <None Include="CloudBasedLoadTests.testsettings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="WebTests\CreateSmokeTest.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
