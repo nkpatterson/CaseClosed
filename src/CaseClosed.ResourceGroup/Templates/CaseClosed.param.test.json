@@ -22,6 +22,9 @@
     },
     "databaseName": {
       "value": "CaseClosed"
+    },
+    "cacheName": {
+      "value": "caseclosedabptest"
     }
   }
 }

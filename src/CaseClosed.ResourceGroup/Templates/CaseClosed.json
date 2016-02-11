@@ -88,6 +88,45 @@
       "metadata": {
         "description": "Describes the performance level for Edition"
       }
+    },
+    "cacheName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cacheSKUName": {
+      "type": "string",
+      "allowedValues": [
+        "Basic",
+        "Standard"
+      ],
+      "defaultValue": "Basic"
+    },
+    "cacheSKUFamily": {
+      "type": "string",
+      "allowedValues": [
+        "C"
+      ],
+      "defaultValue": "C"
+    },
+    "cacheSKUCapacity": {
+      "type": "int",
+      "allowedValues": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "defaultValue": 0
+    },
+    "cacheRedisVersion": {
+      "type": "string",
+      "allowedValues": [
+        "2.8"
+      ],
+      "defaultValue": "2.8"
     }
   },
   "resources": [
@@ -181,6 +220,10 @@
             {
               "Name": "ExternalAuth.OpenIdConnect.ClientId",
               "Value": "[parameters('webSiteClientId')]"
+            },
+            {
+              "Name": "Cache.ConnectionString",
+              "Value": "[concat(parameters('cacheName'), '.redis.cache.windows.net,abortConnect=false,ssl=true,password=', listKeys(resourceId('Microsoft.Cache/Redis', parameters('cacheName')), '2014-04-01-preview').primaryKey)]"
             }
           ]
         }
@@ -197,6 +240,10 @@
             "Default": {
               "value": "[concat('Data Source=tcp:', reference(concat('Microsoft.Sql/servers/', parameters('sqlserverName'))).fullyQualifiedDomainName, ',1433;Initial Catalog=', parameters('databaseName'), ';User Id=', parameters('administratorLogin'), '@', parameters('sqlserverName'), ';Password=', parameters('administratorLoginPassword'), ';')]",
               "type": "SQLServer"
+            },
+            "Abp.Redis.Cache": {
+              "value": "[concat(parameters('cacheName'), '.redis.cache.windows.net,abortConnect=false,ssl=true,password=', listKeys(resourceId('Microsoft.Cache/Redis', parameters('cacheName')), '2014-04-01-preview').primaryKey)]",
+              "type": "Custom"
             }
           }
         }
@@ -418,6 +465,24 @@
       },
       "properties": {
         "ApplicationId": "[parameters('webSiteName')]"
+      }
+    },
+    {
+      "name": "[parameters('cacheName')]",
+      "type": "Microsoft.Cache/Redis",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2014-04-01-preview",
+      "dependsOn": [ ],
+      "tags": {
+        "displayName": "Cache"
+      },
+      "properties": {
+        "sku": {
+          "name": "[parameters('cacheSKUName')]",
+          "family": "[parameters('cacheSKUFamily')]",
+          "capacity": "[parameters('cacheSKUCapacity')]"
+        },
+        "redisVersion": "[parameters('cacheRedisVersion')]"
       }
     }
   ]
