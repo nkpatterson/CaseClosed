@@ -1,6 +1,8 @@
 ﻿using System.Reflection;
 using Abp.AutoMapper;
 using Abp.Modules;
+using Abp.RedisCache;
+using Abp.Runtime.Caching;
 
 namespace CaseClosed
 {
@@ -9,6 +11,7 @@ namespace CaseClosed
     {
         public override void Initialize()
         {
+            IocManager.Register<ICacheManager, AbpRedisCacheManager>();
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
         }
     }
