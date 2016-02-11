@@ -5,6 +5,7 @@ using System;
 namespace CaseClosed.SmokeTests.Dto
 {
     [AutoMapFrom(typeof(SmokeTest))]
+    [Serializable]
     public class SmokeTestListDto : EntityDto
     {
         public DateTime CreationTime { get; set; }

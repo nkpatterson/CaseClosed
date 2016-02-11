@@ -9,9 +9,13 @@ namespace CaseClosed
     [DependsOn(typeof(CaseClosedCoreModule), typeof(AbpAutoMapperModule))]
     public class CaseClosedApplicationModule : AbpModule
     {
+        public override void PreInitialize()
+        {
+            //IocManager.Register<ICacheManager, AbpRedisCacheManager>();
+        }
+
         public override void Initialize()
         {
-            IocManager.Register<ICacheManager, AbpRedisCacheManager>();
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
         }
     }
