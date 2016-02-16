@@ -8,7 +8,7 @@
     "webSiteClientId": {
       "type": "string",
       "metadata": {
-        "description": "Client ID for Azure AD authentication."
+        "description": "Client ID for Azure AD authentication. 123"
       }
     },
     "hostingPlanName": {
