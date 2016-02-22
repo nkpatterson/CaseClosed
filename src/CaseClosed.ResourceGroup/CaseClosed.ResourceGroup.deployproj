@@ -31,6 +31,7 @@
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
+    <None Include="Scripts\delete-resourcegroups.ps1" />
     <None Include="Scripts\Deploy-AzureResourceGroup.ps1" />
     <None Include="Templates\CaseClosed.json" />
     <None Include="Scripts\add-deployslot.ps1" />
