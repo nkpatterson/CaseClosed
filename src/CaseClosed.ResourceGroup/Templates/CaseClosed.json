@@ -44,6 +44,10 @@
         "description": "Describes plan's instance count"
       }
     },
+    "environmentName": {
+      "type": "string",
+      "defaultValue": "Local"
+    },
     "administratorLogin": {
       "type": "string"
     },
@@ -207,11 +211,18 @@
       "properties": {
         "name": "[parameters('webSiteName')]",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
+        "appSettingNames": [
+          "AppInsights.Environment"
+        ],
         "siteConfig": {
           "appSettings": [
             {
               "Name": "AppInsights.InstrumentationKey",
               "Value": "[reference(concat('Microsoft.Insights/components/', parameters('webSiteName'))).instrumentationKey]"
+            },
+            {
+              "Name": "AppInsights.Environment",
+              "Value": "[parameters('environmentName')]"
             },
             {
               "Name": "ExternalAuth.OpenIdConnect.PostLogoutRedirectUrl",

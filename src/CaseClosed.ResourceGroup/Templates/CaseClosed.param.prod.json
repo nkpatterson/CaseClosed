@@ -28,6 +28,9 @@
     },
     "cacheName": {
       "value": "caseclosedabp"
+    },
+    "environmentName": {
+      "value": "Beta"
     }
   }
 }

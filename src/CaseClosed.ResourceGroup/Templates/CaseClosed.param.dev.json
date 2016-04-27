@@ -25,6 +25,9 @@
     },
     "cacheName": {
       "value": "caseclosedabpdev"
+    },
+    "environmentName": {
+      "value": "Dev"
     }
   }
 }

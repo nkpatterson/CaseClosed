@@ -35,6 +35,7 @@ namespace CaseClosed.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             TelemetryConfiguration.Active.InstrumentationKey = WebConfigurationManager.AppSettings["AppInsights.InstrumentationKey"];
+            TelemetryConfiguration.Active.TelemetryInitializers.Add(new CaseClosedTelemetryInitializer());
         }
     }
 }

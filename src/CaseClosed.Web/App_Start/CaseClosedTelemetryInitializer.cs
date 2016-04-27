@@ -2,16 +2,16 @@
 using Microsoft.ApplicationInsights.Channel;
 using Microsoft.ApplicationInsights.Extensibility;
 
-namespace CaseClosed.Web.App_Start
+namespace CaseClosed.Web
 {
     public class CaseClosedTelemetryInitializer : ITelemetryInitializer
     {
         public void Initialize(ITelemetry telemetry)
         {
-            var appId = ConfigurationManager.AppSettings["AppInsights.AppIdentifier"];
-            if (!string.IsNullOrEmpty(appId))
+            var environment = ConfigurationManager.AppSettings["AppInsights.Environment"];
+            if (!string.IsNullOrEmpty(environment))
             {
-                telemetry.Context.Properties["AppIdentifier"] = appId;
+                telemetry.Context.Properties["Environment"] = environment;
             }
         }
     }

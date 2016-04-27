@@ -25,6 +25,9 @@
     },
     "cacheName": {
       "value": "caseclosedabptest"
+    },
+    "environmentName": {
+      "value": "Test"
     }
   }
 }
