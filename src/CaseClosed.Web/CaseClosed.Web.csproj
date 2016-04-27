@@ -449,6 +449,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\CaseClosedNavigationProvider.cs" />
+    <Compile Include="App_Start\CaseClosedTelemetryInitializer.cs" />
     <Compile Include="App_Start\CaseClosedWebModule.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
