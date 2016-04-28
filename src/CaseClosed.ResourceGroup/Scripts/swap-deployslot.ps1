@@ -1,5 +1,8 @@
 [CmdletBinding()]
 Param(
+	[Parameter(Mandatory=$True)]
+	[string]$ResourceGroupName,
+
    [Parameter(Mandatory=$True)]
    [string]$AppName,
    
@@ -8,4 +11,4 @@ Param(
 )
 
 Write-Host "Swapping $SlotName with $AppName."
-Switch-AzureWebsiteSlot -Name $AppName -Slot1 $SlotName -Force
+Invoke-AzureRmResourceAction -ResourceGroupName $ResourceGroupName -ResourceType Microsoft.Web/sites/slots -ResourceName "$AppName/$SlotName" -Action slotsswap -Parameters @{targetSlot="production"} -ApiVersion 2015-08-01 -Force
