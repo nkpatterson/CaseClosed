@@ -16,8 +16,11 @@ namespace CaseClosed.Web.Controllers
     {
         protected CaseClosedControllerBase()
         {
+            var versionNumber = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            versionNumber = versionNumber.Substring(0, versionNumber.Length - 2);
+
+            ViewBag.VersionNumber = versionNumber;
             LocalizationSourceName = CaseClosedConsts.LocalizationSourceName;
-            ViewBag.VersionNumber = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
         protected virtual void CheckModelState()
