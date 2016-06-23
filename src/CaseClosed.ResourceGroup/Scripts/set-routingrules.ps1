@@ -10,6 +10,8 @@ Param(
 	[int]$ReroutePercentage
 )
 
+Import-Module Azure
+
 $rule = New-Object Microsoft.WindowsAzure.Commands.Utilities.Websites.Services.WebEntities.RampUpRule
 $rule.ActionHostName = "$AppName-$SlotName.azurewebsites.net"
 $rule.ReroutePercentage = $ReroutePercentage
