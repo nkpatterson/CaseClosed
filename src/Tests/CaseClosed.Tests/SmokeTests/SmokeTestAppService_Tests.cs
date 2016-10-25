@@ -7,6 +7,7 @@ using Abp.Runtime.Caching;
 using NSubstitute;
 using Castle.MicroKernel.Registration;
 using Abp.Application.Services.Dto;
+using System;
 
 namespace CaseClosed.Tests.SmokeTests
 {
@@ -36,6 +37,8 @@ namespace CaseClosed.Tests.SmokeTests
         [Fact]
         public async Task Should_create_new_SmokeTest()
         {
+            throw new ArgumentException("Something really REALLY bad happened");
+
             // Arrange
             var input = new CreateSmokeTestInput();
 
