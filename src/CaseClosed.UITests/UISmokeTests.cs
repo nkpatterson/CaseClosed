@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
+using System;
 
 namespace CaseClosed.UITests
 {
@@ -39,6 +40,9 @@ namespace CaseClosed.UITests
                     EnsureCleanSession = true
                 });
             }
+
+            // Allow the app to load for the first time
+            Driver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromMinutes(5));
         }
 
         [TestCleanup]
