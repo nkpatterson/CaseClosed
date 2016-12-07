@@ -29,20 +29,20 @@ namespace CaseClosed.UITests
         [TestInitialize]
         public void Initialize()
         {
+            var timeout = TimeSpan.FromMinutes(5);
+
             if (_browser == "Chrome")
             {
-                Driver = new ChromeDriver();
+                Driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), 
+                    new ChromeOptions(), 
+                    timeout);
             }
             else
             {
-                Driver = new InternetExplorerDriver(new InternetExplorerOptions
-                {
-                    EnsureCleanSession = true
-                });
+                Driver = new InternetExplorerDriver(InternetExplorerDriverService.CreateDefaultService(),
+                    new InternetExplorerOptions { EnsureCleanSession = true },
+                    timeout);
             }
-
-            // Allow the app to load for the first time
-            Driver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromMinutes(5));
         }
 
         [TestCleanup]
