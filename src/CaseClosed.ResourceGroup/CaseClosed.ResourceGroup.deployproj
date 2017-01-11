@@ -34,16 +34,17 @@
     <None Include="Scripts\delete-resourcegroups.ps1" />
     <None Include="Scripts\Deploy-AzureResourceGroup.ps1" />
     <None Include="Scripts\set-routingrules.ps1" />
-    <None Include="Templates\CaseClosed.json" />
     <None Include="Scripts\add-deployslot.ps1" />
     <None Include="Scripts\start-webapp.ps1" />
     <None Include="Scripts\stop-webapp.ps1" />
     <None Include="Scripts\swap-deployslot.ps1" />
-    <None Include="Templates\CaseClosed.param.prod.json" />
-    <None Include="Templates\CaseClosed.param.test.json" />
-    <None Include="Templates\CaseClosed.param.dev.json" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Templates\caseclosed\azuredeploy.json" />
+    <None Include="Templates\caseclosed\azuredeploy.pararmeters.json" />
+    <None Include="Templates\caseclosed\azuredeploy.parameters.prod.json" />
+    <None Include="Templates\caseclosed\azuredeploy.parameters.test.json" />
+    <None Include="Templates\caseclosed\metadata.json" />
     <None Include="Tools\AzCopy.exe" />
     <None Include="Tools\Microsoft.Data.Edm.dll">
       <Visible>False</Visible>
