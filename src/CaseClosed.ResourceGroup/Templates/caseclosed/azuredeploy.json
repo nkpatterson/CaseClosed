@@ -264,7 +264,7 @@
       "apiVersion": "2014-04-01",
       "name": "[concat(parameters('hostingPlanName'), '-', resourceGroup().name)]",
       "type": "Microsoft.Insights/autoscalesettings",
-      "location": "East US",
+      "location": "[resourceGroup().location]",
       "tags": {
         "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "Resource",
         "displayName": "AutoScaleSettings"
@@ -330,7 +330,7 @@
       "apiVersion": "2014-04-01",
       "name": "[concat('ServerErrors ', parameters('webSiteName'))]",
       "type": "Microsoft.Insights/alertrules",
-      "location": "East US",
+      "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Web/sites/', parameters('webSiteName'))]"
       ],
@@ -364,7 +364,7 @@
       "apiVersion": "2014-04-01",
       "name": "[concat('ForbiddenRequests ', parameters('webSiteName'))]",
       "type": "Microsoft.Insights/alertrules",
-      "location": "East US",
+      "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Web/sites/', parameters('webSiteName'))]"
       ],
@@ -398,7 +398,7 @@
       "apiVersion": "2014-04-01",
       "name": "[concat('CPUHigh ', parameters('hostingPlanName'))]",
       "type": "Microsoft.Insights/alertrules",
-      "location": "East US",
+      "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
       ],
@@ -432,7 +432,7 @@
       "apiVersion": "2014-04-01",
       "name": "[concat('LongHttpQueue ', parameters('hostingPlanName'))]",
       "type": "Microsoft.Insights/alertrules",
-      "location": "East US",
+      "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
       ],
