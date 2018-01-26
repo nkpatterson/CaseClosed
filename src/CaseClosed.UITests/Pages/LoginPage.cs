@@ -21,7 +21,7 @@ namespace CaseClosed.UITests.Pages
             Driver.FindElement(_passwordSelector).SendKeys(password);
             Driver.FindElement(_loginSelector).Click();
 
-            Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5)); // Hack...
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5); // Hack...
 
             return new HomePage(Driver);
         }
