@@ -177,6 +177,19 @@
             "endIpAddress": "0.0.0.0",
             "startIpAddress": "0.0.0.0"
           }
+        },
+        {
+          "type": "firewallrules",
+          "apiVersion": "2014-04-01-preview",
+          "dependsOn": [
+            "[concat('Microsoft.Sql/servers/', parameters('sqlserverName'))]"
+          ],
+          "location": "[resourceGroup().location]",
+          "name": "Home",
+          "properties": {
+            "endIpAddress": "70.190.250.178",
+            "startIpAddress": "70.190.250.178"
+          }
         }
       ]
     },
