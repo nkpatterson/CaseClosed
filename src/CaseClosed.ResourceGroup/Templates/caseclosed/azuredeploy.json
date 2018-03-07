@@ -133,6 +133,9 @@
       "defaultValue": "2.8"
     }
   },
+  "variables": {
+    "betaSlotName": "beta"
+  },
   "resources": [
     {
       "name": "[parameters('sqlserverName')]",
@@ -273,6 +276,22 @@
         }
       ]
     },
+    //{
+    //  "apiVersion": "2016-08-01",
+    //  "type": "Microsoft.Web/sites/slots",
+    //  "name": "[concat(parameters('webSiteName'), '/', variables('betaSlotName'))]",
+    //  "kind": "app",
+    //  "location": "[resourceGroup().location]",
+    //  "tags": {
+    //    "displayName": "WebAppSlots"
+    //  },
+    //  "properties": {
+    //    "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
+    //  },
+    //  "dependsOn": [
+    //    "[resourceId('Microsoft.Web/Sites', parameters('webSiteName'))]"
+    //  ]
+    //},
     {
       "apiVersion": "2014-04-01",
       "name": "[concat(parameters('hostingPlanName'), '-', resourceGroup().name)]",
@@ -369,7 +388,7 @@
         "action": {
           "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
           "sendToServiceOwners": true,
-          "customEmails": [ ]
+          "customEmails": []
         }
       }
     },
@@ -403,7 +422,7 @@
         "action": {
           "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
           "sendToServiceOwners": true,
-          "customEmails": [ ]
+          "customEmails": []
         }
       }
     },
@@ -437,7 +456,7 @@
         "action": {
           "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
           "sendToServiceOwners": true,
-          "customEmails": [ ]
+          "customEmails": []
         }
       }
     },
@@ -471,7 +490,7 @@
         "action": {
           "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
           "sendToServiceOwners": true,
-          "customEmails": [ ]
+          "customEmails": []
         }
       }
     },
@@ -496,7 +515,7 @@
       "type": "Microsoft.Cache/Redis",
       "location": "[resourceGroup().location]",
       "apiVersion": "2014-04-01-preview",
-      "dependsOn": [ ],
+      "dependsOn": [],
       "tags": {
         "displayName": "Cache"
       },
