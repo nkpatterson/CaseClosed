@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DFA48E27-7D53-4955-A722-3D91A7119BE7}"
 	ProjectSection(SolutionItems) = preProject
@@ -33,6 +33,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseClosed.UITests", "CaseClosed.UITests\CaseClosed.UITests.csproj", "{CFDFDFBF-34FD-42C4-8449-1AC96F71D393}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseClosed.LoadTests", "CaseClosed.LoadTests\CaseClosed.LoadTests.csproj", "{42769016-EF16-4012-9DFD-25DB621A6BB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C2021193-30EB-4C35-A55A-33998E312FE9}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,5 +96,8 @@ Global
 		{2C884F50-9434-4227-850D-DB7D91A9FD9F} = {2AD11CD3-3090-41A8-9DD5-DB7DEC820BB3}
 		{CFDFDFBF-34FD-42C4-8449-1AC96F71D393} = {7E85C7E5-70BD-4C9D-B052-D95955F46609}
 		{42769016-EF16-4012-9DFD-25DB621A6BB7} = {7E85C7E5-70BD-4C9D-B052-D95955F46609}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3811E7B3-AE3B-43C6-B700-983AC84D8247}
 	EndGlobalSection
 EndGlobal
