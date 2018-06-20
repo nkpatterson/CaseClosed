@@ -6,6 +6,7 @@
     [LastModifierUserId]   BIGINT         NULL,
     [CreationTime]         DATETIME       NOT NULL,
     [CreatorUserId]        BIGINT         NULL,
+    [FirstName] VARCHAR(50) NULL, 
     CONSTRAINT [PK_dbo.SmokeTests] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
