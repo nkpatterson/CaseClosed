@@ -193,6 +193,19 @@
             "endIpAddress": "70.190.250.178",
             "startIpAddress": "70.190.250.178"
           }
+        },
+        {
+          "type": "firewallrules",
+          "apiVersion": "2014-04-01-preview",
+          "dependsOn": [
+            "[concat('Microsoft.Sql/servers/', parameters('sqlserverName'))]"
+          ],
+          "location": "[resourceGroup().location]",
+          "name": "HomeVpn",
+          "properties": {
+            "endIpAddress": "167.220.148.232",
+            "startIpAddress": "167.220.148.232"
+          }
         }
       ]
     },
