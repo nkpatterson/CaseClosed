@@ -36,10 +36,11 @@
 
   <!-- Parameters used by tests at runtime -->
   <TestRunParameters>
-    <Parameter name="homepageUrl" value="https://localhost:44300/" />
+    <Parameter name="homepageUrl" value="https://caseclosedabpdev.azurewebsites.net/" />
     <Parameter name="username" value="admin" />
     <Parameter name="password" value="123qwe" />
-    <Parameter name="browser" value="Chrome" />
+    <Parameter name="browser" value="Remote" />
+    <Parameter name="gridUrl" value="http://seleniumhub162998.westus.cloudapp.azure.com:4444/wd/hub" />
   </TestRunParameters>
 
   <!-- Adapter Specific sections -->
@@ -50,6 +51,11 @@
     <CaptureTraceOutput>False</CaptureTraceOutput>
     <DeleteDeploymentDirectoryAfterTestRunIsComplete>False</DeleteDeploymentDirectoryAfterTestRunIsComplete>
     <DeploymentEnabled>False</DeploymentEnabled>
+
+    <Parallelize>
+      <Workers>3</Workers>
+      <Scope>ClassLevel</Scope>
+    </Parallelize>
   </MSTest>
 
 

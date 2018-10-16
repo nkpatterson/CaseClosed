@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Remote;
 using System;
 
 namespace CaseClosed.UITests
@@ -16,6 +17,7 @@ namespace CaseClosed.UITests
         private static string _username;
         private static string _password;
         private static string _browser;
+        private static string _gridUrl;
 
         [ClassInitialize]
         public static void Startup(TestContext context)
@@ -24,6 +26,7 @@ namespace CaseClosed.UITests
             _username = context.Properties["username"]?.ToString() ?? "admin";
             _password = context.Properties["password"]?.ToString() ?? "123qwe";
             _browser = context.Properties["browser"]?.ToString() ?? "Chrome";
+            _gridUrl = context.Properties["gridUrl"]?.ToString() ?? "http://seleniumhub162998.westus.cloudapp.azure.com:4444/wd/hub";
         }
 
         [TestInitialize]
@@ -31,7 +34,12 @@ namespace CaseClosed.UITests
         {
             var timeout = TimeSpan.FromMinutes(5);
 
-            if (_browser == "Chrome")
+            if (_browser == "Remote")
+            {
+                var options = new ChromeOptions();
+                Driver = new RemoteWebDriver(new Uri(_gridUrl), options.ToCapabilities());
+            }
+            else if (_browser == "Chrome")
             {
                 Driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), 
                     new ChromeOptions(), 
