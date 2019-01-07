@@ -37,7 +37,8 @@ namespace CaseClosed.UITests
             if (_browser == "Remote")
             {
                 var options = new ChromeOptions();
-                Driver = new RemoteWebDriver(new Uri(_gridUrl), options.ToCapabilities());
+                Driver = new RemoteWebDriver(new Uri(_gridUrl), options.ToCapabilities(), 
+                    timeout);
             }
             else if (_browser == "Chrome")
             {
