@@ -29,7 +29,7 @@ namespace CaseClosed.SmokeTests
             var smokeTest = new SmokeTest
             {
                 IsSuccess = true,
-                Message = "Smoke test created successfully!"
+                Message = input.Message ?? "Smoke test created successfully!"
             };
 
             var id = await _smokeTestRepo.InsertAndGetIdAsync(smokeTest);

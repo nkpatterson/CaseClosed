@@ -32,9 +32,9 @@ namespace CaseClosed.Web.Controllers
         }
 
         [AbpMvcAuthorize(PermissionNames.SmokeTests_Create)]
-        public async Task<ActionResult> Create()
+        public async Task<ActionResult> Create(string message = null)
         {
-            var output = await _smokeTestAppService.Create(new CreateSmokeTestInput());
+            var output = await _smokeTestAppService.Create(new CreateSmokeTestInput { Message = message });
 
             Flash("Smoke test created successfully!");
 

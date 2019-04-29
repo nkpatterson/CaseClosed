@@ -4,5 +4,6 @@ namespace CaseClosed.SmokeTests.Dto
 {
     public class CreateSmokeTestInput : IInputDto
     {
+        public string Message { get; set; }
     }
 }

@@ -1,8 +1,20 @@
 ﻿@model CaseClosed.Web.Models.SmokeTests.IndexViewModel
 
 @{
-    ViewBag.Title = "Smoke Tests";
-    ViewBag.ActiveMenu = "Settings";
+                /**/
+
+                ViewBag.Title = "Smoke Tests";
+                ViewBag.ActiveMenu = "Settings";
+}
+
+@section scripts {
+    <script type="text/javascript">
+        function createWithMessage() {
+            var createUrl = '@Url.Action("Create", "SmokeTests")';
+            var message = $("#message").val();
+            window.location.href = createUrl + "?message=" + message;
+        }
+    </script>    
 }
 
 <h2>@ViewBag.Title</h2>
@@ -12,28 +24,54 @@
 <p>
     @if (Model.CanCreateSmokeTest)
     {
-        <a id="createSmokeTestButton" href="@Url.Action("Create", "SmokeTests")" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> @L("CreateSmokeTest")</a>
-    }
-</p>
+        <div class="btn-group">
+            <a id="createSmokeTestButton" href="@Url.Action("Create", "SmokeTests")" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> @L("CreateSmokeTest")</a>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a id="createSmokeTestWithMessageButton" href="#" data-toggle="modal" data-target="#myModal">Create with Message</a></li>
+            </ul>
+        </div>
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Enter a Message</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input class="form-control" type="text" id="message" name="message" placeholder="Enter your message here..." />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <a class="btn btn-primary" onclick="createWithMessage()">Save</a>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+}
+    </p>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Created</th>
-            <th>Creator</th>
-            <th>Message</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Items.Items)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>@item.Id</td>
-                <td>@item.CreationTime</td>
-                <td>@item.Creator</td>
-                <td>@item.Message</td>
+                <th>Id</th>
+                <th>Created</th>
+                <th>Creator</th>
+                <th>Message</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items.Items)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.CreationTime</td>
+                    <td>@item.Creator</td>
+                    <td>@item.Message</td>
+                </tr>
+            }
+        </tbody>
+    </table>
